@@ -70,6 +70,7 @@
                   placeholder="请输入密码"
                   v-model="loginForm.password"
                 />
+                <div id="geetest1"></div>
                 <button
                   class="absolute right-3 top-1/3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
                   @click="showPassword = !showPassword"
@@ -86,6 +87,7 @@
               <a href="#" class="text-sm text-green-600 hover:text-green-700">忘记密码？</a>
             </div>
             <button
+              @click="get_geetest_captcha"
               class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors !rounded-button whitespace-nowrap">
               登 录
             </button>
@@ -181,7 +183,7 @@ export default {
       loginForm: {
         username: '',
         password: '',
-        remember: false
+        remember: false,
       },
       registerForm: {
         phone: '',
@@ -192,10 +194,116 @@ export default {
       }
     }
   },
+  created() {
+    // this.loginhander()
+  },
   mounted() {
     // 获取登录状态
     this.isLogin = this.$route.query.isLogin === 'true'
   },
+  methods: {
+    loginHander() {
+      this.$axios.post(`${this.$settings.HOST}/user/login/token/`, {
+        username: this.loginForm.username,
+        password: this.loginForm.password,
+        remember: this.loginForm.remember
+      }).then(res => {
+        if (this.loginForm.remember){
+          // 记录登录状态
+          sessionStorage.removeItem('user_token') // 为了避免登录状态被覆盖
+          sessionStorage.removeItem('user_id')
+          sessionStorage.removeItem('user_name')
+          localStorage.user_token = res.data.access
+          localStorage.user_id = res.data.id
+          localStorage.user_name = res.data.username
+        }else{
+          // 不记录登录状态
+          localStorage.removeItem('user_token') // 为了避免登录状态被覆盖
+          localStorage.removeItem('user_id')
+          localStorage.removeItem('user_name')
+          sessionStorage.user_token = res.data.access
+          sessionStorage.user_id = res.data.id
+          sessionStorage.user_name = res.data.username
+        }
+        // 页面调转
+        let self = this
+        this.$alert("登录成功", "欢迎回来", {}, {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'success'
+        }).then(() => {
+          self.$router.push('/');  // 这里如果用this是alert对象，我们要重新回调到Vue
+        });
+      }).catch(err => {
+        const h = this.$createElement;
+        this.$message({
+          message: h('p', null, [
+            h('span', '登录失败，请检查用户名或密码是否正确！'),
+            h('i', {style: 'color: red'}, )
+          ]),
+          type: 'error',
+          duration: 1000
+        });
+      })
+    },
+    handlerPopup(captchaObj) {
+      // 极验验证码的验证方法
+
+      let self = this;
+      // 成功时回调
+      captchaObj.onSuccess(function () {
+        var validate = captchaObj.getValidate();
+        // 当用户拖动验证码成功后，发送请求到后台
+        self.$axios.post(`${self.$settings.HOST}/user/captcha/`, {
+          geetest_challenge: validate.geetest_challenge,
+          geetest_validate: validate.geetest_validate,
+          geetest_seccode: validate.geetest_seccode,
+        }).then(response => {
+          if (response.data.status) {
+            // 验证码通过以后才发送账号和密码进行登录！
+            self.loginHander();
+          }
+        }).catch(error => {
+          console.log(error.response)
+        })
+      });
+      // 将验证码加到id为geetest1的元素里
+      document.getElementById('geetest1').innerHTML = ''; // 移除之前的验证码元素，避免因用户多次点击时，验证码重复加载
+      captchaObj.appendTo("#geetest1");
+      self.captchaObj = captchaObj;  // 存储验证码实例
+      // 更多接口参考：http://www.geetest.com/install/sections/idx-client-sdk.html
+    },
+    get_geetest_captcha() {
+      // 获取验证码
+
+      this.$axios.get(`${this.$settings.HOST}/user/captcha/`, {
+        params: {
+          username: this.loginForm.username,  // get传入参数要通过params传，不然参数不会传
+        }
+      }).then(response => {
+        // 使用initGeetest接口
+        // 参数1：配置参数
+        // 参数2：回调，回调的第一个参数验证码对象，之后可以使用它做appendTo之类的事件
+        let data = JSON.parse(response.data)  // 服务端返回的字符串，要转换为json
+        console.log(data)
+        initGeetest({  //initGeetest需要在main.js导包
+          gt: data.gt,
+          challenge: data.challenge,
+          product: "popup", // 产品形式，包括：float，embed，popup。注意只对PC版验证码有效
+          offline: !data.success // 表示用户后台检测极验服务器是否宕机，一般不需要关注
+          // 更多配置参数请参见：http://www.geetest.com/install/sections/idx-client-sdk.html#config
+        }, this.handlerPopup);
+      }).catch(error => {
+        const h = this.$createElement;
+        this.$message({
+          message: h('p', null, [
+            h('span', {style: 'color: red'}, '对不起，账号未注册'),
+            h('i', {style: 'color: teal'}, '请注册后登录')
+          ])
+        });
+      });
+    },
+  }
 }
 </script>
 

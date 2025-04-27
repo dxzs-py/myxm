@@ -24,6 +24,13 @@ import ningxiaJson from './assets/map/json/province/ningxia.json'; // 宁夏地�
 echarts.registerMap('ningxia', ningxiaJson);
 Vue.use(echarts)
 
+// 导入axios
+import axios from "axios"
+axios.defaults.withCredentials = false; // false表示阻止ajax请求携带cookie
+Vue.prototype.$axios = axios; // 把对象挂载vue中
+
+// 导入gt极验
+import '../static/js/gt.js'
 
 // 导入css初始化样式
 import "../static/css/reset.css";
