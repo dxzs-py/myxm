@@ -8,6 +8,8 @@ Vue.prototype.$settings = settings;  // 设置个人配置的全局变量
 
 Vue.config.productionTip = false
 
+
+
 // element-ui配置
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
@@ -15,14 +17,31 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 // 导入echarts
-import * as echarts from 'echarts';
-Vue.prototype.$echarts = echarts;
+import * as echarts from 'echarts/core';
 import 'echarts-gl'; // 引入地理扩展包
-import './assets/map/js/china.js';   // 引入中国基础地图数据
+import { MapChart } from 'echarts/charts';
+import {
+  TitleComponent,
+  TooltipComponent,
+  VisualMapComponent
+} from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+// 手动注册必需组件
+echarts.use([
+  MapChart,
+  TitleComponent,
+  TooltipComponent,
+  VisualMapComponent,
+  CanvasRenderer
+]);
+
+// 修改地图数据加载方式（删除原china.js的引入）  // 引入中国基础地图数据
+import chinaJson from './assets/map/json/china.json';
+echarts.registerMap('china', chinaJson);
+
 import ningxiaJson from './assets/map/json/province/ningxia.json'; // 宁夏地图JSON数据路径
-// 注册宁夏地图
-echarts.registerMap('ningxia', ningxiaJson);
-Vue.use(echarts)
+echarts.registerMap('ningxia', ningxiaJson);  // 注册宁夏地图
+Vue.prototype.$echarts = echarts;
 
 // 导入axios
 import axios from "axios"

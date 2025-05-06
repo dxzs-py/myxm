@@ -6,7 +6,7 @@
     <!-- 背景图 -->
     <div class="absolute inset-0 z-0">
       <img
-        :src="'https://ai-public.mastergo.com/ai/img_res/71bf7e3f1a65d0107e7f248cd00ed74b.jpg'"
+        src="/static/image/bj.jpg"
         class="w-full h-full object-cover object-center"
         alt="Background"
       />
@@ -30,25 +30,23 @@
           <button
             :class="[
               'text-xl font-medium pb-2 px-2',
-              isLogin ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-400'
+              'text-green-600 border-b-2 border-green-600'
             ]"
-            @click="isLogin = true"
           >
             登录
           </button>
           <button
             :class="[
               'text-xl font-medium pb-2 px-2',
-              !isLogin ? 'text-green-600 border-b-2 border-green-600' : 'text-gray-400'
+              'text-gray-400'
             ]"
-            @click="isLogin = false"
-          >
+            @click="goToRegister">
             注册
           </button>
         </div>
 
         <!-- 登录表单 -->
-        <div v-if="isLogin">
+        <div>
           <div class="space-y-6">
             <div>
               <div class="relative">
@@ -59,32 +57,36 @@
                   placeholder="请输入手机号/用户名"
                   v-model="loginForm.username"
                 />
+                <i class="fas fa-lock absolute left-3 top-1/3 -translate-y-1/2 text-gray-400 " style="padding-top: 71px; z-index: 1001"></i>
+
+                <button
+                  class="absolute right-3 top-1/3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                  @click="showPassword = !showPassword" style="z-index: 1001"
+                >
+                  <i :class="[showPassword ? 'fas fa-eye-slash' : 'fas fa-eye',]" style="padding-top: 71px"></i>
+                </button>
               </div>
             </div>
             <div>
               <div class="relative">
-                <i class="fas fa-lock absolute left-3 top-1/3 -translate-y-1/2 text-gray-400"></i>
                 <input
                   :type="showPassword ? 'text' : 'password'"
-                  class="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
+                  class="w-full pl-10 pr-12 py-3 border border-gray-200  rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
                   placeholder="请输入密码"
                   v-model="loginForm.password"
                 />
-                <div id="geetest1"></div>
-                <button
-                  class="absolute right-3 top-1/3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                  @click="showPassword = !showPassword"
-                >
-                  <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
-                </button>
+
+                 <div id="geetest1"></div>
               </div>
             </div>
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between mt-6 relative">
               <label class="flex items-center gap-2 cursor-pointer">
                 <input type="checkbox" class="w-4 h-4 accent-green-600" v-model="loginForm.remember"/>
                 <span class="text-sm text-gray-600">记住密码</span>
               </label>
-              <a href="#" class="text-sm text-green-600 hover:text-green-700">忘记密码？</a>
+              <a href="#"
+                class="text-sm text-green-600 hover:text-green-700" style="position: absolute;  right: 0;"
+                >忘记密码？</a>
             </div>
             <button
               @click="get_geetest_captcha"
@@ -94,80 +96,7 @@
           </div>
         </div>
 
-        <!-- 注册表单 -->
-        <div v-else>
-          <div class="space-y-6">
-            <div>
-              <div class="relative">
-                <i class="fas fa-mobile-alt absolute left-3 top-1/3 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  type="text"
-                  class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="请输入手机号"
-                  v-model="registerForm.phone"
-                />
-              </div>
-            </div>
-            <div>
-              <div class="relative">
-                <i class="fas fa-shield-alt absolute left-3 top-1/3 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  type="text"
-                  class="w-full pl-10 pr-32 py-3 border border-gray-200 rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="请输入验证码"
-                  v-model="registerForm.code"
-                />
-                <button
-                  class="absolute right-2 -translate-y-1/2 px-4 py-1.5 bg-green-600 text-white text-sm rounded-md hover:bg-green-700 transition-colors !rounded-button whitespace-nowrap"
-                  style="top:7px"
-                >
-                  获取验证码
-                </button>
-              </div>
-            </div>
-            <div>
-              <div class="relative">
-                <i class="fas fa-lock absolute left-3 top-1/3 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  :type="showPassword ? 'text' : 'password'"
-                  class="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="请设置密码"
-                  v-model="registerForm.password"
-                />
-                <button
-                  class="absolute right-3 top-1/3 -translate-y-1/2 text-gray-400 hover:text-gray-600"
-                  @click="showPassword = !showPassword"
-                >
-                  <i :class="showPassword ? 'fas fa-eye-slash' : 'fas fa-eye'"></i>
-                </button>
-              </div>
-            </div>
-            <div>
-              <div class="relative">
-                <i class="fas fa-lock absolute left-3 top-1/3 -translate-y-1/2 text-gray-400"></i>
-                <input
-                  :type="showPassword ? 'text' : 'password'"
-                  class="w-full pl-10 pr-12 py-3 border border-gray-200 rounded-lg focus:border-green-500 outline-none transition-colors text-sm"
-                  placeholder="请确认密码"
-                  v-model="registerForm.confirmPassword"
-                />
-              </div>
-            </div>
-            <label class="flex items-center gap-2 cursor-pointer">
-              <input type="checkbox" class="w-4 h-4 accent-green-600" v-model="registerForm.agreement"/>
-              <span class="text-sm text-gray-600">
-                我已阅读并同意
-                <a href="#" class="text-green-600 hover:text-green-700">《用户协议》</a>
-                和
-                <a href="#" class="text-green-600 hover:text-green-700">《隐私政策》</a>
-              </span>
-            </label>
-            <button
-              class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors !rounded-button whitespace-nowrap">
-              注 册
-            </button>
-          </div>
-        </div>
+
       </div>
     </div>
   </div>
@@ -175,59 +104,46 @@
 
 <script>
 export default {
-  name: 'App',
+  name: 'Login',
   data() {
     return {
-      isLogin: true,
       showPassword: false,
       loginForm: {
         username: '',
         password: '',
         remember: false,
       },
-      registerForm: {
-        phone: '',
-        code: '',
-        password: '',
-        confirmPassword: '',
-        agreement: false
-      }
     }
   },
-  created() {
-    // this.loginhander()
-  },
-  mounted() {
-    // 获取登录状态
-    this.isLogin = this.$route.query.isLogin === 'true'
-  },
   methods: {
+    goToRegister() {
+      this.$router.push('/user/rgt');
+    },
     loginHander() {
       this.$axios.post(`${this.$settings.HOST}/user/login/token/`, {
         username: this.loginForm.username,
         password: this.loginForm.password,
-        remember: this.loginForm.remember
       }).then(res => {
-        if (this.loginForm.remember){
-          // 记录登录状态
-          sessionStorage.removeItem('user_token') // 为了避免登录状态被覆盖
-          sessionStorage.removeItem('user_id')
-          sessionStorage.removeItem('user_name')
-          localStorage.user_token = res.data.access
-          localStorage.user_id = res.data.id
-          localStorage.user_name = res.data.username
-        }else{
-          // 不记录登录状态
-          localStorage.removeItem('user_token') // 为了避免登录状态被覆盖
-          localStorage.removeItem('user_id')
-          localStorage.removeItem('user_name')
-          sessionStorage.user_token = res.data.access
-          sessionStorage.user_id = res.data.id
-          sessionStorage.user_name = res.data.username
+        if (this.loginForm.remember) {
+          // 记住登录状态
+          sessionStorage.removeItem('user_token'); // 为了避免登录状态被覆盖
+          sessionStorage.removeItem('user_id');
+          sessionStorage.removeItem('user_name');
+          localStorage.user_token = res.data.access;
+          localStorage.user_id = res.data.id;
+          localStorage.user_name = res.data.username;
+        } else {
+          // 不记住登录状态
+          localStorage.removeItem('user_token');  // 为了避免登录状态被覆盖
+          localStorage.removeItem('user_id');
+          localStorage.removeItem('user_name');
+          sessionStorage.user_token = res.data.access;
+          sessionStorage.user_id = res.data.id;
+          sessionStorage.user_name = res.data.username;
         }
-        // 页面调转
-        let self = this
-        this.$alert("登录成功", "欢迎回来", {}, {
+        // 页面跳转
+        let self = this;
+        this.$alert("登陆成功", "欢迎回来", {}, {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'success'
@@ -239,7 +155,7 @@ export default {
         this.$message({
           message: h('p', null, [
             h('span', '登录失败，请检查用户名或密码是否正确！'),
-            h('i', {style: 'color: red'}, )
+            h('i', {style: 'color: red'},)
           ]),
           type: 'error',
           duration: 1000
@@ -275,7 +191,6 @@ export default {
     },
     get_geetest_captcha() {
       // 获取验证码
-
       this.$axios.get(`${this.$settings.HOST}/user/captcha/`, {
         params: {
           username: this.loginForm.username,  // get传入参数要通过params传，不然参数不会传
@@ -303,7 +218,7 @@ export default {
         });
       });
     },
-  }
+  },
 }
 </script>
 
