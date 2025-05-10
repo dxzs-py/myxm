@@ -12,13 +12,12 @@
 
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 
 from django.urls import re_path  # 导入正则表达式的路径处理函数
 from django.conf import settings  # 导入Django设置模块，用于访问设置变量
 from django.views.generic import RedirectView
 from django.views.static import serve  # 导入用于服务静态文件的视图函数
-
 
 # 定义URL模式的列表，用于将URL映射到相应的视图
 """
@@ -31,10 +30,12 @@ urlpatterns = [
     # 将以'admin/'开头的URL映射到Django自带的管理后台
     path('admin/', admin.site.urls),
     path('', RedirectView.as_view(url='/admin/')),  # 根路径重定向到admin
-    # path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico')),  # 图标重定向
+    path('favicon.ico', RedirectView.as_view(url='/static/favicon.ico')),  # 图标重定向
 
     re_path(r'media/(?P<path>.*)', serve, {"document_root": settings.MEDIA_ROOT}),
     # path('', include('home.urls')),
-    path('user/', include('user_login.urls')),
+    path('user/', include('user.urls')),
     path('crop/', include('crop.urls')),
+    path('meteorology/', include('meteorology.urls')),
+     path('forecast/', include('forecast.urls')),
 ]

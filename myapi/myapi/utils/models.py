@@ -4,7 +4,6 @@ class BaseModel(models.Model):
     """基础模型"""
     # 模型字段
     is_show = models.BooleanField(default=True, verbose_name='是否显示')
-    # is_deleted = models.BooleanField(default=False, verbose_name='是否删除')
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
 

@@ -1,8 +1,13 @@
 from rest_framework import serializers
-from .models import Crop
+from .models import Growth, Crop, PlantArea
 
-class CropSerializer(serializers.ModelSerializer):
-    """气象数据的序列化器"""
+
+class GrowthSerializer(serializers.ModelSerializer):
+    """作物生长周期数据的序列化器"""
+
     class Meta:
-        model = Crop
-        fields = ["city", "begin_time", "end_time", "city_type", "growth_cycle"]
+        model = Growth
+        exclude = ["update_time", "create_time"]
+
+
+

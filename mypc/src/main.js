@@ -5,10 +5,9 @@ import App from './App'
 import router from './router'
 import settings from "./settings"
 Vue.prototype.$settings = settings;  // 设置个人配置的全局变量
+import store from './store/index';
 
 Vue.config.productionTip = false
-
-
 
 // element-ui配置
 import ElementUI from 'element-ui';
@@ -18,14 +17,6 @@ Vue.use(ElementUI);
 
 // 导入echarts
 import * as echarts from 'echarts'; // ✅ 完整导入
-import 'echarts-gl'; // ✅ 确保地理扩展包正确加载
-
-// 修改地图数据加载方式（删除原china.js的引入）  // 引入中国基础地图数据
-import chinaJson from './assets/map/json/china.json';
-echarts.registerMap('china', chinaJson);
-
-import ningxiaJson from './assets/map/json/province/ningxia.json'; // 宁夏地图JSON数据路径
-echarts.registerMap('ningxia', ningxiaJson);  // 注册宁夏地图
 Vue.prototype.$echarts = echarts;
 
 // 导入axios
@@ -46,5 +37,6 @@ new Vue({
   el: '#app',
   router,
   components: { App },
+  store,
   template: '<App/>'
 })

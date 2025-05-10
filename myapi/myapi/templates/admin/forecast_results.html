@@ -1,0 +1,73 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block title %}预测结果{% endblock %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+<a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+&rsaquo; <a href="{% url 'admin:forecast_forecast_changelist' %}">预测管理</a>
+&rsaquo; 预测结果
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="module">
+    <h2>预测结果</h2>
+    
+    {% if results %}
+        <p>总共 {{ results.count }} 条结果</p>
+        
+        {% for result in results.results %}
+        <div class="result-item" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+            <h3>特征: {{ result.feature }}</h3>
+            <p>生成时间: {{ result.generated_at }}</p>
+            <p>过期时间: {{ result.expires }}</p>
+            
+            <h4>预测值:</h4>
+            <div style="max-height: 200px; overflow-y: auto;">
+                <pre>{{ result.values|pprint }}</pre>
+            </div>
+        </div>
+        {% endfor %}
+    {% else %}
+        <p>暂无预测结果</p>
+    {% endif %}
+    
+    <div class="submit-row">
+        <a href="{% url 'admin:forecast_forecast_changelist' %}" class="button">返回预测管理</a>
+    </div>
+</div>
+
+<style>
+    .result-item {
+        background: #f9f9f9;
+    }
+    
+    pre {
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: 4px;
+    }
+    
+    .submit-row {
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .button {
+        padding: 10px 15px;
+        background: #79aec8;
+        color: white;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+    
+    .button:hover {
+        background: #679bb4;
+    }
+</style>
+{% endblock %}

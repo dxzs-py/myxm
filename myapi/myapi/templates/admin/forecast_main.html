@@ -1,0 +1,54 @@
+{% extends "admin/base_site.html" %}
+{% load i18n admin_urls static admin_modify %}
+
+{% block title %}预测管理{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+        &rsaquo; 预测管理
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="module">
+        <h2>预测管理</h2>
+
+        <div class="submit-row">
+            <form method="post" action="{% url 'admin:forecast-trigger' %}">
+                {% csrf_token %}
+                <input type="submit" value="触发预测任务" class="default" name="_trigger">
+            </form>
+        </div>
+
+        <div class="submit-row">
+            <form method="get" action="{% url 'admin:forecast-results' %}">
+                <input type="submit" value="查看预测结果" name="_view_results">
+            </form>
+        </div>
+    </div>
+
+    <style>
+        .submit-row {
+            padding: 12px 14px;
+            margin: 20px 0;
+            background: #f8f8f8;
+            border: 1px solid #eee;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .submit-row input[type="submit"] {
+            background: #79aec8;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .submit-row input[type="submit"]:hover {
+            background: #679bb4;
+        }
+    </style>
+{% endblock %}

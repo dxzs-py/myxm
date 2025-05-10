@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from .serializers import get_account_by_mobile
 from rest_framework import status as http_status
 from rest_framework.views import APIView
+from rest_framework.generics import ListAPIView
 
 #请在官网申请ID使用，示例ID不可使用
 pc_geetest_id = "6386fee5f38474b4d6bb30209dfbcde3"
@@ -105,3 +106,19 @@ class SmSAPIView(APIView):
 
         # 5.响应发送短信的结果
         return Response({"message": "短信发送成功"}, status=http_status.HTTP_200_OK)
+
+
+from .serializers import SelfModelSerializer
+from rest_framework.permissions import IsAuthenticated
+class SelfAPIView(ListAPIView):
+    """用户信息视图"""
+    def get_queryset(self):
+        # 获取当前登录用户
+        queryset = super().get_queryset()
+        user_id = self.request.user.id
+        return queryset.filter(id=user_id)
+
+    permission_classes = [IsAuthenticated]
+    queryset = User.objects.all()
+    serializer_class = SelfModelSerializer
+

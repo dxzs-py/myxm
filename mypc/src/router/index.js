@@ -1,9 +1,14 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../components/Home1.vue'
+import Home from '../components/Home.vue'
+
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import KLG from "../components/Knowledge.vue";
+import MAP from "../components/common/NingXiaMap.vue";
+import PS from "../components/person.vue"
+import Header from "../components/common/Header.vue"
+
 Vue.use(Router)
 
 export default new Router({
@@ -11,28 +16,35 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name:"Home",
-      component: Home,
-    },
-    {
-      path: '/home',
-      name:"Home1",
-      component: Home,
+      component: Header,
+      redirect: '/home',
+      children: [
+        {
+          path: '/home',
+          name: "Home",
+          component: Home,
+        },
+        {
+          path: '/klg',
+          name: "knowledge",
+          component: KLG
+        },
+        {
+          path: '/person',
+          name: "ps",
+          component: PS
+        },
+      ]
     },
     {
       path: '/user/login',
-      name:"Login",
+      name: "Login",
       component: Login
     },
     {
       path: '/user/rgt',
-      name:"Register",
+      name: "Register",
       component: Register
-    },
-    {
-      path: '/klg',
-      name:"knowledge",
-      component: KLG
     },
   ]
 })

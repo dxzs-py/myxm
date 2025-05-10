@@ -209,3 +209,9 @@ class UserModelSerializer(serializers.ModelSerializer):
         # 这只是在内存中为new_User实例添加了一个临时属性，并不会修改数据库表结构，也不会将token存入数据库
 
         return new_User  # 会传递给序列化器的序列化阶段这个实例会被序列化器用来生成最终的响应数据
+
+
+class SelfModelSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ['username', 'mobile', 'email', 'is_staff', 'date_joined', ]

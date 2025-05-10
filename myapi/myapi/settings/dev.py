@@ -64,8 +64,10 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
 
     # 子应用
-    'user_login',
+    'user',
     'crop',
+    'meteorology',
+    'forecast',
 
 ]
 
@@ -93,7 +95,9 @@ ROOT_URLCONF = 'myapi.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -147,9 +151,17 @@ CACHES = {
         }
     },
     # 提供存储短信验证码
-    "sms_code":{
+    "sms_code": {
         "BACKEND": "django_redis.cache.RedisCache",
         "LOCATION": "redis://127.0.0.1:6379/2",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
+    # 提供预测数据存储
+    "forecast": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/3",
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
@@ -298,7 +310,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "uploads")
 MEDIA_URL = "/media/"
 
 # 注册自定义用户模型 值格式必须是“应用名.模型类名”
-AUTH_USER_MODEL = 'user_login.User'
+AUTH_USER_MODEL = 'user.User'
 
 # simplejwt配置， 需要导入datetime模块
 from datetime import timedelta
@@ -309,11 +321,11 @@ SIMPLE_JWT = {
     'ROTATE_REFRESH_TOKENS': True,  # 刷新后使旧令牌失效
     'BLACKLIST_AFTER_ROTATION': True,  # 需安装 `rest_framework_simplejwt.token_blacklist`
     'ALGORITHM': 'HS256',  # 加密算法
-    "TOKEN_OBTAIN_SERIALIZER": "user_login.serializers.MyTokenObtainPairSerializer",  # 自定义序列化器
+    "TOKEN_OBTAIN_SERIALIZER": "user.serializers.MyTokenObtainPairSerializer",  # 自定义序列化器
 }
 # 实现多条件登录
 AUTHENTICATION_BACKENDS = [
-    'user_login.serializers.UsernameMobileAuthBackend'
+    'user.serializers.UsernameMobileAuthBackend'
 ]
 
 SMS = {
@@ -331,4 +343,3 @@ SMS = {
     # 说明：REST API版本号保持不变
     "_softVersion": "2013-12-26"
 }
-

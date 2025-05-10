@@ -1,8 +1,5 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- 顶部导航 -->
-    <Header class="bg-white shadow-sm h-16 sticky w-full top-0 z-50">
-    </Header>
     <!-- 特色作物信息 -->
     <div class="bg-white p-8 shadow-sm">
       <div class="max-w-7xl mx-auto">
@@ -40,10 +37,10 @@
           </div>
           <div class="p-6 rounded-lg bg-gradient-to-br from-green-50 to-white border border-green-100">
             <div class="flex items-center mb-4">
-              <img src="/static/image/xsg2.jpg"
+              <img src="/static/image/xm.jpg"
                    class="w-20 h-20 object-cover rounded-lg" alt="硒砂瓜"/>
               <div class="ml-4">
-                <h3 class="text-xl font-medium">硒砂瓜</h3>
+                <h3 class="text-xl font-medium">小麦</h3>
                 <p class="text-gray-500 text-sm mt-1">主产区：固原、中卫</p>
               </div>
             </div>
@@ -121,20 +118,24 @@
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-lg font-medium">灾害预警信息</h2>
             <div class="flex items-center space-x-2">
-              <DropdownMenu
-                :show="showTimeDropdown"
-                :options="timeOptions"
-                :selected="selectedTimeRange"
-                @toggle="showTimeDropdown = !showTimeDropdown"
-                @select="handleTimeSelect"
-              >
-                <template #trigger>
-                  <button  class="!rounded-button px-3 py-1.5 border border-gray-200 text-sm whitespace-nowrap">
+              <el-dropdown @command="handleTimeSelect">
+                <span class="el-dropdown-link">
+                  <button class="!rounded-button px-3 py-1.5 border border-gray-200 text-sm whitespace-nowrap">
                     {{ selectedTimeRange || '最近一周' }}
                     <i class="fas fa-chevron-down ml-2"></i>
                   </button>
-                </template>
-              </DropdownMenu>
+                </span>
+                <el-dropdown-menu slot="dropdown">
+                  <el-dropdown-item
+                    v-for="option in timeOptions"
+                    :key="option.value"
+                    :command="option.value"
+                    :class="{ 'active': option.value === selectedTimeRange }"
+                  >
+                    {{ option.label }}
+                  </el-dropdown-item>
+                </el-dropdown-menu>
+              </el-dropdown>
             </div>
 
           </div>
@@ -171,23 +172,16 @@
 
 <script>
 
-import Header from "./common/Header.vue"
-import DropdownMenu from "./common/DropdownMenu.vue";
-
 export default {
-  components: {
-    Header,
-    DropdownMenu
-  },
+
   data() {
     return {
-      showTimeDropdown: false,
       selectedTimeRange: '最近一周',
-    timeOptions: [
-      { label: '最近一周', value: '最近一周' },
-      { label: '最近一月', value: '最近一月' },
-      { label: '最近三月', value: '最近三月' },
-    ],
+      timeOptions: [
+        {label: '最近一周', value: '最近一周'},
+        {label: '最近一月', value: '最近一月'},
+        {label: '最近三月', value: '最近三月'},
+      ],
       warningList: [
         {
           icon: 'fa-cloud-rain',
@@ -230,10 +224,9 @@ export default {
   },
   methods: {
     handleTimeSelect(value) {
-    this.selectedTimeRange = value
-    this.showTimeDropdown = false
-    // 这里可以添加时间范围变化后的处理逻辑
-  }
+      this.selectedTimeRange = value
+      // 这里可以添加时间范围变化后的处理逻辑
+    }
   }
 };
 </script>
