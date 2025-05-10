@@ -2253,3 +2253,975 @@ INFO 2025-05-06 18:56:45,065 basehttp 5556 133521688479296 "OPTIONS //user/captc
 INFO 2025-05-06 18:56:45,079 basehttp 5556 133521688479296 "POST //user/captcha/ HTTP/1.1" 200 17
 INFO 2025-05-06 18:56:45,128 basehttp 5556 133521688479296 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
 INFO 2025-05-06 18:56:46,217 basehttp 5556 133521688479296 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-07 20:19:17,307 autoreload 26173 133859808203840 Watching for file changes with StatReloader
+INFO 2025-05-07 20:19:30,299 basehttp 26173 133859725276736 "GET / HTTP/1.1" 302 0
+INFO 2025-05-07 20:19:30,524 basehttp 26173 133859725276736 "GET /admin/ HTTP/1.1" 200 16561
+INFO 2025-05-07 20:19:30,682 basehttp 26173 133859716884032 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,691 basehttp 26173 133859716884032 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,696 basehttp 26173 133859725276736 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,698 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,703 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,703 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,739 basehttp 26173 133859716884032 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,745 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,747 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,748 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,749 basehttp 26173 133859725276736 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,763 basehttp 26173 133859725276736 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,769 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,771 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,772 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:30,783 basehttp 26173 133859475703360 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:31,066 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/theme/x-blue.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:31,277 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:31,279 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:31,280 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+WARNING 2025-05-07 20:19:31,421 log 26173 133859484096064 Not Found: /favicon.ico
+WARNING 2025-05-07 20:19:31,422 basehttp 26173 133859484096064 "GET /favicon.ico HTTP/1.1" 404 2663
+INFO 2025-05-07 20:19:37,622 basehttp 26173 133859725276736 "GET /admin/user_login/user/ HTTP/1.1" 200 39218
+INFO 2025-05-07 20:19:37,673 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,674 basehttp 26173 133859725276736 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,675 basehttp 26173 133859716884032 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,677 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,680 basehttp 26173 133859500881472 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,680 basehttp 26173 133859492488768 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,684 basehttp 26173 133859475703360 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,686 basehttp 26173 133859716884032 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,688 basehttp 26173 133859725276736 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,690 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,700 basehttp 26173 133859475703360 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,717 basehttp 26173 133859492488768 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-07 20:19:37,726 basehttp 26173 133859500881472 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,735 basehttp 26173 133859716884032 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,752 basehttp 26173 133859725276736 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,754 basehttp 26173 133859484096064 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,756 basehttp 26173 133859475703360 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,765 basehttp 26173 133859492488768 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,773 basehttp 26173 133859500881472 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,779 basehttp 26173 133859716884032 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,797 basehttp 26173 133859725276736 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,805 basehttp 26173 133859475703360 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,806 basehttp 26173 133859484096064 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:19:37,810 basehttp 26173 133859492488768 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+INFO 2025-05-07 20:21:18,381 basehttp 26173 133859467310656 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 20:21:25,017 basehttp 26173 133859467310656 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-05-07 20:21:25,023 basehttp 26173 133859467310656 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-07 20:21:25,071 basehttp 26173 133859467310656 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-05-07 20:21:26,065 basehttp 26173 133859467310656 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-07 20:23:32,980 autoreload 26173 133859808203840 /home/dx/Desktop/my_pr/myapi/myapi/settings/dev.py changed, reloading.
+INFO 2025-05-07 20:23:34,285 autoreload 26856 131045678715968 Watching for file changes with StatReloader
+INFO 2025-05-07 20:23:41,583 basehttp 26856 131045597902400 "GET /admin/ HTTP/1.1" 200 16561
+INFO 2025-05-07 20:23:44,642 basehttp 26856 131045597902400 "GET /admin/ HTTP/1.1" 200 16561
+INFO 2025-05-07 20:32:47,239 autoreload 26856 131045678715968 /home/dx/Desktop/my_pr/myapi/myapi/urls.py changed, reloading.
+INFO 2025-05-07 20:32:47,989 autoreload 27597 133359928419392 Watching for file changes with StatReloader
+INFO 2025-05-07 20:33:25,212 autoreload 27597 133359928419392 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/views.py changed, reloading.
+INFO 2025-05-07 20:33:25,964 autoreload 27713 133302312604736 Watching for file changes with StatReloader
+INFO 2025-05-07 20:35:31,526 basehttp 27713 133302161765952 "GET /admin/ HTTP/1.1" 200 16561
+INFO 2025-05-07 20:41:57,851 autoreload 27713 133302312604736 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-07 20:41:58,591 autoreload 28300 123952854668352 Watching for file changes with StatReloader
+INFO 2025-05-07 21:11:16,877 autoreload 5435 133715556463680 Watching for file changes with StatReloader
+WARNING 2025-05-07 21:15:06,578 log 5435 133715406616128 Not Found: /user/mobile//
+WARNING 2025-05-07 21:15:06,579 basehttp 5435 133715406616128 "GET //user/mobile// HTTP/1.1" 404 4608
+WARNING 2025-05-07 21:15:10,329 log 5435 133715406616128 Not Found: /user/mobile//
+WARNING 2025-05-07 21:15:10,330 basehttp 5435 133715406616128 "GET //user/mobile// HTTP/1.1" 404 4608
+WARNING 2025-05-07 21:15:18,832 log 5435 133715406616128 Bad Request: /user/mobile/15674458323/
+WARNING 2025-05-07 21:15:18,833 basehttp 5435 133715406616128 "GET //user/mobile/15674458323/ HTTP/1.1" 400 38
+INFO 2025-05-07 21:15:23,718 basehttp 5435 133715406616128 "GET //user/mobile/15674458342/ HTTP/1.1" 200 59
+INFO 2025-05-07 21:15:26,855 basehttp 5435 133715406616128 "GET //user/mobile/15674458342/ HTTP/1.1" 200 59
+INFO 2025-05-07 21:15:38,879 basehttp 5435 133715406616128 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 21:15:46,981 basehttp 5435 133715406616128 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-05-07 21:15:46,987 basehttp 5435 133715406616128 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-07 21:15:47,037 basehttp 5435 133715406616128 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-05-07 21:15:48,019 basehttp 5435 133715406616128 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-07 22:04:55,392 autoreload 5435 133715556463680 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-07 22:04:56,614 autoreload 9122 140501463766080 Watching for file changes with StatReloader
+INFO 2025-05-07 22:12:39,332 basehttp 9122 140501382592064 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 22:12:55,776 basehttp 9122 140501382592064 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-07 22:12:56,731 basehttp 9122 140501382592064 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-07 22:13:33,661 basehttp 9122 140501382592064 "GET //user/mobile/19031680510/ HTTP/1.1" 200 59
+INFO 2025-05-07 22:13:34,314 basehttp 9122 140501382592064 "GET //user/sms/19031680510/ HTTP/1.1" 200 32
+WARNING 2025-05-07 22:14:00,059 log 9122 140501382592064 Bad Request: /user/mobile/15674458323/
+WARNING 2025-05-07 22:14:00,060 basehttp 9122 140501382592064 "GET //user/mobile/15674458323/ HTTP/1.1" 400 38
+WARNING 2025-05-07 22:14:03,227 log 9122 140501382592064 Bad Request: /user/mobile/15674458322/
+WARNING 2025-05-07 22:14:03,227 basehttp 9122 140501382592064 "GET //user/mobile/15674458322/ HTTP/1.1" 400 38
+WARNING 2025-05-07 22:14:05,596 log 9122 140501382592064 Not Found: /user/mobile/1567445832/
+WARNING 2025-05-07 22:14:05,596 basehttp 9122 140501382592064 "GET //user/mobile/1567445832/ HTTP/1.1" 404 4638
+INFO 2025-05-07 22:14:09,087 basehttp 9122 140501382592064 "GET //user/mobile/15674458325/ HTTP/1.1" 200 59
+INFO 2025-05-07 22:14:25,885 basehttp 9122 140501382592064 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 22:14:28,657 basehttp 9122 140501382592064 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 22:14:34,352 basehttp 9122 140501382592064 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-07 22:14:35,289 basehttp 9122 140501382592064 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-07 22:16:18,263 basehttp 9122 140501373150784 "GET / HTTP/1.1" 302 0
+INFO 2025-05-07 22:16:18,366 basehttp 9122 140501373150784 "GET /admin/ HTTP/1.1" 200 16561
+WARNING 2025-05-07 22:16:18,773 log 9122 140501373150784 Not Found: /favicon.ico
+WARNING 2025-05-07 22:16:18,774 basehttp 9122 140501373150784 "GET /favicon.ico HTTP/1.1" 404 2821
+INFO 2025-05-07 22:16:26,948 basehttp 9122 140501373150784 "GET /admin/user_login/user/ HTTP/1.1" 200 39218
+INFO 2025-05-07 22:16:26,995 basehttp 9122 140501373150784 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-07 22:16:32,586 basehttp 9122 140501373150784 "GET /admin/user_login/user/3/change/ HTTP/1.1" 200 13673
+INFO 2025-05-07 22:16:32,634 basehttp 9122 140501373150784 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-07 22:16:32,635 basehttp 9122 140501364758080 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2025-05-07 22:16:32,637 basehttp 9122 140501355316800 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2025-05-07 22:35:56,078 basehttp 9122 140501364758080 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-07 22:36:02,141 basehttp 9122 140501364758080 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-07 22:36:03,075 basehttp 9122 140501364758080 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-08 13:05:34,062 autoreload 5764 123495820854336 Watching for file changes with StatReloader
+INFO 2025-05-08 13:06:29,924 basehttp 5764 123495670347328 "GET / HTTP/1.1" 302 0
+INFO 2025-05-08 13:06:30,040 basehttp 5764 123495670347328 "GET /admin/ HTTP/1.1" 200 16561
+INFO 2025-05-08 13:06:30,132 basehttp 5764 123495661954624 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,134 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,137 basehttp 5764 123495653561920 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,138 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,150 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,152 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,153 basehttp 5764 123495653561920 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,155 basehttp 5764 123495661954624 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,161 basehttp 5764 123495636776512 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,162 basehttp 5764 123495628383808 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,174 basehttp 5764 123495628383808 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,182 basehttp 5764 123495636776512 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,206 basehttp 5764 123495661954624 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,210 basehttp 5764 123495653561920 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,211 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,213 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,484 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,487 basehttp 5764 123495653561920 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:30,488 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+WARNING 2025-05-08 13:06:30,528 log 5764 123495653561920 Not Found: /favicon.ico
+WARNING 2025-05-08 13:06:30,529 basehttp 5764 123495653561920 "GET /favicon.ico HTTP/1.1" 404 2821
+INFO 2025-05-08 13:06:33,682 basehttp 5764 123495653561920 "GET /admin/user_login/user/ HTTP/1.1" 200 39218
+INFO 2025-05-08 13:06:33,715 basehttp 5764 123495670347328 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,715 basehttp 5764 123495628383808 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,718 basehttp 5764 123495661954624 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,719 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,721 basehttp 5764 123495636776512 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,725 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,728 basehttp 5764 123495628383808 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,733 basehttp 5764 123495661954624 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,738 basehttp 5764 123495636776512 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,739 basehttp 5764 123495645169216 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,747 basehttp 5764 123495653561920 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 13:06:33,770 basehttp 5764 123495670347328 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,773 basehttp 5764 123495628383808 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,777 basehttp 5764 123495661954624 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,781 basehttp 5764 123495645169216 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,785 basehttp 5764 123495636776512 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,793 basehttp 5764 123495653561920 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,816 basehttp 5764 123495670347328 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,819 basehttp 5764 123495628383808 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,823 basehttp 5764 123495661954624 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,828 basehttp 5764 123495645169216 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,831 basehttp 5764 123495636776512 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,840 basehttp 5764 123495653561920 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-05-08 13:06:33,860 basehttp 5764 123495670347328 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+INFO 2025-05-08 16:31:41,558 basehttp 5764 123495670347328 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-08 16:31:41,912 basehttp 5764 123495645169216 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-08 16:31:48,981 basehttp 5764 123495645169216 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-05-08 16:31:48,996 basehttp 5764 123495645169216 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-08 16:31:49,047 basehttp 5764 123495645169216 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-05-08 16:31:50,202 basehttp 5764 123495645169216 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-08 20:21:04,311 autoreload 4207 134206092596288 Watching for file changes with StatReloader
+INFO 2025-05-08 21:13:54,069 autoreload 4207 134206092596288 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-08 21:13:57,796 autoreload 8150 130570143564864 Watching for file changes with StatReloader
+INFO 2025-05-08 21:21:07,594 autoreload 8150 130570143564864 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-08 21:21:09,403 autoreload 8573 135021927760960 Watching for file changes with StatReloader
+INFO 2025-05-08 21:27:10,921 autoreload 8573 135021927760960 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-08 21:27:11,614 autoreload 9103 130945814045760 Watching for file changes with StatReloader
+INFO 2025-05-08 21:27:31,200 autoreload 9103 130945814045760 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-08 21:27:31,961 autoreload 9124 125048405386304 Watching for file changes with StatReloader
+INFO 2025-05-08 21:39:05,536 basehttp 9124 125048324093504 "GET / HTTP/1.1" 302 0
+INFO 2025-05-08 21:39:05,692 basehttp 9124 125048324093504 "GET /admin/ HTTP/1.1" 200 16561
+WARNING 2025-05-08 21:39:06,326 log 9124 125048324093504 Not Found: /favicon.ico
+WARNING 2025-05-08 21:39:06,326 basehttp 9124 125048324093504 "GET /favicon.ico HTTP/1.1" 404 2821
+INFO 2025-05-08 22:08:46,676 autoreload 9124 125048405386304 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/admin.py changed, reloading.
+INFO 2025-05-08 22:08:51,814 autoreload 12608 133847709410368 Watching for file changes with StatReloader
+INFO 2025-05-08 22:08:57,069 basehttp 12608 133847206327872 "GET /admin/ HTTP/1.1" 200 17207
+INFO 2025-05-08 22:09:00,707 basehttp 12608 133847206327872 "GET /admin/meteorology/city/ HTTP/1.1" 200 31416
+INFO 2025-05-08 22:09:00,745 basehttp 12608 133847206327872 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:09:03,277 basehttp 12608 133847206327872 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:09:03,315 basehttp 12608 133847197935168 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-05-08 22:09:03,318 basehttp 12608 133847206327872 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:09:03,319 basehttp 12608 133847188493888 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-05-08 22:09:26,755 basehttp 12608 133847206327872 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:09:26,806 basehttp 12608 133847206327872 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:09:41,239 basehttp 12608 133847206327872 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17580
+INFO 2025-05-08 22:09:41,263 basehttp 12608 133847188493888 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2025-05-08 22:09:41,272 basehttp 12608 133847206327872 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:09:41,306 basehttp 12608 133847188493888 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2025-05-08 22:09:41,318 basehttp 12608 133847188493888 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2025-05-08 22:09:41,323 basehttp 12608 133847206327872 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2025-05-08 22:09:41,491 basehttp 12608 133847206327872 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2025-05-08 22:09:41,493 basehttp 12608 133847188493888 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2025-05-08 22:09:50,684 basehttp 12608 133847188493888 "GET /static/admin/img/calendar-icons.svg HTTP/1.1" 200 2455
+INFO 2025-05-08 22:10:10,830 basehttp 12608 133847188493888 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:10:10,873 basehttp 12608 133847188493888 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:12:23,653 autoreload 12938 124439523374144 Watching for file changes with StatReloader
+INFO 2025-05-08 22:12:31,345 basehttp 12938 124439019648576 "GET /admin/ HTTP/1.1" 200 17207
+INFO 2025-05-08 22:12:31,605 basehttp 12938 124439019648576 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:12:31,648 basehttp 12938 124439019648576 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:12:34,130 basehttp 12938 124439019648576 "GET /admin/meteorology/city/ HTTP/1.1" 200 31416
+INFO 2025-05-08 22:12:34,158 basehttp 12938 124439019648576 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:14:57,755 autoreload 12938 124439523374144 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/admin.py changed, reloading.
+INFO 2025-05-08 22:14:59,035 autoreload 13162 124397812937792 Watching for file changes with StatReloader
+INFO 2025-05-08 22:14:59,686 basehttp 13162 124397377549888 "GET /admin/ HTTP/1.1" 200 17207
+INFO 2025-05-08 22:15:02,007 basehttp 13162 124397377549888 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 37924
+INFO 2025-05-08 22:15:02,041 basehttp 13162 124397377549888 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:18:32,816 autoreload 13162 124397812937792 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/admin.py changed, reloading.
+INFO 2025-05-08 22:18:34,102 autoreload 13369 137644302189632 Watching for file changes with StatReloader
+INFO 2025-05-08 22:18:36,108 basehttp 13369 137643867240000 "GET /admin/ HTTP/1.1" 200 17207
+INFO 2025-05-08 22:18:36,324 basehttp 13369 137643867240000 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:18:36,357 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:18:41,301 basehttp 13369 137643867240000 "GET /admin/meteorology/city/ HTTP/1.1" 200 31416
+INFO 2025-05-08 22:18:41,334 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:18:42,335 basehttp 13369 137643867240000 "GET /admin/meteorology/city/add/ HTTP/1.1" 200 12003
+INFO 2025-05-08 22:18:42,368 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:19:11,747 basehttp 13369 137643867240000 "POST /admin/meteorology/city/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:19:11,785 basehttp 13369 137643867240000 "GET /admin/meteorology/city/ HTTP/1.1" 200 31975
+INFO 2025-05-08 22:19:11,869 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:19:37,232 basehttp 13369 137643867240000 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17617
+INFO 2025-05-08 22:19:37,267 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:21:54,422 basehttp 13369 137643867240000 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36609
+INFO 2025-05-08 22:21:54,451 basehttp 13369 137643867240000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:26:10,739 autoreload 13369 137644302189632 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/models.py changed, reloading.
+INFO 2025-05-08 22:26:11,964 autoreload 13986 131420312732736 Watching for file changes with StatReloader
+INFO 2025-05-08 22:26:55,070 basehttp 13986 131419876619840 "GET /admin/ HTTP/1.1" 200 17812
+INFO 2025-05-08 22:26:55,308 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36593
+INFO 2025-05-08 22:26:55,340 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:28:10,672 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17509
+INFO 2025-05-08 22:28:10,710 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:30:32,288 basehttp 13986 131419876619840 "POST /admin/meteorology/meteorology/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:30:32,333 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 38271
+INFO 2025-05-08 22:30:32,409 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:30:39,604 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17509
+INFO 2025-05-08 22:30:39,637 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:30:55,948 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 38099
+INFO 2025-05-08 22:30:55,984 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:30:59,910 basehttp 13986 131419876619840 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17509
+INFO 2025-05-08 22:30:59,940 basehttp 13986 131419876619840 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:31:44,896 autoreload 13986 131420312732736 /home/dx/Desktop/my_pr/myapi/myapi/utils/models.py changed, reloading.
+INFO 2025-05-08 22:31:46,191 autoreload 14384 134087376835648 Watching for file changes with StatReloader
+INFO 2025-05-08 22:32:12,957 basehttp 14384 134086865712704 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 38099
+INFO 2025-05-08 22:32:12,991 basehttp 14384 134086865712704 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:32:15,580 basehttp 14384 134086865712704 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 17031
+INFO 2025-05-08 22:32:15,645 basehttp 14384 134086865712704 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:32:36,900 autoreload 14384 134087376835648 /home/dx/Desktop/my_pr/myapi/myapi/utils/models.py changed, reloading.
+INFO 2025-05-08 22:32:38,133 autoreload 14493 130511519130688 Watching for file changes with StatReloader
+INFO 2025-05-08 22:35:14,752 autoreload 14493 130511519130688 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/admin.py changed, reloading.
+INFO 2025-05-08 22:35:15,990 autoreload 14746 138504095556672 Watching for file changes with StatReloader
+INFO 2025-05-08 22:35:32,508 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 38099
+INFO 2025-05-08 22:35:32,541 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:35:34,849 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 16619
+INFO 2025-05-08 22:35:34,882 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:37:09,097 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:37:09,134 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39526
+INFO 2025-05-08 22:37:09,208 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:37:41,167 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39354
+INFO 2025-05-08 22:37:41,202 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:37:42,567 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39354
+INFO 2025-05-08 22:37:42,599 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:04,696 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:38:04,734 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39458
+INFO 2025-05-08 22:38:04,806 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:07,016 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/2/change/ HTTP/1.1" 200 17661
+INFO 2025-05-08 22:38:07,050 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:15,897 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/2/change/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:38:15,934 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39526
+INFO 2025-05-08 22:38:16,017 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:18,321 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:38:18,355 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39458
+INFO 2025-05-08 22:38:18,432 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:19,592 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/2/change/ HTTP/1.1" 200 17661
+INFO 2025-05-08 22:38:19,628 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:22,685 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39354
+INFO 2025-05-08 22:38:22,719 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:23,877 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/1/change/ HTTP/1.1" 200 17661
+INFO 2025-05-08 22:38:23,913 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:38:26,781 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 39354
+INFO 2025-05-08 22:38:26,816 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:42:10,756 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 16619
+INFO 2025-05-08 22:42:10,790 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:44:45,187 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/add/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:44:45,227 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/3/change/ HTTP/1.1" 200 17904
+INFO 2025-05-08 22:44:45,306 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-08 22:46:16,596 basehttp 14746 138503659714112 "POST /admin/meteorology/meteorology/3/change/ HTTP/1.1" 302 0
+INFO 2025-05-08 22:46:16,638 basehttp 14746 138503659714112 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 40781
+INFO 2025-05-08 22:46:16,713 basehttp 14746 138503659714112 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 16:25:09,961 autoreload 6787 135340737565760 Watching for file changes with StatReloader
+INFO 2025-05-09 16:26:02,247 basehttp 6787 135340300957248 "GET / HTTP/1.1" 302 0
+INFO 2025-05-09 16:26:02,402 basehttp 6787 135340300957248 "GET /admin/ HTTP/1.1" 200 19950
+WARNING 2025-05-09 16:26:02,939 log 6787 135340300957248 Not Found: /favicon.ico
+WARNING 2025-05-09 16:26:02,940 basehttp 6787 135340300957248 "GET /favicon.ico HTTP/1.1" 404 2821
+INFO 2025-05-09 16:26:08,684 basehttp 6787 135340300957248 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 40609
+INFO 2025-05-09 16:26:08,733 basehttp 6787 135340300957248 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 16:26:10,540 basehttp 6787 135340300957248 "GET /admin/meteorology/city/ HTTP/1.1" 200 30800
+INFO 2025-05-09 16:26:10,572 basehttp 6787 135340300957248 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 16:37:44,480 autoreload 6787 135340737565760 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/views.py changed, reloading.
+INFO 2025-05-09 16:37:46,365 autoreload 8109 137727181583424 Watching for file changes with StatReloader
+INFO 2025-05-09 16:40:01,020 autoreload 8109 137727181583424 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/views.py changed, reloading.
+INFO 2025-05-09 16:40:02,919 autoreload 8344 138783666017344 Watching for file changes with StatReloader
+ERROR 2025-05-09 16:40:21,412 log 8344 138783229998656 Internal Server Error: /meteorology/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1056, in get_fields
+    assert hasattr(self, 'Meta'), (
+AssertionError: Class MeteorologySerializer missing "Meta" attribute
+ERROR 2025-05-09 16:40:21,416 basehttp 8344 138783229998656 "GET /meteorology/ HTTP/1.1" 500 145366
+INFO 2025-05-09 16:42:31,555 autoreload 8344 138783666017344 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:42:33,686 autoreload 13254 123938550305856 Watching for file changes with StatReloader
+INFO 2025-05-09 16:42:52,626 autoreload 13254 123938550305856 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:42:53,865 autoreload 13542 133733291721792 Watching for file changes with StatReloader
+INFO 2025-05-09 16:43:58,023 autoreload 13542 133733291721792 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:43:59,300 autoreload 13646 134632140358720 Watching for file changes with StatReloader
+INFO 2025-05-09 16:44:13,590 basehttp 13646 134631703705152 "GET /meteorology/ HTTP/1.1" 200 5864
+INFO 2025-05-09 16:44:13,639 basehttp 13646 134631695312448 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,640 basehttp 13646 134631686919744 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,643 basehttp 13646 134631703705152 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,643 basehttp 13646 134631695312448 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,645 basehttp 13646 134631686919744 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,651 basehttp 13646 134631678527040 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,653 basehttp 13646 134631678527040 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,656 basehttp 13646 134631703705152 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,656 basehttp 13646 134631319926336 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,657 basehttp 13646 134631670134336 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,660 basehttp 13646 134631319926336 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-05-09 16:44:13,687 basehttp 13646 134631695312448 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-05-09 16:46:48,067 autoreload 13646 134632140358720 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:46:49,522 autoreload 13924 127261758899264 Watching for file changes with StatReloader
+INFO 2025-05-09 16:47:15,845 autoreload 13924 127261758899264 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:47:17,095 autoreload 13981 129327710528576 Watching for file changes with StatReloader
+INFO 2025-05-09 16:47:17,786 basehttp 13981 129327276488256 "GET /meteorology/ HTTP/1.1" 200 5984
+INFO 2025-05-09 16:48:13,976 autoreload 13981 129327710528576 /home/dx/Desktop/my_pr/myapi/myapi/apps/meteorology/serializers.py changed, reloading.
+INFO 2025-05-09 16:48:15,262 autoreload 14106 130077650125888 Watching for file changes with StatReloader
+INFO 2025-05-09 16:48:29,183 basehttp 14106 130077213849152 "GET /meteorology/ HTTP/1.1" 200 5984
+INFO 2025-05-09 16:56:36,367 basehttp 14106 130077213849152 "GET /meteorology/ HTTP/1.1" 200 5984
+INFO 2025-05-09 18:27:20,648 basehttp 14106 130077213849152 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 16619
+INFO 2025-05-09 18:27:20,753 basehttp 14106 130077205456448 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-05-09 18:27:20,754 basehttp 14106 130077196015168 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-05-09 18:27:20,756 basehttp 14106 130077213849152 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 18:27:24,023 basehttp 14106 130077213849152 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 40609
+INFO 2025-05-09 18:27:24,059 basehttp 14106 130077213849152 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 18:52:19,036 basehttp 14106 130077213849152 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-05-09 18:52:25,860 basehttp 14106 130077213849152 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-05-09 18:52:25,869 basehttp 14106 130077213849152 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-05-09 18:52:25,920 basehttp 14106 130077213849152 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-05-09 18:52:26,964 basehttp 14106 130077213849152 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-05-09 18:53:34,417 basehttp 14106 130077196015168 "GET /admin/meteorology/meteorology/add/ HTTP/1.1" 200 16619
+INFO 2025-05-09 18:53:34,455 basehttp 14106 130077196015168 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-09 18:53:38,736 basehttp 14106 130077196015168 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 40609
+INFO 2025-05-09 18:53:38,772 basehttp 14106 130077196015168 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 10:48:01,462 autoreload 4601 132472985637952 Watching for file changes with StatReloader
+INFO 2025-05-10 10:48:12,820 basehttp 4601 132472482297408 "GET / HTTP/1.1" 302 0
+INFO 2025-05-10 10:48:12,920 basehttp 4601 132472482297408 "GET /admin/ HTTP/1.1" 200 19950
+INFO 2025-05-10 10:48:13,013 basehttp 4601 132472482297408 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,023 basehttp 4601 132472482297408 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,024 basehttp 4601 132472473904704 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,026 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,038 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,042 basehttp 4601 132472473904704 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,045 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,045 basehttp 4601 132472456070720 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,047 basehttp 4601 132472439285312 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,059 basehttp 4601 132472439285312 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,061 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,073 basehttp 4601 132472482297408 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,076 basehttp 4601 132472456070720 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,093 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,093 basehttp 4601 132472473904704 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,115 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,462 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,463 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:13,465 basehttp 4601 132472473904704 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+WARNING 2025-05-10 10:48:13,504 log 4601 132472473904704 Not Found: /favicon.ico
+WARNING 2025-05-10 10:48:13,505 basehttp 4601 132472473904704 "GET /favicon.ico HTTP/1.1" 404 2821
+INFO 2025-05-10 10:48:16,173 basehttp 4601 132472473904704 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 40609
+INFO 2025-05-10 10:48:16,206 basehttp 4601 132472447678016 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,210 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,211 basehttp 4601 132472456070720 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,212 basehttp 4601 132472482297408 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,218 basehttp 4601 132472439285312 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,220 basehttp 4601 132472456070720 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,221 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,224 basehttp 4601 132472439285312 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,224 basehttp 4601 132472482297408 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,225 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,236 basehttp 4601 132472473904704 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 10:48:16,259 basehttp 4601 132472456070720 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,264 basehttp 4601 132472464463424 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,270 basehttp 4601 132472447678016 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,272 basehttp 4601 132472482297408 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,273 basehttp 4601 132472439285312 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,282 basehttp 4601 132472473904704 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,303 basehttp 4601 132472456070720 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,309 basehttp 4601 132472464463424 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,314 basehttp 4601 132472447678016 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,321 basehttp 4601 132472439285312 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,321 basehttp 4601 132472482297408 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,326 basehttp 4601 132472473904704 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,347 basehttp 4601 132472456070720 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,353 basehttp 4601 132472464463424 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,358 basehttp 4601 132472447678016 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:16,625 basehttp 4601 132472447678016 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-05-10 10:48:19,647 basehttp 4601 132472447678016 "POST /admin/meteorology/meteorology/ HTTP/1.1" 200 6578
+INFO 2025-05-10 10:48:19,678 basehttp 4601 132472447678016 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2025-05-10 10:48:21,331 basehttp 4601 132472447678016 "POST /admin/meteorology/meteorology/ HTTP/1.1" 302 0
+INFO 2025-05-10 10:48:21,360 basehttp 4601 132472447678016 "GET /admin/meteorology/meteorology/ HTTP/1.1" 200 36674
+INFO 2025-05-10 10:48:21,430 basehttp 4601 132472447678016 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 10:50:48,558 autoreload 4601 132472985637952 /home/dx/Desktop/my_pr/myapi/myapi/urls.py changed, reloading.
+INFO 2025-05-10 10:50:49,825 autoreload 5099 129954454357056 Watching for file changes with StatReloader
+INFO 2025-05-10 10:50:51,274 basehttp 5099 129954018752064 "GET /admin/ HTTP/1.1" 200 21052
+INFO 2025-05-10 10:50:51,681 basehttp 5099 129954018752064 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 107460
+WARNING 2025-05-10 10:50:55,018 log 5099 129954018752064 Not Found: /admin/meteorology/meteorology/
+WARNING 2025-05-10 10:50:55,019 basehttp 5099 129954018752064 "GET /admin/meteorology/meteorology/ HTTP/1.1" 404 5994
+INFO 2025-05-10 10:50:55,846 basehttp 5099 129954018752064 "GET /admin/crop/city/ HTTP/1.1" 200 30779
+INFO 2025-05-10 10:50:55,889 basehttp 5099 129954018752064 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 10:52:21,465 autoreload 5099 129954454357056 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-05-10 10:52:22,721 autoreload 5354 131266673263680 Watching for file changes with StatReloader
+INFO 2025-05-10 10:52:25,242 basehttp 5354 131266237167168 "GET /admin/ HTTP/1.1" 200 20768
+INFO 2025-05-10 10:52:28,918 basehttp 5354 131266237167168 "GET /admin/crop/city/ HTTP/1.1" 200 30779
+INFO 2025-05-10 10:52:28,962 basehttp 5354 131266237167168 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 10:54:56,630 autoreload 5354 131266673263680 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 10:54:57,906 autoreload 5644 135710272914496 Watching for file changes with StatReloader
+INFO 2025-05-10 10:55:04,061 basehttp 5644 135709836965440 "GET /admin/ HTTP/1.1" 200 21038
+INFO 2025-05-10 10:55:04,264 basehttp 5644 135709836965440 "GET /admin/crop/city/ HTTP/1.1" 200 30779
+INFO 2025-05-10 10:55:04,302 basehttp 5644 135709836965440 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+WARNING 2025-05-10 10:55:07,821 log 5644 135709836965440 Not Found: /admin/meteorology/meteorology/
+WARNING 2025-05-10 10:55:07,822 basehttp 5644 135709836965440 "GET /admin/meteorology/meteorology/ HTTP/1.1" 404 5987
+INFO 2025-05-10 10:55:47,753 autoreload 5644 135710272914496 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 10:55:48,998 autoreload 5689 131830324372544 Watching for file changes with StatReloader
+INFO 2025-05-10 10:55:49,881 basehttp 5689 131829889758784 "GET /admin/ HTTP/1.1" 200 21038
+WARNING 2025-05-10 10:55:51,339 log 5689 131829889758784 Not Found: /admin/meteorology/meteorology/
+WARNING 2025-05-10 10:55:51,344 basehttp 5689 131829889758784 "GET /admin/meteorology/meteorology/ HTTP/1.1" 404 5987
+INFO 2025-05-10 10:55:51,399 basehttp 5689 131829881366080 "GET /admin/crop/city/ HTTP/1.1" 200 30779
+INFO 2025-05-10 10:55:51,440 basehttp 5689 131829881366080 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 21:11:41,144 autoreload 4284 138800305771584 Watching for file changes with StatReloader
+INFO 2025-05-10 21:12:25,935 basehttp 4284 138799869851200 "GET / HTTP/1.1" 302 0
+INFO 2025-05-10 21:12:25,947 basehttp 4284 138799869851200 "GET / HTTP/1.1" 302 0
+INFO 2025-05-10 21:12:26,159 basehttp 4284 138799787013696 "GET /admin/ HTTP/1.1" 200 21038
+INFO 2025-05-10 21:12:26,201 basehttp 4284 138799787013696 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,206 basehttp 4284 138799869851200 "GET /admin/ HTTP/1.1" 200 21038
+INFO 2025-05-10 21:12:26,209 basehttp 4284 138799778620992 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,210 basehttp 4284 138799770228288 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,247 basehttp 4284 138799778620992 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,248 basehttp 4284 138799770228288 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,249 basehttp 4284 138799869851200 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,257 basehttp 4284 138799787013696 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,260 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,264 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,269 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,276 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,316 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,331 basehttp 4284 138799869851200 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,336 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,338 basehttp 4284 138799787013696 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,335 basehttp 4284 138799778620992 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,583 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/theme/x-blue.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,808 basehttp 4284 138799869851200 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,809 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,817 basehttp 4284 138799787013696 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:26,875 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.woff2 HTTP/1.1" 200 107460
+WARNING 2025-05-10 21:12:27,008 log 4284 138799753442880 Not Found: /favicon.ico
+WARNING 2025-05-10 21:12:27,011 basehttp 4284 138799753442880 "GET /favicon.ico HTTP/1.1" 404 2811
+INFO 2025-05-10 21:12:37,694 basehttp 4284 138799753442880 "GET /admin/user_login/user/ HTTP/1.1" 200 39218
+INFO 2025-05-10 21:12:37,732 basehttp 4284 138799770228288 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,733 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,737 basehttp 4284 138799787013696 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,740 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,743 basehttp 4284 138799770228288 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,744 basehttp 4284 138799778620992 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,745 basehttp 4284 138799745050176 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,751 basehttp 4284 138799787013696 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,754 basehttp 4284 138799778620992 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,757 basehttp 4284 138799745050176 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,762 basehttp 4284 138799753442880 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 21:12:37,786 basehttp 4284 138799761835584 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,789 basehttp 4284 138799770228288 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,797 basehttp 4284 138799787013696 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,800 basehttp 4284 138799778620992 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,804 basehttp 4284 138799745050176 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,809 basehttp 4284 138799753442880 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,832 basehttp 4284 138799761835584 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,836 basehttp 4284 138799770228288 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,841 basehttp 4284 138799787013696 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,845 basehttp 4284 138799778620992 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,850 basehttp 4284 138799745050176 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,854 basehttp 4284 138799753442880 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-05-10 21:12:37,876 basehttp 4284 138799761835584 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+ERROR 2025-05-10 21:12:39,059 log 4284 138799761835584 Internal Server Error: /admin/crop/crop/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+ERROR 2025-05-10 21:12:39,070 basehttp 4284 138799761835584 "GET /admin/crop/crop/ HTTP/1.1" 500 271628
+INFO 2025-05-10 21:12:39,453 basehttp 4284 138799761835584 "GET /admin/crop/city/ HTTP/1.1" 200 30779
+INFO 2025-05-10 21:12:39,489 basehttp 4284 138799761835584 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 21:15:39,699 autoreload 4284 138800305771584 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:15:41,436 autoreload 6284 136881568171072 Watching for file changes with StatReloader
+INFO 2025-05-10 21:17:26,459 autoreload 6284 136881568171072 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-05-10 21:17:27,679 autoreload 6531 136025441551424 Watching for file changes with StatReloader
+INFO 2025-05-10 21:19:42,136 autoreload 6531 136025441551424 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-05-10 21:19:43,365 autoreload 6689 137671358252096 Watching for file changes with StatReloader
+INFO 2025-05-10 21:24:02,066 basehttp 6689 137670922597952 "GET /admin/ HTTP/1.1" 200 21038
+ERROR 2025-05-10 21:24:02,316 log 6689 137670922597952 Internal Server Error: /admin/crop/crop/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+ERROR 2025-05-10 21:24:02,326 basehttp 6689 137670922597952 "GET /admin/crop/crop/ HTTP/1.1" 500 271018
+INFO 2025-05-10 21:24:33,771 autoreload 6689 137671358252096 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:24:35,106 autoreload 7172 130638389101632 Watching for file changes with StatReloader
+INFO 2025-05-10 21:26:38,039 autoreload 7172 130638389101632 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:26:39,298 autoreload 7347 125021556614208 Watching for file changes with StatReloader
+INFO 2025-05-10 21:26:53,994 autoreload 7347 125021556614208 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:26:55,227 autoreload 7383 125197393589312 Watching for file changes with StatReloader
+INFO 2025-05-10 21:28:21,294 autoreload 7383 125197393589312 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:28:22,543 autoreload 7525 132160272041024 Watching for file changes with StatReloader
+INFO 2025-05-10 21:31:36,937 autoreload 7525 132160272041024 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-05-10 21:31:38,194 autoreload 7732 136516721177664 Watching for file changes with StatReloader
+INFO 2025-05-10 21:33:34,744 autoreload 7732 136516721177664 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:33:35,966 autoreload 7884 123271206560832 Watching for file changes with StatReloader
+INFO 2025-05-10 21:35:49,443 autoreload 7884 123271206560832 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-05-10 21:35:50,644 autoreload 8089 126346598265920 Watching for file changes with StatReloader
+INFO 2025-05-10 21:36:55,643 autoreload 8089 126346598265920 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-05-10 21:36:56,870 autoreload 8198 125898252756032 Watching for file changes with StatReloader
+INFO 2025-05-10 21:37:15,248 autoreload 8289 140330312643648 Watching for file changes with StatReloader
+INFO 2025-05-10 21:37:18,916 basehttp 8289 140329802004032 "GET /admin/ HTTP/1.1" 200 21038
+ERROR 2025-05-10 21:37:19,190 log 8289 140329802004032 Internal Server Error: /admin/crop/crop/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2024, in changelist_view
+    cl = self.get_changelist_instance(request)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 867, in get_changelist_instance
+    return ChangeList(
+           ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 146, in __init__
+    self.get_results(request)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/views/main.py", line 313, in get_results
+    result_count = paginator.count
+                   ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/paginator.py", line 110, in count
+    return c()
+           ^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 604, in count
+    return self.query.get_count(using=self.db)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 644, in get_count
+    return obj.get_aggregation(using, {"__count": Count("*")})["__count"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/query.py", line 626, in get_aggregation
+    result = compiler.execute_sql(SINGLE)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1622, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 122, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 79, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 92, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 100, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/utils.py", line 105, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/backends/mysql/base.py", line 76, in execute
+    return self.cursor.execute(query, args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 153, in execute
+    result = self._query(query)
+             ^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/cursors.py", line 322, in _query
+    conn.query(q)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 563, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 825, in _read_query_result
+    result.read()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 1199, in read
+    first_packet = self.connection._read_packet()
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/connections.py", line 775, in _read_packet
+    packet.raise_for_error()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/protocol.py", line 219, in raise_for_error
+    err.raise_mysql_exception(self._data)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/pymysql/err.py", line 150, in raise_mysql_exception
+    raise errorclass(errno, errval)
+django.db.utils.ProgrammingError: (1146, "Table 'dx_xm.xm_crop' doesn't exist")
+ERROR 2025-05-10 21:37:19,200 basehttp 8289 140329802004032 "GET /admin/crop/crop/ HTTP/1.1" 500 271232
+INFO 2025-05-10 21:40:56,382 autoreload 8289 140330312643648 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/migrations/0001_initial.py changed, reloading.
+INFO 2025-05-10 21:40:57,684 autoreload 8562 137255295628352 Watching for file changes with StatReloader
+INFO 2025-05-10 21:43:01,748 autoreload 8562 137255295628352 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/migrations/0001_initial.py changed, reloading.
+INFO 2025-05-10 21:43:02,941 autoreload 8775 140385022030912 Watching for file changes with StatReloader
+INFO 2025-05-10 21:46:03,642 autoreload 8775 140385022030912 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/migrations/0001_initial.py changed, reloading.
+INFO 2025-05-10 21:46:04,865 autoreload 9031 134374993519680 Watching for file changes with StatReloader
+INFO 2025-05-10 21:46:30,486 basehttp 9031 134374489060928 "GET /admin/ HTTP/1.1" 200 21038
+INFO 2025-05-10 21:46:30,703 basehttp 9031 134374489060928 "GET /admin/crop/crop/ HTTP/1.1" 200 37193
+INFO 2025-05-10 21:46:30,761 basehttp 9031 134374480668224 "GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+INFO 2025-05-10 21:46:30,765 basehttp 9031 134374471226944 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2025-05-10 21:46:30,767 basehttp 9031 134374489060928 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-05-10 21:46:34,105 basehttp 9031 134374489060928 "GET /admin/crop/city/ HTTP/1.1" 200 30379
+INFO 2025-05-10 21:46:34,130 basehttp 9031 134374489060928 "GET /admin/jsi18n/ HTTP/1.1" 200 9327

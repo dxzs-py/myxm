@@ -65,6 +65,7 @@ INSTALLED_APPS = [
 
     # 子应用
     'user_login',
+    'crop',
 
 ]
 

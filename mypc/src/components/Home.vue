@@ -1,22 +1,35 @@
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- 顶部导航 -->
-    <Header></Header>
+    <Header class="bg-white shadow-sm h-16 sticky w-full top-0 z-50">
+    </Header>
 
     <main class="container mx-auto px-4 py-6">
-      <!-- 实时气象数据 -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
-        <div v-for="(item, index) in weatherData" :key="index" class="bg-white p-4 rounded-lg shadow-sm">
-          <div class="flex justify-between items-center mb-2">
-            <span class="text-gray-600">{{ item.label }}</span>
-            <i :class="['fas', item.icon, item.iconColor]"></i>
-          </div>
-          <div class="text-2xl font-semibold">{{ item.value }}</div>
-        </div>
+<div class="bg-gradient-to-br from-purple-50 via-purple-100 to-purple-200 rounded-3xl shadow-xl mb-16 overflow-hidden transition-all duration-500 hover:shadow-2xl">
+  <div class="p-12 max-w-8xl mx-auto">
+    <h2 class="text-5xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-100 flex items-center animate-gradient-x">
+      <i class="fas fa-sun-cloud  mr-5 text-4xl animate-pulse"></i>
+      气象数据概览
+    </h2>
+    <div class="flex flex-col lg:flex-row gap-8 justify-between">
+      <div
+        v-for="(weatherData, D) in Data"
+        :key="D"
+        class="transform transition-all duration-500 hover:scale-[1.02] flex-1"
+      >
+        <WeatherCard
+          :title="weatherData.title"
+          :data="weatherData.DataDetaile"
+          class="w-full max-w-4xl transition-all duration-300 hover:shadow-xl hover:shadow-purple-300/30 mx-auto"
+        />
       </div>
+    </div>
+  </div>
+</div>
+
 
       <!-- 种植区域分布 -->
-      <div class="bg-white rounded-lg shadow-sm mb-6">
+      <div class="bg-white rounded-lg shadow-sm mb-6" >
         <div class="p-4 border-b">
           <div class="flex justify-between items-center">
             <h2 class="text-lg font-medium">种植区域分布</h2>
@@ -107,58 +120,58 @@
                   :class="['absolute top-2 right-2 px-2 py-1 rounded text-sm text-white', riskLevelStyles[advice.riskLevel]]">
                   {{ riskLevelTexts[advice.riskLevel] }}
                 </span>
-              </div>
-              <div class="p-4">
-                <h3 class="font-medium mb-2">{{ advice.crop }}</h3>
-                <p class="text-gray-600 text-sm">{{ advice.suggestion }}</p>
+                </div>
+                <div class="p-4">
+                  <h3 class="font-medium mb-2">{{ advice.crop }}</h3>
+                  <p class="text-gray-600 text-sm">{{ advice.suggestion }}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <!-- 用户反馈 -->
-      <div class="bg-white rounded-lg shadow-sm">
-        <div class="p-4 border-b">
-          <h2 class="text-lg font-medium">用户反馈</h2>
-        </div>
-        <div class="p-4">
-          <div class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">反馈类型</label>
-              <DropdownMenu
-                :show="dropdownStates.feedback"
-                :options="feedbackOptions"
-                :selected="feedback.type"
-                @select="selectFeedbackType"
-                @toggle="toggleDropdown('feedback')"
-              >
-                <template #trigger>
-                  <button class="w-full bg-gray-100 px-4 py-2 rounded-lg text-left flex items-center justify-between">
-                    {{ feedback.type ? getFeedbackLabel(feedback.type) : '请选择反馈类型' }}
-                    <i class="fas fa-chevron-down"></i>
-                  </button>
-                </template>
-              </DropdownMenu>
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-gray-700 mb-1">反馈内容</label>
-              <textarea
-                v-model="feedback.content"
-                rows="4"
-                class="w-full px-4 py-2 bg-gray-100 rounded-lg border-none resize-none focus:outline-none"
-                placeholder="请输入您的反馈内容"
-              ></textarea>
-            </div>
-            <div>
-              <button @click="submitFeedback"
-                      class="bg-green-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-green-700">
-                提交反馈
-              </button>
+        <!-- 用户反馈 -->
+        <div class="bg-white rounded-lg shadow-sm">
+          <div class="p-4 border-b">
+            <h2 class="text-lg font-medium">用户反馈</h2>
+          </div>
+          <div class="p-4">
+            <div class="space-y-4">
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">反馈类型</label>
+                <DropdownMenu
+                  :show="dropdownStates.feedback"
+                  :options="feedbackOptions"
+                  :selected="feedback.type"
+                  @select="selectFeedbackType"
+                  @toggle="toggleDropdown('feedback')"
+                >
+                  <template #trigger>
+                    <button class="w-full bg-gray-100 px-4 py-2 rounded-lg text-left flex items-center justify-between">
+                      {{ feedback.type ? getFeedbackLabel(feedback.type) : '请选择反馈类型' }}
+                      <i class="fas fa-chevron-down"></i>
+                    </button>
+                  </template>
+                </DropdownMenu>
+              </div>
+              <div>
+                <label class="block text-sm font-medium text-gray-700 mb-1">反馈内容</label>
+                <textarea
+                  v-model="feedback.content"
+                  rows="4"
+                  class="w-full px-4 py-2 bg-gray-100 rounded-lg border-none resize-none focus:outline-none"
+                  placeholder="请输入您的反馈内容"
+                ></textarea>
+              </div>
+              <div>
+                <button @click="submitFeedback"
+                        class="bg-green-600 text-white px-6 py-2 !rounded-button whitespace-nowrap hover:bg-green-700">
+                  提交反馈
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </main>
   </div>
 </template>
@@ -166,11 +179,16 @@
 <script>
 import Header from "./common/Header.vue";
 import DropdownMenu from "./common/DropdownMenu.vue";
+import WeatherCard from "./common/WeatherCard.vue";
+import * as echarts from 'echarts';
+// 引入ningxia地图数据,不知道干嘛呢
+
 
 export default {
   components: {
     Header,
-    DropdownMenu
+    DropdownMenu,
+    WeatherCard
   },
   data() {
     return {
@@ -184,12 +202,28 @@ export default {
         riskMap: null,
         weatherTrend: null
       },
-      weatherData: [
-        {label: '温度', value: '26°C', icon: 'fa-sun', iconColor: 'text-yellow-500'},
-        {label: '湿度', value: '65%', icon: 'fa-cloud', iconColor: 'text-blue-500'},
-        {label: '降水量', value: '2.5mm', icon: 'fa-bolt', iconColor: 'text-purple-500'},
-        {label: '风速', value: '3.2m/s', icon: 'fa-wind', iconColor: 'text-green-500'}
+
+      Data: [
+        {
+          title: '当前天气',
+          DataDetaile: [
+            {label: '温度', value: '-8.5°C', icon: 'fa-sun', iconColor: 'text-yellow-500'},
+            {label: '湿度', value: '59.0%', icon: 'fa-cloud', iconColor: 'text-blue-500'},
+            {label: '降水量', value: '0.0mm', icon: 'fa-bolt', iconColor: 'text-purple-500'},
+            {label: '风速', value: '1m/s', icon: 'fa-wind', iconColor: 'text-green-500'}
+          ],
+        },
+        {
+          title: '预测天气',
+          DataDetaile: [
+            {label: '温度', value: '-6.8°C', icon: 'fa-sun', iconColor: 'text-yellow-500'},
+            {label: '湿度', value: '66.0%', icon: 'fa-cloud', iconColor: 'text-blue-500'},
+            {label: '降水量', value: '0.0mm', icon: 'fa-bolt', iconColor: 'text-purple-500'},
+            {label: '风速', value: '2.7m/s', icon: 'fa-wind', iconColor: 'text-green-500'}
+          ],
+        }
       ],
+
       cropTypes: [
         {label: '枸杞', value: 'goji'},
         {label: '葡萄', value: 'grape'},
@@ -199,19 +233,19 @@ export default {
         {
           crop: '宁夏枸杞',
           suggestion: '近期有霜冻风险，建议采取防寒措施，可使用防寒布覆盖。',
-          image: '/static/image/gq.jpg/',
+          image: '/static/image/gq1.jpg/',
           riskLevel: 'high'
         },
         {
           crop: '贺兰山葡萄',
           suggestion: '预计未来三天降雨，注意排水防涝，加强病害防治。',
-          image: '/static/image/pt.jpg/',
+          image: '/static/image/pt1.jpg/',
           riskLevel: 'medium'
         },
         {
           crop: '中卫硒砂瓜',
           suggestion: '当前温度适宜生长，建议适时进行追肥和灌溉。',
-          image: '/static/image/xsg.png/',
+          image: '/static/image/xsg1.png/',
           riskLevel: 'low'
         }
       ],
@@ -459,11 +493,7 @@ export default {
 
 <style scoped>
 
-input[type="number"]::-webkit-inner-spin-button,
-input[type="number"]::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+
 
 textarea:focus,
 input:focus {

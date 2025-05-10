@@ -17,23 +17,8 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI);
 
 // 导入echarts
-import * as echarts from 'echarts/core';
-import 'echarts-gl'; // 引入地理扩展包
-import { MapChart } from 'echarts/charts';
-import {
-  TitleComponent,
-  TooltipComponent,
-  VisualMapComponent
-} from 'echarts/components';
-import { CanvasRenderer } from 'echarts/renderers';
-// 手动注册必需组件
-echarts.use([
-  MapChart,
-  TitleComponent,
-  TooltipComponent,
-  VisualMapComponent,
-  CanvasRenderer
-]);
+import * as echarts from 'echarts'; // ✅ 完整导入
+import 'echarts-gl'; // ✅ 确保地理扩展包正确加载
 
 // 修改地图数据加载方式（删除原china.js的引入）  // 引入中国基础地图数据
 import chinaJson from './assets/map/json/china.json';

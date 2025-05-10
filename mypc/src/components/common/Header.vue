@@ -1,47 +1,76 @@
 <template>
-<header class="bg-white shadow-sm">
-<div class="container mx-auto px-4 h-16 flex items-center justify-between">
-<div class="flex items-center space-x-2">
-<i class="fas fa-seedling text-2xl text-green-600"></i>
-<h1 class="text-xl font-medium">宁夏特色作物气象灾害风险识别与预警系统</h1>
-</div>
-<div class="flex items-center space-x-8">
-<nav class="flex space-x-6">
-<a href="home" class="text-gray-700 hover:text-green-600">首页</a>
-<a href="#" class="text-gray-700 hover:text-green-600">数据中心</a>
-<a href="klg" class="text-gray-700 hover:text-green-600">种植指南</a>
-<a href="#" class="text-gray-700 hover:text-green-600">用户反馈</a>
-</nav>
+<header class="bg-white shadow-sm relative">
+  <!-- 时间显示移动到右侧 -->
+  <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+    <!-- 左侧Logo区 -->
+    <div class="flex items-center space-x-3 flex-1">
+      <i class="fas fa-seedling text-2xl text-green-500 transform hover:rotate-12 transition-all"></i>
+      <h1 class="text-xl font-medium text-gray-800">宁夏特色作物气象灾害风险识别与预警系统</h1>
+    </div>
 
-<div class="relative">
-<div class="relative flex items-center">
-  <input
-    v-model="searchQuery"
-    class="w-64 h-10 pl-10 pr-4 rounded-lg border-none bg-gray-100 focus:outline-none"
-    placeholder="搜索作物或地区"
-  />
-  <i class="fas fa-search absolute left-3 text-gray-400"></i>
-</div>
-</div>
+    <!-- 中间导航区 -->
+    <nav class="flex space-x-4 mx-8 flex-1 justify-center">
+      <router-link
+        to="home"
+        class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50">
+        首页
+      </router-link>
+      <router-link
+        to="#"
+        class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50">
+        数据中心
+      </router-link>
+      <router-link
+        to="klg"
+        class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50">
+        种植指南
+      </router-link>
+      <router-link
+        to="#"
+        class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50">
+        用户反馈
+      </router-link>
+    </nav>
 
-<div v-if="token" class="flex items-center space-x-3">
-<div class="login-box login-box1 full-left" style="padding-bottom: 10px">
-            <router-link to="">用户中心</router-link>
-            <el-menu class="member el-menu-demo" mode="horizontal">
-              <el-submenu index="2" popper-class="custom-user-menu">
-                <template ><img style="width: 40px;height: 40px " src="/static/image/logo@2x.png" alt="">
-                  <span class="shop-cart-total" style="padding-left: 10px">
-                    {{ username }}
-                  </span>
-                </template>
-                <el-menu-item index="2-1">我的账户</el-menu-item>
-                <el-menu-item index="2-2">我的订单</el-menu-item>
-                <el-menu-item index="2-3">我的优惠卷</el-menu-item>
-                <span @click="logoutHander"><el-menu-item index="2-3">退出登录</el-menu-item></span>
-              </el-submenu>
-            </el-menu>
-</div>
-</div>
+    <!-- 右侧功能区 -->
+    <div class="flex items-center space-x-6 flex-1 justify-end">
+      <!-- 搜索框 -->
+      <div class="relative w-72 mr-4">
+        <input
+          v-model="searchQuery"
+          class="w-full h-10 pl-10 pr-4 rounded-lg border border-gray-200 bg-gray-50 focus:outline-none
+                 focus:ring-2 focus:ring-green-500 focus:bg-white transition-all"
+          placeholder="搜索作物或地区"
+        />
+        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2
+         text-gray-400 leading-[0] transform"></i>
+      </div>
+
+      <!-- 时间显示 -->
+      <div class="time-box bg-gray-800 text-white px-3 py-1.5 rounded-lg shadow-md">
+        <div class="text-lg font-mono leading-tight">{{ formattedTime }}</div>
+        <div class="text-sm opacity-80 tracking-tight">{{ formattedDate }}</div>
+      </div>
+
+      <!-- 用户操作区 -->
+      <div v-if="token" class="flex items-center space-x-3" style="width: 130px">
+        用户中心
+        <el-menu class="member el-menu-demo relative" mode="horizontal" style="padding-bottom: 55px">
+          <el-submenu index="2" popper-class="custom-user-menu">
+            <template>
+              <div class="flex items-center">
+                <img class="w-10 h-10 rounded-full border-2 border-white"
+                     src="/static/image/logo@2x.png" alt="用户头像">
+                <span class="ml-2 text-gray-700 font-medium">{{ username }}</span>
+              </div>
+            </template>
+            <el-menu-item index="2-1">我的账户</el-menu-item>
+            <el-menu-item index="2-2">我的订单</el-menu-item>
+            <el-menu-item index="2-3">我的优惠券</el-menu-item>
+            <el-menu-item index="2-4" @click="logoutHander">退出登录</el-menu-item>
+          </el-submenu>
+        </el-menu>
+      </div>
 
 <div v-else class="flex items-center space-x-4">
   <button class="bg-green-600 text-white px-4 py-2 !rounded-button whitespace-nowrap hover:bg-green-700">
@@ -65,8 +94,20 @@ export default {
     return{
       token:"",
       searchQuery: '',
-      // nav_list:[],
-      username:""
+      username:"",
+      currentTime: new Date(),
+    }
+  },
+  computed: {
+    formattedTime() {
+      return this.currentTime.toLocaleTimeString('zh-CN', { hour12: false })
+    },
+    formattedDate() {
+      return this.currentTime.toLocaleDateString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit'
+      }).replace(/\//g, '-')
     }
   },
   created() {
@@ -89,6 +130,14 @@ export default {
       sessionStorage.removeItem('user_name');
       this.check_user_login();
     }
+  },
+  mounted() {
+    this.timer = setInterval(() => {
+      this.currentTime = new Date()
+    }, 1000)
+  },
+  beforeDestroy() {
+    clearInterval(this.timer)
   }
 }
 
@@ -128,4 +177,28 @@ export default {
   color: #409EFF !important;
 }
 
+
+.time-box {
+  min-width: 100px;
+  backdrop-filter: blur(4px);
+  background: rgba(31, 41, 31, 0.9);
+}
+
+.member :deep(.el-submenu__title) {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+
+.custom-user-menu {
+  @apply shadow-lg rounded-lg overflow-hidden;
+
+  .el-menu-item {
+    @apply px-4 py-3 text-sm text-gray-600 hover:bg-green-50 hover:text-green-600 transition-colors;
+  }
+}
+
+/* 统一按钮过渡效果 */
+button, .el-menu-item {
+  @apply transition-all duration-200;
+}
 </style>

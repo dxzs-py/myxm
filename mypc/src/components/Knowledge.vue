@@ -1,5 +1,8 @@
 <template>
   <div class="min-h-screen bg-gray-50">
+    <!-- 顶部导航 -->
+    <Header class="bg-white shadow-sm h-16 sticky w-full top-0 z-50">
+    </Header>
     <!-- 特色作物信息 -->
     <div class="bg-white p-8 shadow-sm">
       <div class="max-w-7xl mx-auto">
@@ -7,7 +10,7 @@
         <div class="grid grid-cols-3 gap-6">
           <div class="p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100">
             <div class="flex items-center mb-4">
-              <img src="https://ai-public.mastergo.com/ai/img_res/26df82fbbfaa58a9cef9ee413f726253.jpg"
+              <img src="/static/image/gq2.jpg"
                    class="w-20 h-20 object-cover rounded-lg" alt="枸杞"/>
               <div class="ml-4">
                 <h3 class="text-xl font-medium">枸杞</h3>
@@ -22,10 +25,10 @@
           </div>
           <div class="p-6 rounded-lg bg-gradient-to-br from-purple-50 to-white border border-purple-100">
             <div class="flex items-center mb-4">
-              <img src="https://ai-public.mastergo.com/ai/img_res/7d5efdce325c3208ee0d9e7c95ec6efb.jpg"
+              <img src="/static/image/pt2.jpg"
                    class="w-20 h-20 object-cover rounded-lg" alt="葡萄"/>
               <div class="ml-4">
-                <h3 class="text-xl font-medium">酿酒葡萄</h3>
+                <h3 class="text-xl font-medium">葡萄</h3>
                 <p class="text-gray-500 text-sm mt-1">主产区：贺兰山东麓</p>
               </div>
             </div>
@@ -37,10 +40,10 @@
           </div>
           <div class="p-6 rounded-lg bg-gradient-to-br from-green-50 to-white border border-green-100">
             <div class="flex items-center mb-4">
-              <img src="https://ai-public.mastergo.com/ai/img_res/0724a49586918dae9dfb4a9017743a52.jpg"
-                   class="w-20 h-20 object-cover rounded-lg" alt="甘草"/>
+              <img src="/static/image/xsg2.jpg"
+                   class="w-20 h-20 object-cover rounded-lg" alt="硒砂瓜"/>
               <div class="ml-4">
-                <h3 class="text-xl font-medium">甘草</h3>
+                <h3 class="text-xl font-medium">硒砂瓜</h3>
                 <p class="text-gray-500 text-sm mt-1">主产区：固原、中卫</p>
               </div>
             </div>
@@ -109,21 +112,7 @@
         </div>
       </div>
     </div>
-    <!-- 顶部导航 -->
-    <header class="bg-white shadow-sm h-16 fixed w-full top-0 z-50">
-      <div class="max-w-7xl mx-auto px-4 h-full flex items-center justify-between">
-        <h1 class="text-xl font-medium text-gray-800">宁夏特色作物分布与灾害监测</h1>
-        <div class="flex items-center space-x-4">
-          <div class="relative">
-            <input type="text" placeholder="搜索区域或作物" class="pl-10 pr-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-blue-500">
-            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm"></i>
-          </div>
-          <button class="!rounded-button flex items-center px-4 py-2 bg-blue-600 text-white text-sm whitespace-nowrap">
-            <i class="fas fa-filter mr-2"></i>筛选
-          </button>
-        </div>
-      </div>
-    </header>
+
     <!-- 主要内容区 -->
     <main class="pt-16 pb-8">
       <div class="max-w-7xl mx-auto px-4 mt-8">
@@ -132,11 +121,22 @@
           <div class="flex items-center justify-between mb-6">
             <h2 class="text-lg font-medium">灾害预警信息</h2>
             <div class="flex items-center space-x-2">
-              <button class="!rounded-button px-3 py-1.5 border border-gray-200 text-sm whitespace-nowrap">
-                最近一周
-                <i class="fas fa-chevron-down ml-2"></i>
-              </button>
+              <DropdownMenu
+                :show="showTimeDropdown"
+                :options="timeOptions"
+                :selected="selectedTimeRange"
+                @toggle="showTimeDropdown = !showTimeDropdown"
+                @select="handleTimeSelect"
+              >
+                <template #trigger>
+                  <button  class="!rounded-button px-3 py-1.5 border border-gray-200 text-sm whitespace-nowrap">
+                    {{ selectedTimeRange || '最近一周' }}
+                    <i class="fas fa-chevron-down ml-2"></i>
+                  </button>
+                </template>
+              </DropdownMenu>
             </div>
+
           </div>
           <div class="relative">
             <el-carousel :interval="3000" arrow="always" :loop="true" height="180px">
@@ -148,14 +148,14 @@
                     </div>
                     <div class="ml-3 flex-1">
                       <div class="flex items-center">
-                        <span :class="['px-2 py-0.5 rounded text-xs', warning.levelBg]">{{  warning.level  }}</span>
-                        <span class="ml-2 text-sm text-gray-500">{{ warning.time  }}</span>
+                        <span :class="['px-2 py-0.5 rounded text-xs', warning.levelBg]">{{ warning.level }}</span>
+                        <span class="ml-2 text-sm text-gray-500">{{ warning.time }}</span>
                       </div>
-                      <h4 class="font-medium mt-2">{{ warning.title  }}</h4>
-                      <p class="text-sm text-gray-600 mt-1">{{ warning.description  }}</p>
+                      <h4 class="font-medium mt-2">{{ warning.title }}</h4>
+                      <p class="text-sm text-gray-600 mt-1">{{ warning.description }}</p>
                       <div class="mt-3">
                         <span class="text-sm text-gray-500">影响作物：</span>
-                        <span class="text-sm text-gray-800">{{ warning.crops  }}</span>
+                        <span class="text-sm text-gray-800">{{ warning.crops }}</span>
                       </div>
                     </div>
                   </div>
@@ -170,16 +170,24 @@
 </template>
 
 <script>
-import * as echarts from 'echarts';
-// 引入ningxia地图数据
-const ningxiaJson = {
-  type: 'FeatureCollection',
-  features: []
-};
+
+import Header from "./common/Header.vue"
+import DropdownMenu from "./common/DropdownMenu.vue";
 
 export default {
+  components: {
+    Header,
+    DropdownMenu
+  },
   data() {
     return {
+      showTimeDropdown: false,
+      selectedTimeRange: '最近一周',
+    timeOptions: [
+      { label: '最近一周', value: '最近一周' },
+      { label: '最近一月', value: '最近一月' },
+      { label: '最近三月', value: '最近三月' },
+    ],
       warningList: [
         {
           icon: 'fa-cloud-rain',
@@ -221,7 +229,11 @@ export default {
     };
   },
   methods: {
-
+    handleTimeSelect(value) {
+    this.selectedTimeRange = value
+    this.showTimeDropdown = false
+    // 这里可以添加时间范围变化后的处理逻辑
+  }
   }
 };
 </script>
@@ -231,7 +243,6 @@ export default {
 .el-carousel {
   @apply mb-4;
 }
-
 
 
 .el-carousel__item:nth-child(n) {
