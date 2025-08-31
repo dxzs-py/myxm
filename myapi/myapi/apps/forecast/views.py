@@ -6,8 +6,9 @@ from django.utils import timezone
 from django_redis import get_redis_connection
 from myapi.apps.forecast.utils import PredictionService
 import json
-
-
+import pandas as pd
+import os
+from django.conf import settings
 class PredictionListView(APIView):
     def get(self, request):
         """获取最新的预测结果"""
@@ -84,7 +85,6 @@ class TriggerPredictionView(APIView):
             # 创建唯一的键名
             key = f"prediction:{feature_name}:{forecast_start_date.strftime('%Y%m%d')}-{forecast_end_date.strftime('%Y%m%d')}"
             # 存储的数据结构
-            print(timezone.now().isoformat())
             data = {
                 'feature': feature_name,
                 'values': json.dumps(prediction['values']),  # 序列化列表为JSON字符串
@@ -95,14 +95,13 @@ class TriggerPredictionView(APIView):
             pipe.hset(key, mapping=data)
             pipe.expire(key, 7 * 24 * 3600)  # 7天过期
 
-
             return f"成功生成预测结果，日期：{forecast_start_date.date()}-{forecast_end_date.date()}"
         except Exception as e:
             raise Exception(f"预测任务失败: {str(e)}")
 
     def post(self, request):
         """手动触发预测任务"""
-        target_indices = request.data.get('target_indices', [0,1,2])
+        target_indices = request.data.get('target_indices', [0, 1, 2, 3, 4, 5, 6])
         try:
             # 获取redis连接对象
             redis_conn = get_redis_connection('forecast')
@@ -110,7 +109,7 @@ class TriggerPredictionView(APIView):
             with redis_conn.pipeline() as pipe:
                 for target_index in target_indices:
                     result = self.periodic_prediction(target_index, pipe)
-                    results.append(result)if target_indices else 1
+                    results.append(result) if target_indices else 1
                 pipe.execute()
 
             return Response({
@@ -123,4 +122,16 @@ class TriggerPredictionView(APIView):
                 'error': str(e)
             }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-
+from myapi.apps.forecast.utils import NingxiaDisasterIdentifier
+class DisasterIdentificationView(APIView):
+    def get(self, request):
+        try:
+            file_path = os.path.join(settings.BASE_DIR, 'myapi', 'apps', 'forecast', 'static', 'data_finally.csv')
+            prev_days = pd.read_csv(file_path).iloc[-8:]            # 分离当天数据和历史数据
+            today = prev_days.iloc[-1]  # 当天数据
+            prev_days = prev_days.iloc[:-1]  # 历史数据
+            identifier = NingxiaDisasterIdentifier()
+            disasters = identifier.identify_all(today, prev_days)
+            return Response({'disasters': disasters, 'status': 'success'}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

@@ -13,7 +13,7 @@
         <nav class="flex space-x-4 mx-8 flex-1 justify-center">
           <router-link
             to="home"
-            class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50">
+            class="px-3 py-2 rounded-md transition-colors duration-200 text-gray-600 hover:text-green-600 hover:bg-green-50 ">
             首页
           </router-link>
           <router-link
@@ -202,5 +202,12 @@ export default {
 /* 统一按钮过渡效果 */
 button, .el-menu-item {
   @apply transition-all duration-200;
+}
+
+a.router-link-active {
+  background-color: #10B981;
+}
+a:hover {
+  background-color: #555;
 }
 </style>

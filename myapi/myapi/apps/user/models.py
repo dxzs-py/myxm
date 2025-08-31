@@ -83,11 +83,31 @@ class County(BaseModel):
 class City(BaseModel):
     """城市模型"""
     name = models.CharField(max_length=64, verbose_name="城市名称", unique=True)
+    province = models.ForeignKey(
+        "Province",
+        related_name="province_city",
+        on_delete=models.PROTECT,
+        verbose_name="所属省",
+        null=True,
+        blank=True,
+    )
 
     class Meta:
         db_table = "xm_city"
         verbose_name = "城市"
         verbose_name_plural = "城市"
+
+    def __str__(self):
+        return self.name
+
+class Province(BaseModel):
+    """省模型"""
+    name = models.CharField(max_length=64, verbose_name="省名称", unique=True)
+
+    class Meta:
+        db_table = "xm_province"
+        verbose_name = "省"
+        verbose_name_plural = "省"
 
     def __str__(self):
         return self.name

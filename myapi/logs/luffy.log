@@ -9132,3 +9132,624 @@ INFO 2025-08-12 13:42:45,357 basehttp 14871 136497194145344 "GET //meteorology/?
 INFO 2025-08-12 13:42:52,231 basehttp 14871 136497210930752 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
 INFO 2025-08-12 13:42:52,443 basehttp 14871 136497194145344 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 156
 INFO 2025-08-12 13:42:52,677 basehttp 14871 136497202538048 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-08-16 19:38:12,335 autoreload 19800 131607546688576 Watching for file changes with StatReloader
+INFO 2025-08-16 19:39:42,410 basehttp 19800 131603581191744 "GET / HTTP/1.1" 302 0
+INFO 2025-08-16 19:39:43,044 basehttp 19800 131603581191744 "GET /admin/ HTTP/1.1" 200 22734
+INFO 2025-08-16 19:39:50,025 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-16 19:39:53,903 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 5623
+INFO 2025-08-16 19:39:55,719 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-16 19:39:56,673 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 5623
+INFO 2025-08-16 19:39:57,601 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-16 19:41:27,433 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 5623
+INFO 2025-08-16 19:41:30,559 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-16 19:41:35,250 basehttp 19800 131603581191744 "POST /admin/forecast/forecast/trigger/ HTTP/1.1" 302 0
+INFO 2025-08-16 19:41:35,295 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6139
+INFO 2025-08-16 19:41:38,168 basehttp 19800 131603581191744 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 11209
+INFO 2025-08-16 19:43:32,520 autoreload 19800 131607546688576 /home/dx/Desktop/my_pr/myapi/myapi/apps/forecast/views.py changed, reloading.
+INFO 2025-08-16 19:43:37,213 autoreload 21119 134863351071808 Watching for file changes with StatReloader
+INFO 2025-08-16 19:44:04,323 basehttp 21119 134859386603072 "POST /forecast/trigger-prediction/ HTTP/1.1" 202 460
+INFO 2025-08-16 19:44:27,140 basehttp 21119 134859246753344 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-16 19:44:29,709 basehttp 21119 134859246753344 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 11209
+INFO 2025-08-16 19:44:37,442 basehttp 21119 134859246753344 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-19 15:31:04,992 autoreload 13450 128016932389952 Watching for file changes with StatReloader
+INFO 2025-08-19 15:36:13,517 autoreload 13962 134166677648448 Watching for file changes with StatReloader
+WARNING 2025-08-19 15:37:20,153 log 13962 134162712708672 Method Not Allowed: /forecast/disaster-identification/
+WARNING 2025-08-19 15:37:20,154 basehttp 13962 134162712708672 "POST /forecast/disaster-identification/ HTTP/1.1" 405 46
+ERROR 2025-08-19 15:37:35,844 log 13962 134162712708672 Internal Server Error: /forecast/disaster-identification/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: DisasterIdentificationView.get() takes 1 positional argument but 2 were given
+ERROR 2025-08-19 15:37:35,849 basehttp 13962 134162712708672 "GET /forecast/disaster-identification/ HTTP/1.1" 500 98828
+INFO 2025-08-19 15:41:11,469 autoreload 13962 134166677648448 /home/dx/Desktop/my_pr/myapi/myapi/apps/forecast/views.py changed, reloading.
+INFO 2025-08-19 15:41:16,384 autoreload 14427 132888686531648 Watching for file changes with StatReloader
+ERROR 2025-08-19 15:41:38,046 log 14427 132884721911360 Internal Server Error: /forecast/disaster-identification/
+ERROR 2025-08-19 15:41:38,047 basehttp 14427 132884721911360 "GET /forecast/disaster-identification/ HTTP/1.1" 500 74
+INFO 2025-08-19 15:42:04,473 autoreload 14427 132888686531648 /home/dx/Desktop/my_pr/myapi/myapi/apps/forecast/views.py changed, reloading.
+INFO 2025-08-19 15:42:08,643 autoreload 14521 129063330915392 Watching for file changes with StatReloader
+INFO 2025-08-19 15:42:20,235 basehttp 14521 129059367765568 "GET /forecast/disaster-identification/ HTTP/1.1" 200 188
+INFO 2025-08-19 15:47:17,258 autoreload 14926 133707599168576 Watching for file changes with StatReloader
+INFO 2025-08-19 15:50:03,262 autoreload 15229 130578402038848 Watching for file changes with StatReloader
+INFO 2025-08-19 16:06:01,969 basehttp 15229 130574369945152 "GET / HTTP/1.1" 302 0
+INFO 2025-08-19 16:06:25,085 basehttp 15229 130574369945152 "GET /admin/ HTTP/1.1" 200 22734
+INFO 2025-08-19 16:06:25,208 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,210 basehttp 15229 130574361552448 "GET / HTTP/1.1" 302 0
+INFO 2025-08-19 16:06:25,326 basehttp 15229 130574361552448 "GET /admin/ HTTP/1.1" 200 22734
+INFO 2025-08-19 16:06:25,489 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,504 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 200 6994
+INFO 2025-08-19 16:06:25,507 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 200 101784
+INFO 2025-08-19 16:06:25,529 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,532 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,537 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,604 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,616 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,637 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,713 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,721 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,724 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,738 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,751 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:25,753 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:26,335 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:26,342 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:26,344 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:26,380 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:26,452 basehttp 15229 130574344767040 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-08-19 16:06:26,505 basehttp 15229 130574344767040 "GET /static/favicon.ico HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,710 basehttp 15229 130574344767040 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-08-19 16:06:33,754 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,790 basehttp 15229 130574344767040 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,800 basehttp 15229 130574353159744 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,801 basehttp 15229 130574361552448 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,808 basehttp 15229 130574353159744 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,819 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,821 basehttp 15229 130574334277184 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,829 basehttp 15229 130574334277184 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,830 basehttp 15229 130573985117760 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,838 basehttp 15229 130573985117760 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,842 basehttp 15229 130574344767040 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,855 basehttp 15229 130574369945152 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 16:06:33,859 basehttp 15229 130574353159744 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,869 basehttp 15229 130574361552448 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,873 basehttp 15229 130574369945152 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,877 basehttp 15229 130574334277184 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,887 basehttp 15229 130573985117760 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,896 basehttp 15229 130574344767040 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,908 basehttp 15229 130574353159744 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,918 basehttp 15229 130574361552448 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,922 basehttp 15229 130574369945152 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:33,929 basehttp 15229 130574334277184 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:06:37,656 basehttp 15229 130574334277184 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-08-19 16:06:37,722 basehttp 15229 130574334277184 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 16:06:39,175 basehttp 15229 130574334277184 "GET /admin/crop/growth/ HTTP/1.1" 200 33653
+INFO 2025-08-19 16:06:39,243 basehttp 15229 130574334277184 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 16:06:41,955 basehttp 15229 130574334277184 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-19 16:06:49,232 basehttp 15229 130574334277184 "POST /admin/forecast/forecast/trigger/ HTTP/1.1" 302 0
+INFO 2025-08-19 16:06:49,314 basehttp 15229 130574334277184 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6139
+INFO 2025-08-19 16:06:51,885 basehttp 15229 130574334277184 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 11209
+INFO 2025-08-19 16:06:57,640 basehttp 15229 130574334277184 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-19 16:07:06,745 basehttp 15229 130573624391232 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 16:07:07,055 basehttp 15229 130573641176640 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 16:07:07,269 basehttp 15229 130573632783936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-08-19 16:07:25,247 basehttp 15229 130573624391232 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 16:07:25,450 basehttp 15229 130573632783936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 16:07:25,659 basehttp 15229 130573641176640 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-08-19 16:08:56,271 basehttp 15229 130573624391232 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 16:08:56,472 basehttp 15229 130573641176640 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 16:08:56,693 basehttp 15229 130573632783936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-08-19 16:14:04,418 basehttp 15229 130573641176640 "GET /admin/user/user/ HTTP/1.1" 200 47092
+INFO 2025-08-19 16:14:04,522 basehttp 15229 130573624391232 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:04,537 basehttp 15229 130573641176640 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 16:14:04,733 basehttp 15229 130573641176640 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:04,739 basehttp 15229 130573624391232 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:04,773 basehttp 15229 130573624391232 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:04,784 basehttp 15229 130573641176640 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:04,946 basehttp 15229 130573624391232 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:08,071 basehttp 15229 130573624391232 "GET /admin/user/user/1/change/ HTTP/1.1" 200 18629
+INFO 2025-08-19 16:14:08,142 basehttp 15229 130573632783936 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:14:08,157 basehttp 15229 130573624391232 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 16:14:08,159 basehttp 15229 130573641176640 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-08-19 16:23:36,583 autoreload 15229 130578402038848 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:23:50,298 autoreload 18426 132796266083392 Watching for file changes with StatReloader
+INFO 2025-08-19 16:28:31,911 autoreload 18426 132796266083392 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:28:36,083 autoreload 18727 139252343538752 Watching for file changes with StatReloader
+INFO 2025-08-19 16:32:44,023 autoreload 18727 139252343538752 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 16:32:48,354 autoreload 18980 139436374709312 Watching for file changes with StatReloader
+WARNING 2025-08-19 16:33:18,502 log 18980 139432342582848 Unauthorized: /user/self/
+WARNING 2025-08-19 16:33:18,505 basehttp 18980 139432342582848 "GET /user/self/ HTTP/1.1" 401 43
+INFO 2025-08-19 16:33:41,886 autoreload 18980 139436374709312 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:33:46,166 autoreload 19076 127003136676928 Watching for file changes with StatReloader
+ERROR 2025-08-19 16:33:58,119 log 19076 126999172826688 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py", line 118, in get_queryset
+    return queryset.filter(id=user_id)
+           ^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'filter'
+ERROR 2025-08-19 16:33:58,131 basehttp 19076 126999172826688 "GET /user/self/ HTTP/1.1" 500 110805
+INFO 2025-08-19 16:34:22,633 autoreload 19076 127003136676928 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:34:27,086 autoreload 19164 123167336465472 Watching for file changes with StatReloader
+INFO 2025-08-19 16:34:43,027 autoreload 19164 123167336465472 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:34:47,247 autoreload 19226 133267237807168 Watching for file changes with StatReloader
+ERROR 2025-08-19 16:34:58,434 log 19226 133263207167552 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+                                    ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py", line 118, in get_queryset
+    return queryset.filter(id=user_id)
+           ^^^^^^^^^^^^^^^
+AttributeError: 'int' object has no attribute 'filter'
+ERROR 2025-08-19 16:34:58,444 basehttp 19226 133263207167552 "GET /user/self/ HTTP/1.1" 500 110805
+INFO 2025-08-19 16:35:24,789 autoreload 19226 133267237807168 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 16:35:28,923 autoreload 19293 135881719678016 Watching for file changes with StatReloader
+INFO 2025-08-19 16:35:40,412 basehttp 19293 135877755225664 "GET /user/self/ HTTP/1.1" 200 86
+INFO 2025-08-19 16:36:25,923 autoreload 19293 135881719678016 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 16:36:29,944 autoreload 19368 135342923084864 Watching for file changes with StatReloader
+ERROR 2025-08-19 16:36:55,132 log 19368 135338891671104 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `city_name` is not valid for model `User` in `user.serializers.SelfModelSerializer`.
+ERROR 2025-08-19 16:36:55,139 basehttp 19368 135338891671104 "GET /user/self/ HTTP/1.1" 500 166328
+INFO 2025-08-19 16:37:10,498 autoreload 19368 135342923084864 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 16:37:14,790 autoreload 19438 136593784947776 Watching for file changes with StatReloader
+ERROR 2025-08-19 16:37:26,435 log 19438 136589753710144 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `city__name` is not valid for model `User` in `user.serializers.SelfModelSerializer`.
+ERROR 2025-08-19 16:37:26,446 basehttp 19438 136589753710144 "GET /user/self/ HTTP/1.1" 500 166352
+INFO 2025-08-19 16:39:06,817 autoreload 19438 136593784947776 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 16:39:11,150 autoreload 19572 139920306975808 Watching for file changes with StatReloader
+INFO 2025-08-19 16:39:20,956 basehttp 19572 139916277184064 "GET /user/self/ HTTP/1.1" 200 116
+INFO 2025-08-19 17:00:51,645 autoreload 19572 139920306975808 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 17:00:56,426 autoreload 20867 132032270529600 Watching for file changes with StatReloader
+INFO 2025-08-19 17:06:03,469 basehttp 20867 132028217415232 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 17:06:03,659 basehttp 20867 132028234200640 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 17:06:03,912 basehttp 20867 132028225807936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-08-19 17:09:17,360 basehttp 20867 132028217415232 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 17:09:17,514 basehttp 20867 132028225807936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 17:09:17,723 basehttp 20867 132028234200640 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-08-19 17:09:20,814 basehttp 20867 132028234200640 "GET //crop/plantArea/?crop=%E6%98%A5%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 532
+INFO 2025-08-19 17:09:54,764 autoreload 20867 132032270529600 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-19 17:10:00,796 autoreload 21526 139603277947968 Watching for file changes with StatReloader
+INFO 2025-08-19 17:10:21,104 basehttp 21526 139599245473344 "GET /user/self/ HTTP/1.1" 200 116
+INFO 2025-08-19 17:31:44,435 autoreload 4513 131177320895552 Watching for file changes with StatReloader
+INFO 2025-08-19 17:34:35,113 basehttp 4513 131173355701824 "GET /admin/ HTTP/1.1" 200 22734
+INFO 2025-08-19 17:34:35,834 basehttp 4513 131173355701824 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-19 17:41:08,228 autoreload 4513 131177320895552 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 17:41:15,596 autoreload 5560 125472952906816 Watching for file changes with StatReloader
+INFO 2025-08-19 17:43:34,238 basehttp 5560 125468921558592 "GET /admin/user/user/ HTTP/1.1" 200 47092
+INFO 2025-08-19 17:43:34,322 basehttp 5560 125468921558592 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:46:34,980 autoreload 5560 125472952906816 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-08-19 17:46:39,664 autoreload 5918 130342829036608 Watching for file changes with StatReloader
+INFO 2025-08-19 17:52:55,293 basehttp 5918 130338797209152 "GET /admin/user/user/1/change/ HTTP/1.1" 200 18629
+INFO 2025-08-19 17:52:55,375 basehttp 5918 130338797209152 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:53:00,259 basehttp 5918 130338797209152 "GET /admin/user/user/ HTTP/1.1" 200 47092
+INFO 2025-08-19 17:53:00,342 basehttp 5918 130338797209152 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:54:15,454 autoreload 5918 130342829036608 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-08-19 17:54:21,233 autoreload 6528 127711685915712 Watching for file changes with StatReloader
+INFO 2025-08-19 17:56:56,700 basehttp 6528 127707720795712 "GET /admin/ HTTP/1.1" 200 22734
+INFO 2025-08-19 17:56:57,403 basehttp 6528 127707720795712 "GET /admin/user/user/ HTTP/1.1" 200 47590
+INFO 2025-08-19 17:56:57,463 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:56:57,838 basehttp 6528 127707720795712 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-08-19 17:58:18,371 basehttp 6528 127707720795712 "GET /admin/user/user/1/change/ HTTP/1.1" 200 18629
+INFO 2025-08-19 17:58:18,447 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:58:35,673 basehttp 6528 127707720795712 "GET /admin/user/user/ HTTP/1.1" 200 47590
+INFO 2025-08-19 17:58:35,747 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 17:59:16,940 basehttp 6528 127707720795712 "POST /admin/user/user/ HTTP/1.1" 302 0
+INFO 2025-08-19 17:59:17,235 basehttp 6528 127707720795712 "GET /admin/user/user/ HTTP/1.1" 200 47969
+INFO 2025-08-19 17:59:17,345 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 18:00:41,872 basehttp 6528 127707720795712 "GET /admin/user/user/add/ HTTP/1.1" 200 17887
+INFO 2025-08-19 18:00:41,930 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 18:00:47,848 basehttp 6528 127707720795712 "GET /admin/user/user/ HTTP/1.1" 200 47863
+INFO 2025-08-19 18:00:47,907 basehttp 6528 127707720795712 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-19 18:00:52,939 basehttp 6528 127707720795712 "GET /media/avatar/dxtx.jpg HTTP/1.1" 200 31952
+INFO 2025-08-19 18:01:07,875 basehttp 6528 127707720795712 "GET /media/avatar/dxtx.jpg HTTP/1.1" 200 31952
+INFO 2025-08-19 18:10:24,895 basehttp 6528 127707720795712 "OPTIONS //user/self/ HTTP/1.1" 200 0
+WARNING 2025-08-19 18:10:25,024 log 6528 127707720795712 Unauthorized: /user/self/
+WARNING 2025-08-19 18:10:25,026 basehttp 6528 127707720795712 "GET //user/self/ HTTP/1.1" 401 171
+WARNING 2025-08-19 18:10:35,813 log 6528 127707720795712 Unauthorized: /user/self/
+WARNING 2025-08-19 18:10:35,814 basehttp 6528 127707720795712 "GET //user/self/ HTTP/1.1" 401 171
+WARNING 2025-08-19 18:10:55,969 log 6528 127707720795712 Unauthorized: /user/self/
+WARNING 2025-08-19 18:10:55,972 basehttp 6528 127707720795712 "GET //user/self/ HTTP/1.1" 401 171
+INFO 2025-08-19 18:11:25,227 basehttp 6528 127707720795712 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-08-19 18:11:32,099 basehttp 6528 127707720795712 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-08-19 18:11:32,110 basehttp 6528 127707720795712 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-08-19 18:11:32,166 basehttp 6528 127707720795712 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-08-19 18:11:33,826 basehttp 6528 127707720795712 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-08-19 18:11:35,401 basehttp 6528 127707486615104 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 18:11:35,571 basehttp 6528 127707720795712 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 158
+INFO 2025-08-19 18:11:35,818 basehttp 6528 127707712403008 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+WARNING 2025-08-19 18:11:40,292 log 6528 127707712403008 Unauthorized: /user/self/
+WARNING 2025-08-19 18:11:40,294 basehttp 6528 127707712403008 "GET //user/self/ HTTP/1.1" 401 171
+INFO 2025-08-19 18:12:42,096 basehttp 6528 127707712403008 "OPTIONS /user/self/ HTTP/1.1" 200 0
+WARNING 2025-08-19 18:12:42,107 log 6528 127707712403008 Unauthorized: /user/self/
+WARNING 2025-08-19 18:12:42,107 basehttp 6528 127707712403008 "GET /user/self/ HTTP/1.1" 401 171
+INFO 2025-08-19 18:14:14,836 basehttp 6528 127707712403008 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-08-19 18:14:21,432 basehttp 6528 127707712403008 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-08-19 18:14:23,124 basehttp 6528 127707712403008 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-08-19 18:14:24,653 basehttp 6528 127707486615104 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-19 18:14:24,841 basehttp 6528 127707712403008 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-08-19 18:14:25,069 basehttp 6528 127707720795712 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+WARNING 2025-08-19 18:14:31,057 log 6528 127707720795712 Unauthorized: /user/self/
+WARNING 2025-08-19 18:14:31,058 basehttp 6528 127707720795712 "GET /user/self/ HTTP/1.1" 401 171
+INFO 2025-08-31 21:49:03,471 autoreload 4725 128398079489088 Watching for file changes with StatReloader
+INFO 2025-08-31 21:49:29,512 basehttp 4725 128394118645312 "GET / HTTP/1.1" 302 0
+INFO 2025-08-31 21:49:29,926 basehttp 4725 128394118645312 "GET /admin/ HTTP/1.1" 200 22761
+INFO 2025-08-31 21:49:30,026 basehttp 4725 128394100811328 "GET /static/admin/simpleui-x/css/index.css?_=3.2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,029 basehttp 4725 128393886561856 "GET /static/admin/simpleui-x/waves/waves.min.css?_=2.1 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,029 basehttp 4725 128394110252608 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/css/all.min.css HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,030 basehttp 4725 128394118645312 "GET /static/admin/simpleui-x/elementui/theme-chalk/index.css HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,054 basehttp 4725 128393886561856 "GET /static/admin/simpleui-x/automatic/segment.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,056 basehttp 4725 128394118645312 "GET /static/admin/simpleui-x/js/vue.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,061 basehttp 4725 128394100811328 "GET /static/admin/simpleui-x/img/logo.png HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,061 basehttp 4725 128393869776448 "GET /static/admin/simpleui-x/automatic/dicts.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,063 basehttp 4725 128393878169152 "GET /static/admin/simpleui-x/elementui/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,064 basehttp 4725 128394110252608 "GET /static/admin/simpleui-x/locale/en-us.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,073 basehttp 4725 128393878169152 "GET /static/admin/simpleui-x/locale/zh-hans.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,087 basehttp 4725 128393869776448 "GET /static/admin/simpleui-x/js/cookie.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,112 basehttp 4725 128394110252608 "GET /static/admin/simpleui-x/theme/theme.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,115 basehttp 4725 128393886561856 "GET /static/admin/simpleui-x/waves/waves.min.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,117 basehttp 4725 128394100811328 "GET /static/admin/simpleui-x/js/menu.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,117 basehttp 4725 128394118645312 "GET /static/admin/simpleui-x/js/index.js?_=2025.01.13 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,501 basehttp 4725 128393886561856 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-brands-400.woff2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,503 basehttp 4725 128394118645312 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-regular-400.woff2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,504 basehttp 4725 128394100811328 "GET /static/admin/simpleui-x/fontawesome-free-6.2.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,513 basehttp 4725 128394100811328 "GET /static/admin/simpleui-x/elementui/theme-chalk/fonts/element-icons.woff HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:30,634 basehttp 4725 128394100811328 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-08-31 21:49:30,650 basehttp 4725 128394100811328 "GET /static/favicon.ico HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,551 basehttp 4725 128394100811328 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-31 21:49:34,584 basehttp 4725 128394100811328 "GET /static/admin/css/responsive.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,587 basehttp 4725 128394118645312 "GET /static/admin/simpleui-x/js/language.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,589 basehttp 4725 128393886561856 "GET /static/admin/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,593 basehttp 4725 128394110252608 "GET /static/admin/simpleui-x/css/base.css?_=2.7 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,591 basehttp 4725 128393869776448 "GET /static/admin/simpleui-x/theme/simpleui.css HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,593 basehttp 4725 128394118645312 "GET /static/admin/js/vendor/jquery/jquery.min.js HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,592 basehttp 4725 128393878169152 "GET /static/admin/simpleui-x/js/cookie.js HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,605 basehttp 4725 128393878169152 "GET /static/admin/simpleui-x/locale/en-us.js?_=2.1.2 HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:34,607 basehttp 4725 128394110252608 "GET /static/admin/simpleui-x/locale/zh-hans.js HTTP/1.1" 304 0
+INFO 2025-08-31 21:49:35,736 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 5623
+INFO 2025-08-31 21:49:36,878 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-31 21:49:39,406 basehttp 4725 128394110252608 "POST /admin/forecast/forecast/trigger/ HTTP/1.1" 302 0
+INFO 2025-08-31 21:49:39,441 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6139
+INFO 2025-08-31 21:49:40,620 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 11202
+INFO 2025-08-31 21:49:52,585 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-08-31 21:49:55,836 basehttp 4725 128394110252608 "POST /admin/forecast/forecast/trigger/ HTTP/1.1" 302 0
+INFO 2025-08-31 21:49:55,865 basehttp 4725 128394110252608 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6139
+INFO 2025-08-31 21:50:01,235 basehttp 4725 128392947037760 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-31 21:50:01,502 basehttp 4725 128393441695296 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-08-31 21:50:01,808 basehttp 4725 128393433302592 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1250
+INFO 2025-08-31 21:50:12,099 basehttp 4725 128393433302592 "OPTIONS /user/self/ HTTP/1.1" 200 0
+WARNING 2025-08-31 21:50:12,143 log 4725 128393433302592 Unauthorized: /user/self/
+WARNING 2025-08-31 21:50:12,144 basehttp 4725 128393433302592 "GET /user/self/ HTTP/1.1" 401 171
+WARNING 2025-08-31 21:50:24,380 log 4725 128393433302592 Unauthorized: /user/self/
+WARNING 2025-08-31 21:50:24,381 basehttp 4725 128393433302592 "GET /user/self/ HTTP/1.1" 401 171
+INFO 2025-08-31 21:51:01,652 autoreload 4725 128398079489088 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-31 21:51:06,320 autoreload 5184 131380016264256 Watching for file changes with StatReloader
+INFO 2025-08-31 21:55:38,010 autoreload 5184 131380016264256 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-08-31 21:55:42,083 autoreload 5499 132871972627520 Watching for file changes with StatReloader
+WARNING 2025-08-31 21:55:52,492 log 5499 132867945395776 Unauthorized: /user/self/
+WARNING 2025-08-31 21:55:52,493 basehttp 5499 132867945395776 "GET /user/self/ HTTP/1.1" 401 171
+INFO 2025-08-31 21:57:19,815 basehttp 5499 132867945395776 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-08-31 21:57:26,539 basehttp 5499 132867945395776 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-08-31 21:57:26,546 basehttp 5499 132867945395776 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-08-31 21:57:26,596 basehttp 5499 132867945395776 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+INFO 2025-08-31 21:57:27,593 basehttp 5499 132867945395776 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-08-31 21:57:28,888 basehttp 5499 132867926513216 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-08-31 21:57:29,050 basehttp 5499 132867945395776 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-08-31 21:57:29,233 basehttp 5499 132867934905920 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1250
+INFO 2025-08-31 21:57:32,365 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 21:57:42,128 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 21:58:36,034 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+WARNING 2025-08-31 21:58:36,072 log 5499 132867918120512 Not Found: /media/http://www.mtl.cn:8000/media/avatar/dxtx.jpg
+WARNING 2025-08-31 21:58:36,073 basehttp 5499 132867918120512 "GET /media/http://www.mtl.cn:8000/media/avatar/dxtx.jpg HTTP/1.1" 404 3034
+INFO 2025-08-31 21:59:01,741 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+WARNING 2025-08-31 21:59:02,817 log 5499 132867918120512 Not Found: /media/http://www.mtl.cn:8000/media/avatar/dxtx.jpg
+WARNING 2025-08-31 21:59:02,817 basehttp 5499 132867918120512 "GET /media/http://www.mtl.cn:8000/media/avatar/dxtx.jpg HTTP/1.1" 404 3034
+INFO 2025-08-31 22:01:36,512 basehttp 5499 132867918120512 "GET /media/avatar/dxtx.jpg HTTP/1.1" 304 0
+INFO 2025-08-31 22:03:26,754 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 22:11:30,670 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 22:12:45,908 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 22:13:40,298 basehttp 5499 132867918120512 "GET /admin/user/user/ HTTP/1.1" 200 47863
+INFO 2025-08-31 22:13:40,360 basehttp 5499 132867926513216 "GET /static/admin/css/forms.css HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,362 basehttp 5499 132867945395776 "GET /static/admin/css/changelists.css?_=20180905 HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,363 basehttp 5499 132867564762688 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,365 basehttp 5499 132867556369984 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,369 basehttp 5499 132867547977280 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,372 basehttp 5499 132867926513216 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,375 basehttp 5499 132867945395776 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,376 basehttp 5499 132867564762688 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,384 basehttp 5499 132867556369984 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,385 basehttp 5499 132867918120512 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:13:40,386 basehttp 5499 132867547977280 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,392 basehttp 5499 132867918120512 "GET /static/admin/simpleui-x/automatic/dicts.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,418 basehttp 5499 132867926513216 "GET /static/admin/simpleui-x/js/axios.min.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,419 basehttp 5499 132867945395776 "GET /static/admin/simpleui-x/automatic/segment.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,474 basehttp 5499 132867945395776 "GET /static/admin/css/widgets.css HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,488 basehttp 5499 132867926513216 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,524 basehttp 5499 132867945395776 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,575 basehttp 5499 132867945395776 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:40,577 basehttp 5499 132867926513216 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 304 0
+INFO 2025-08-31 22:13:49,743 basehttp 5499 132867945395776 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:13:49,775 basehttp 5499 132867945395776 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:13:52,439 basehttp 5499 132867945395776 "GET /admin/user/county/ HTTP/1.1" 200 38031
+INFO 2025-08-31 22:13:52,466 basehttp 5499 132867945395776 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:14:48,001 basehttp 5499 132867934905920 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-08-31 22:33:51,234 autoreload 5499 132871972627520 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-08-31 22:33:59,450 autoreload 8336 134264716362816 Watching for file changes with StatReloader
+INFO 2025-08-31 22:36:46,282 autoreload 8336 134264716362816 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-08-31 22:36:48,873 autoreload 8856 124501170324544 Watching for file changes with StatReloader
+INFO 2025-08-31 22:51:05,697 autoreload 8856 124501170324544 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-08-31 22:51:08,552 autoreload 9746 139780608529472 Watching for file changes with StatReloader
+INFO 2025-08-31 22:51:22,103 basehttp 9746 139776647054912 "GET /admin/ HTTP/1.1" 200 22761
+INFO 2025-08-31 22:51:22,759 basehttp 9746 139776647054912 "GET /admin/user/user/ HTTP/1.1" 200 48240
+INFO 2025-08-31 22:51:22,818 basehttp 9746 139776647054912 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:51:23,166 basehttp 9746 139776647054912 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-08-31 22:52:00,361 autoreload 9746 139780608529472 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-08-31 22:52:02,913 autoreload 9844 138891498914880 Watching for file changes with StatReloader
+INFO 2025-08-31 22:54:32,966 autoreload 9844 138891498914880 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-08-31 22:54:35,515 autoreload 10038 124376250790976 Watching for file changes with StatReloader
+INFO 2025-08-31 22:54:39,980 basehttp 10038 124372225357376 "GET /admin/ HTTP/1.1" 200 23015
+INFO 2025-08-31 22:54:40,361 basehttp 10038 124372225357376 "GET /admin/user/user/ HTTP/1.1" 200 43584
+INFO 2025-08-31 22:54:40,606 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:54:40,857 basehttp 10038 124372225357376 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-08-31 22:54:41,978 basehttp 10038 124372225357376 "GET /admin/user/province/ HTTP/1.1" 200 30369
+INFO 2025-08-31 22:54:42,011 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:54:43,186 basehttp 10038 124372225357376 "GET /admin/user/province/add/ HTTP/1.1" 200 11091
+INFO 2025-08-31 22:54:43,215 basehttp 10038 124372216964672 "GET /static/admin/js/change_form.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:54:43,216 basehttp 10038 124372204377664 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 304 0
+INFO 2025-08-31 22:54:43,226 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:55:22,596 basehttp 10038 124372225357376 "POST /admin/user/province/add/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:55:22,633 basehttp 10038 124372225357376 "GET /admin/user/province/ HTTP/1.1" 200 30976
+INFO 2025-08-31 22:55:22,732 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:55:25,141 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:55:25,170 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:55:27,739 basehttp 10038 124372225357376 "GET /admin/user/city/2/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:55:27,771 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:55:36,284 basehttp 10038 124372225357376 "POST /admin/user/city/2/change/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:55:36,318 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32560
+INFO 2025-08-31 22:55:36,391 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:56:43,341 basehttp 10038 124372225357376 "GET /admin/user/city/1/change/ HTTP/1.1" 200 13893
+INFO 2025-08-31 22:56:43,373 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:56:50,330 basehttp 10038 124372225357376 "POST /admin/user/city/1/change/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:56:50,365 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32566
+INFO 2025-08-31 22:56:50,437 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:56:52,351 basehttp 10038 124372225357376 "GET /admin/user/city/5/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:56:52,381 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:56:56,361 basehttp 10038 124372225357376 "POST /admin/user/city/5/change/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:56:56,391 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32560
+INFO 2025-08-31 22:56:56,468 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:56:57,641 basehttp 10038 124372225357376 "GET /admin/user/city/4/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:56:57,678 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:00,520 basehttp 10038 124372225357376 "POST /admin/user/city/4/change/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:57:00,550 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32560
+INFO 2025-08-31 22:57:00,625 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:01,854 basehttp 10038 124372225357376 "GET /admin/user/city/3/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:01,891 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:04,581 basehttp 10038 124372225357376 "POST /admin/user/city/3/change/ HTTP/1.1" 302 0
+INFO 2025-08-31 22:57:04,610 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32560
+INFO 2025-08-31 22:57:04,683 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:06,638 basehttp 10038 124372225357376 "GET /admin/user/city/3/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:06,673 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:08,344 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:09,442 basehttp 10038 124372225357376 "GET /admin/user/city/2/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:09,475 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:11,097 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:12,122 basehttp 10038 124372225357376 "GET /admin/user/city/1/change/ HTTP/1.1" 200 13893
+INFO 2025-08-31 22:57:12,158 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:14,024 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:14,055 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:15,387 basehttp 10038 124372225357376 "GET /admin/user/city/5/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:15,424 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:17,409 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:18,520 basehttp 10038 124372225357376 "GET /admin/user/city/4/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:18,558 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:20,745 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:22,303 basehttp 10038 124372225357376 "GET /admin/user/city/3/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:22,333 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:23,552 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:24,684 basehttp 10038 124372225357376 "GET /admin/user/city/2/change/ HTTP/1.1" 200 13890
+INFO 2025-08-31 22:57:24,714 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:26,092 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:57:27,518 basehttp 10038 124372225357376 "GET /admin/user/city/1/change/ HTTP/1.1" 200 13893
+INFO 2025-08-31 22:57:27,550 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:57:29,486 basehttp 10038 124372225357376 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-08-31 22:59:16,964 basehttp 10038 124372225357376 "GET /admin/user/city/1/change/ HTTP/1.1" 200 13893
+INFO 2025-08-31 22:59:17,002 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:59:19,708 basehttp 10038 124372225357376 "GET /admin/user/province/1/change/ HTTP/1.1" 200 12019
+INFO 2025-08-31 22:59:19,783 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:59:22,428 basehttp 10038 124372225357376 "GET /admin/user/user/1/change/ HTTP/1.1" 200 18629
+INFO 2025-08-31 22:59:22,462 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:59:25,869 basehttp 10038 124372225357376 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-08-31 22:59:25,908 basehttp 10038 124372225357376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-08-31 22:59:35,599 basehttp 10038 124372225357376 "GET / HTTP/1.1" 302 0
+INFO 2025-08-31 22:59:35,638 basehttp 10038 124372225357376 "GET /admin/ HTTP/1.1" 200 23042
+INFO 2025-08-31 22:59:36,326 basehttp 10038 124371985233472 "GET /user/self/ HTTP/1.1" 200 220

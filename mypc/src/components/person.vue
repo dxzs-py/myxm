@@ -1,10 +1,6 @@
 <!-- 代码已包含 CSS：使用 TailwindCSS , 安装 TailwindCSS 后方可看到布局样式效果 -->
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- 顶部导航区 -->
-    <Header class="bg-white shadow-sm h-16 sticky w-full top-0 z-50">
-
-    </Header>
     <!-- 主体内容区 -->
     <div class="container mx-auto px-4 py-8">
       <!-- 用户基本信息 -->
@@ -16,7 +12,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="flex items-center">
             <img class="w-16 h-16 rounded-full border-2 border-gray-200"
-                 src="/static/image/logo@2x.png" alt="用户头像">
+                 :src="userInfo.avatar ? `${userInfo.avatar}` : '/static/image/logo@2x.png'" alt="用户头像">
             <div class="ml-4">
               <h3 class="text-lg font-medium">{{ userInfo.username }}</h3>
               <p class="text-gray-500 text-sm">普通用户</p>
@@ -30,15 +26,15 @@
             </div>
             <div>
               <label class="text-gray-500 text-sm">手机号</label>
-              <p class="font-medium">{{ userInfo.phone || '未绑定' }}</p>
+              <p class="font-medium">{{ userInfo.mobile || '未绑定' }}</p>
             </div>
             <div>
-              <label class="text-gray-500 text-sm">注册时间</label>
-              <p class="font-medium">{{ userInfo.registerDate }}</p>
+              <label class="text-gray-500 text-sm">电子邮件地址</label>
+              <p class="font-medium">{{ userInfo.email || '未绑定' }}</p>
             </div>
             <div>
               <label class="text-gray-500 text-sm">上次登录</label>
-              <p class="font-medium">{{ userInfo.lastLogin }}</p>
+              <p class="font-medium">{{ userInfo.last_login | timeformat }}</p>
             </div>
           </div>
         </div>
@@ -51,7 +47,7 @@
             <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
             关注区域
           </h2>
-          <span class="text-sm text-gray-500">已选择 {{ selectedAreas.length }}/5</span>
+          <span class="text-sm text-gray-500">已选择 {{ selectedAreas.length }}/4</span>
         </div>
         <div class="grid grid-cols-3 gap-3">
           <div v-for="(select, index) in areaSelects" :key="index" class="w-full">
@@ -102,23 +98,21 @@
         </div>
       </div>
     </div>
-    <Footer></Footer>
   </div>
 </template>
 <script>
-import Footer from "./common/Footer.vue";
-import Header from "./common/Header.vue"
+
 export default {
-  components: {Footer, Header},
   data() {
     return {
       userInfo: {
         username: '张三',
-        phone: '138****8888',
-        registerDate: '2023-05-15',
-        lastLogin: '2024-01-20 14:30'
+        mobile: '138****8888',
+        email: '3309201506@qq.com',
+        last_login: '2024-01-20 14:30',
+        avatar: null,
       },
-      selectedAreas: ['', '', '', ''],
+      selectedAreas: ['', '', ''],
       selectedAreaTags: ['宁夏银川市兴庆区', '宁夏中卫市沙坡头区'],
       areaSelects: [
         {
@@ -168,18 +162,67 @@ export default {
       selectedLevel: 2
     };
   },
+  filters: {
+    timeformat(value) {
+      let datetime = new Date(value);
+      let Y = datetime.getFullYear(); // 年
+      let m = datetime.getMonth() + 1;
+      let d = datetime.getDate();
+      let H = datetime.getHours();
+      let M = datetime.getMinutes();
+      let S = datetime.getSeconds();
+      m = m < 10 ? '0' + m : m;
+      d = d < 10 ? '0' + d : d;
+      H = H < 10 ? '0' + H : H;
+      M = M < 10 ? '0' + M : M;
+      S = S < 10 ? '0' + S : S;
+      return `${Y}-${m}-${d} ${H}:${M}`;
+    }
+  },
   methods: {
+    getuserInfo() {
+      // 获取用户信息
+      let token = this.check_user_login();
+      this.$axios.get(`${this.$settings.HOST}user/self/`, {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        },
+      }).then(response => {
+        this.userInfo = response.data[0];
+      })
+    },
+    check_user_login(){
+        let token = localStorage.user_token || sessionStorage.user_token;
+        if( !token ){
+            let self = this;
+            this.$confirm("对不起，您尚未登录！所以请登录再使用购物车","路飞学城",{
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {
+                self.$router.push("/user/login");
+            });
+            return false; // 阻止js继续往下执行
+        }
+        return token;
+      },
     removeArea(index) {
       this.selectedAreaTags.splice(index, 1);
-    },
+    }
+    ,
     toggleCrop(crop) {
       crop.selected = !crop.selected;
-    },
+    }
+    ,
     toggleNotify(method) {
       method.selected = !method.selected;
     }
+  },
+  created() {
+    this.getuserInfo();
   }
-};
+}
+;
 </script>
 <style scoped>
 input[type="range"] {

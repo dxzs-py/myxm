@@ -135,7 +135,7 @@ class UserModelSerializer(serializers.ModelSerializer):
         # 指定序列化器关联的模型类
         model = User
         # 定义需要序列化和反序列化的字段
-        fields = ['id', 'username', 'password', 'token', 'mobile', 'sms_code']
+        fields = ['id', 'username', 'password', 'token', 'mobile', 'sms_code',]
 
         # 额外定义字段的参数
         # 因为后端不需要提供数据给客户端，但是一开始的models并没有加入write_only=True，所以这里需要加入一个extra_kwargs，进行额外字段声明
@@ -212,6 +212,8 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class SelfModelSerializer(serializers.ModelSerializer):
+    city_name = serializers.CharField(source='city.name', read_only=True)
+    county_name = serializers.CharField(source='county.name', read_only=True)
     class Meta:
         model = User
-        fields = ['username', 'mobile', 'email', 'is_staff', 'date_joined', ]
+        fields = ['username', 'mobile', 'avatar', 'email', 'city_name', 'county_name','last_login']

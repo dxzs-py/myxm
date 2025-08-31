@@ -69,10 +69,10 @@ class ForecastAdminSite(admin.ModelAdmin):
                 api_request = HttpRequest()
                 api_request.method = 'POST'
                 api_request.user = request.user
-                api_request._full_data = {'target_indices': [0, 1, 2]}
+                api_request._full_data = {'target_indices': [0, 1, 2, 3, 4, 5, 6]}
                 api_request.META = request.META
                 api_request.parsers = [JSONParser()]
-                api_request.data = {'target_indices': [0, 1, 2]}
+                api_request.data = {'target_indices': [0, 1, 2, 3, 4, 5, 6]}
 
                 # 实例化视图并处理请求
                 view = TriggerPredictionView()
@@ -112,7 +112,7 @@ class ForecastAdminSite(admin.ModelAdmin):
             response = view.get(api_request)
 
             context = dict(
-                self.admin_site.each_context(request),  #  Admin 模板提供上下文变量
+                self.admin_site.each_context(request),  # Admin 模板提供上下文变量
                 title="预测结果",
                 results=response.data if response.status_code == 200 else None,
             )

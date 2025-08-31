@@ -54,7 +54,6 @@ class UserAPIView(CreateAPIView):
     serializer_class = UserModelSerializer
 
 import re
-from rest_framework import serializers
 """
 GET /user/mobile/<mobile>/
 """
@@ -121,4 +120,5 @@ class SelfAPIView(ListAPIView):
     permission_classes = [IsAuthenticated]
     queryset = User.objects.all()
     serializer_class = SelfModelSerializer
+
 
