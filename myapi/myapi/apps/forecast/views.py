@@ -126,10 +126,10 @@ from myapi.apps.forecast.utils import NingxiaDisasterIdentifier
 class DisasterIdentificationView(APIView):
     def get(self, request):
         try:
-            file_path = os.path.join(settings.BASE_DIR, 'myapi', 'apps', 'forecast', 'static', 'data_finally.csv')
+            file_path = os.path.join(settings.BASE_DIR, 'apps', 'forecast', 'static', 'data_finally.csv')
             prev_days = pd.read_csv(file_path).iloc[-8:]            # 分离当天数据和历史数据
-            today = prev_days.iloc[-1]  # 当天数据
-            prev_days = prev_days.iloc[:-1]  # 历史数据
+            today = prev_days.iloc[-1]  
+            prev_days = prev_days.iloc[:-1]
             identifier = NingxiaDisasterIdentifier()
             disasters = identifier.identify_all(today, prev_days)
             return Response({'disasters': disasters, 'status': 'success'}, status=status.HTTP_200_OK)

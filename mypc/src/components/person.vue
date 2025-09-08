@@ -183,24 +183,36 @@ export default {
     getuserInfo() {
       // 获取用户信息
       let token = this.check_user_login();
-      this.$axios.get(`${this.$settings.HOST}user/self/`, {
-        headers: {
-          "Authorization": `Bearer ${token}`
-        },
-      }).then(response => {
-        this.userInfo = response.data[0];
-      })
+      if (token) {
+        this.$axios.get(`${this.$settings.HOST}user/self/`, {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          },
+        }).then(response => {
+          this.userInfo = response.data[0];
+        }).catch(error => {
+          this.$message.error("未登录或者登录已过期，请重新登陆");
+          // 保存当前路径，以便登录后跳转回来
+          localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
+          this.$router.push("/user/login");
+        })
+      }
     },
     check_user_login(){
         let token = localStorage.user_token || sessionStorage.user_token;
         if( !token ){
             let self = this;
-            this.$confirm("对不起，您尚未登录！所以请登录再使用购物车","路飞学城",{
+            this.$confirm("对不起，您尚未登录！","宁夏气象灾害风险识别预测预警系统",{
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
             }).then(() => {
+                // 保存当前路径，以便登录后跳转回来
+                localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
                 self.$router.push("/user/login");
+            }).catch(() => {
+                // 用户点击取消，跳转到首页
+                self.$router.push("/");
             });
             return false; // 阻止js继续往下执行
         }

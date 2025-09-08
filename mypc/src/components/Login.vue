@@ -141,14 +141,24 @@ export default {
           sessionStorage.user_id = res.data.id;
           sessionStorage.user_name = res.data.username;
         }
-        // 页面跳转
+        // 页面跳转 - 检查是否有保存的跳转路径
         let self = this;
         this.$alert("登陆成功", "欢迎回来", {}, {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
           type: 'success'
         }).then(() => {
-          self.$router.push('/');  // 这里如果用this是alert对象，我们要重新回调到Vue
+          // 检查是否有保存的跳转路径
+          const redirectPath = localStorage.getItem('redirectAfterLogin');
+          if (redirectPath) {
+            // 清除保存的路径
+            localStorage.removeItem('redirectAfterLogin');
+            // 跳转到原页面
+            self.$router.push(redirectPath);
+          } else {
+            // 默认跳转到首页
+            self.$router.push('/');
+          }
         });
       }).catch(err => {
         const h = this.$createElement;

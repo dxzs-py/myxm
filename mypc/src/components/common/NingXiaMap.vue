@@ -236,7 +236,7 @@ export default {
           // 是否显示右侧控件
           show: true,
           orient: 'horizontal',  // 排列方向 vertical-垂直 | horizontal-水平
-          left: 'right',    // 水平定位 right-右侧 | 20-20像素 | '20%'-百分比
+          left: 'left',    // 水平定位 right-右侧 | 20-20像素 | '20%'-百分比
           top: 'bottom',   // 垂直定位 top-顶部 | 100-100像素 | '30%'-百分比
           itemGap: 10,
           feature: {

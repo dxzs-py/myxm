@@ -48,19 +48,19 @@
       <div class="grid grid-cols-2 gap-3">
         <div class="text-center">
           <p class="text-xs text-gray-600">温度</p>
-          <p class="text-xl font-bold">{{ environment.temperature }}°C</p>
+          <p class="text-xl font-bold">{{ environment.currentTemp }}°C</p>
         </div>
         <div class="text-center">
           <p class="text-xs text-gray-600">湿度</p>
-          <p class="text-xl font-bold">{{ environment.humidity }}%</p>
-        </div>
-        <div class="text-center">
-          <p class="text-xs text-gray-600">光照</p>
-          <p class="text-xl font-bold">{{ environment.light }}lux</p>
+          <p class="text-xl font-bold">{{ environment.currentHumidity }}%</p>
         </div>
         <div class="text-center">
           <p class="text-xs text-gray-600">土壤湿度</p>
-          <p class="text-xl font-bold">{{ environment.soilMoisture }}%</p>
+          <p class="text-xl font-bold">{{ environment.currentWindLevel }}%</p>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-gray-600">气压</p>
+          <p class="text-xl font-bold">{{ environment.currentPressure }}pa</p>
         </div>
       </div>
     </div>
@@ -145,29 +145,18 @@
                   </div>
                   <div>
                     <p class="text-xs text-gray-600">温度</p>
-                    <p class="font-semibold">{{ environment.temperature }}°C</p>
+                    <p class="font-semibold">{{ environment.currentTemp }}°C</p>
                   </div>
                 </div>
               </div>
               <div class="rounded-lg border border-gray-200 p-3">
                 <div class="flex items-center space-x-2">
                   <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-wind"></i>
                   </div>
                   <div>
-                    <p class="text-xs text-gray-600">湿度</p>
-                    <p class="font-semibold">{{ environment.humidity }}%</p>
-                  </div>
-                </div>
-              </div>
-              <div class="rounded-lg border border-gray-200 p-3">
-                <div class="flex items-center space-x-2">
-                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-600">
-                    <i class="fas fa-sun"></i>
-                  </div>
-                  <div>
-                    <p class="text-xs text-gray-600">光照</p>
-                    <p class="font-semibold">{{ environment.light }}lux</p>
+                    <p class="text-xs text-gray-600">风速</p>
+                    <p class="font-semibold">{{ environment.currentWindLevel }}%</p>
                   </div>
                 </div>
               </div>
@@ -178,7 +167,18 @@
                   </div>
                   <div>
                     <p class="text-xs text-gray-600">土壤湿度</p>
-                    <p class="font-semibold">{{ environment.soilMoisture }}%</p>
+                    <p class="font-semibold">{{ environment.currentHumidity }}%</p>
+                  </div>
+                </div>
+              </div>
+              <div class="rounded-lg border border-gray-200 p-3">
+                <div class="flex items-center space-x-2">
+                  <div class="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                    <i class="fas fa-compress"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs text-gray-600">气压</p>
+                    <p class="font-semibold">{{ environment.currentPressure }}lux</p>
                   </div>
                 </div>
               </div>
@@ -230,6 +230,19 @@
 <script>
 export default {
   name: "App",
+  props:{
+    environment:{
+      type: Object,
+      default: () => {
+        return {
+          currentTemp: 24.5,
+          currentHumidity: 68,
+          currentWindLevel: 3,
+          currentPressure: 112
+        }
+      }
+    }
+  },
   data() {
     return {
       showMonitoringSettings: false,
@@ -251,12 +264,6 @@ export default {
         startDate: '2023-05-15',
         icon: 'fas fa-flower',
         nextIcon: 'fas fa-apple-alt'
-      },
-      environment: {
-        temperature: 24.5,
-        humidity: 68,
-        light: 12500,
-        soilMoisture: 42
       },
       alerts: [
         {

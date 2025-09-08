@@ -19,22 +19,22 @@
               <div class="text-center">
                 <div
                   class="text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500">
-                  {{ currentTemp }}°C
+                  {{ currentenvironment.currentTemp }}°C
                 </div>
                 <p class="text-sm text-gray-500">当前温度</p>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold text-blue-600">{{ currentHumidity }}%</div>
+                <div class="text-3xl font-bold text-blue-600">{{ currentenvironment.currentHumidity }}%</div>
                 <p class="text-sm text-gray-500">湿度</p>
               </div>
               <div class="text-center">
                 <div class="flex items-center justify-center">
                   <i class="fas fa-wind mr-2 text-blue-600"></i>
-                  <span class="text-xl font-bold">{{ currentWindLevel }}级</span>
+                  <span class="text-xl font-bold">{{ currentenvironment.currentWindLevel }}级</span>
                 </div>
               </div>
               <div class="text-center">
-                <div class="text-xl font-bold text-blue-600">{{ currentPressure }} hPa</div>
+                <div class="text-xl font-bold text-blue-600">{{ currentenvironment.currentPressure }} hPa</div>
                 <p class="text-sm text-gray-500">气压</p>
               </div>
             </div>
@@ -104,7 +104,7 @@
           </div>
           <div class="hidden md:block md:col-span-1 border-l border-gray-200 shadow-lg h-full">
 
-            <Detail></Detail>
+            <Detail :environment="currentenvironment"></Detail>
           </div>
         </div>
       </div>
@@ -119,93 +119,42 @@ import Detail from "./common/Detail.vue";
 import {debounce} from 'lodash'
 
 export default {
-  components: {NXmap,Detail},
+  components: {NXmap, Detail},
   data() {
     return {
       // 地图实例
       combinedMap: null,
       // 实时气象数据
-      currentTemp: 12,
-      currentHumidity: 65,
-      currentWindLevel: 3,
-      currentPressure: 112,
+
+      currentenvironment: {
+        currentTemp: 12,
+        currentHumidity: 65,
+        currentWindLevel: 3,
+        currentPressure: 112,
+      },
 
       isRefreshing: false,
 
       // 地区数据
       areaData: {
-        '银川市': {temp: 12, humidity: 65, windLevel: 3, pressure: 1012, crops: ['葡萄', '枸杞'], riskLevel: 'high'},
-        '石嘴山市': {temp: 10, humidity: 58, windLevel: 4, pressure: 1015, crops: ['小麦'], riskLevel: 'medium'},
-        '吴忠市': {temp: 11, humidity: 62, windLevel: 2, pressure: 1013, crops: ['枸杞', '葡萄'], riskLevel: 'low'},
-        '固原市': {temp: 8, humidity: 55, windLevel: 3, pressure: 1018, crops: ['葡萄'], riskLevel: 'medium'},
-        '中卫市': {temp: 13, humidity: 60, windLevel: 2, pressure: 1014, crops: ['枸杞', '小麦'], riskLevel: 'low'}
+        '银川市': {temp: 12, humidity: 65, windLevel: 3, pressure: 1012, crops: ['葡萄', '枸杞'],status: false},
+        '石嘴山市': {temp: 10, humidity: 58, windLevel: 4, pressure: 1015, crops: ['小麦'],status: false},
+        '吴忠市': {temp: 11, humidity: 62, windLevel: 2, pressure: 1013, crops: ['枸杞', '葡萄'],status: false},
+        '固原市': {temp: 8, humidity: 55, windLevel: 3, pressure: 1018, crops: ['葡萄'],status: false},
+        '中卫市': {temp: 13, humidity: 60, windLevel: 2, pressure: 1014, crops: ['枸杞', '小麦'],status: false}
       },
 
       // 天气预测数据
       weatherForecast: [
-        {
-          date: '2025-05-16',
-          temp_max: 15,
-          temp_min: 4,
-          humidity: 45,
-          windSpeedDay: 3,
-          pressure: 1012
-        },
-        {
-          date: '2025-05-17',
-          temp_max: 13,
-          temp_min: 3,
-          humidity: 55,
-          windSpeedDay: 4,
-          pressure: 1015
-        },
-        {
-          date: '2025-05-18',
-          temp_max: 2,
-          temp_min: 10,
-          humidity: 75,
-          windSpeedDay: 3,
-          pressure: 1018
-        },
-        {
-          date: '2025-05-19',
-          temp_max: 8,
-          temp_min: 1,
-          humidity: 65,
-          windSpeedDay: 2,
-          pressure: 1020
-        },
-        {
-          date: '2025-05-20',
-          temp_max: 12,
-          temp_min: 0,
-          humidity: 50,
-          windSpeedDay: 3,
-          pressure: 1015
-        },
-        {
-          date: '2025-05-21',
-          temp_max: 11,
-          temp_min: -1,
-          humidity: 55,
-          windSpeedDay: 4,
-          pressure: 1018
-        },
-        {
-          date: '2025-05-22',
-          temp_max: 5,
-          temp_min: -3,
-          humidity: 70,
-          windSpeedDay: 3,
-          pressure: 1022
-        }
+        {date: '2025-05-16', temp_max: 15, temp_min: 4, humidity: 45, windSpeedDay: 3, pressure: 1012},
+        {date: '2025-05-17', temp_max: 13, temp_min: 3, humidity: 55, windSpeedDay: 4, pressure: 1015},
+        {date: '2025-05-18', temp_max: 2, temp_min: 10, humidity: 75, windSpeedDay: 3, pressure: 1018},
+        {date: '2025-05-19', temp_max: 8, temp_min: 1, humidity: 65, windSpeedDay: 2, pressure: 1020},
+        {date: '2025-05-20', temp_max: 12, temp_min: 0, humidity: 50, windSpeedDay: 3, pressure: 1015},
+        {date: '2025-05-21', temp_max: 11, temp_min: -1, humidity: 55, windSpeedDay: 4, pressure: 1018},
+        {date: '2025-05-22', temp_max: 5, temp_min: -3, humidity: 70, windSpeedDay: 3, pressure: 1022}
       ],
       selectedForecastDay: 0,
-
-      // 地图实例
-      ningxiaMap: null,
-      forecastRiskMap: null,
-
       // 显示状态
       currentTime: new Date().toLocaleString()
     };
@@ -259,6 +208,21 @@ export default {
       }
     }, 300),
     currentAreaData() {
+      if (this.areaData[this.selectedArea].status ) {
+        // 更新数据
+        this.initData();
+        // 更新时间戳
+        // 修改时间显示格式
+        this.currentTime = new Date().toLocaleString('zh-CN', {
+          hour12: false,
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+        return;
+      }
       this.$axios.get(`${this.$settings.HOST}/meteorology/`, {
         params: {
           address: this.selectedArea,
@@ -266,12 +230,12 @@ export default {
         }
       }).then(response => {
         const data = response.data[0].current
-
         // 使用 Vue.set 确保响应式更新
         this.$set(this.areaData[this.selectedArea], 'temp', data.temperature)
         this.$set(this.areaData[this.selectedArea], 'humidity', data.humidity)
         this.$set(this.areaData[this.selectedArea], 'windLevel', data.windspeed)
         this.$set(this.areaData[this.selectedArea], 'pressure', data.pressure)
+        this.$set(this.areaData[this.selectedArea], 'status', true)
         // 更新数据
         this.initData();
         // 更新时间戳
@@ -292,10 +256,10 @@ export default {
     updateAreaData(areaName) {
       const data = this.areaData[areaName];
       if (data) {
-        this.$set(this, 'currentTemp', data.temp);
-        this.$set(this, 'currentHumidity', data.humidity);
-        this.$set(this, 'currentWindLevel', data.windLevel);
-        this.$set(this, 'currentPressure', data.pressure);
+        this.$set(this.currentenvironment, 'currentTemp', data.temp);
+        this.$set(this.currentenvironment, 'currentHumidity', data.humidity);
+        this.$set(this.currentenvironment, 'currentWindLevel', data.windLevel);
+        this.$set(this.currentenvironment, 'currentPressure', data.pressure);
       }
     },
     initData(value) {
