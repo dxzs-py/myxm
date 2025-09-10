@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from rest_framework.exceptions import ValidationError
-
+from crop.models import Crop
 from myapi.utils.models import BaseModel
 
 
@@ -25,6 +25,13 @@ class User(AbstractUser):
         verbose_name="县",
         null=True,
         blank=True
+    )
+    crops_interest = models.ManyToManyField(# 允许一个模型实例关联多个其他模型实例
+        Crop,
+        related_name="interested_users",
+        verbose_name="关注的作物",
+        blank=True,
+        null=True,
     )
 
     class Meta:

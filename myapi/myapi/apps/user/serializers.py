@@ -212,8 +212,25 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 
 class SelfModelSerializer(serializers.ModelSerializer):
-    city_name = serializers.CharField(source='city.name', read_only=True)
-    county_name = serializers.CharField(source='county.name', read_only=True)
+    # city_name = serializers.CharField(source='city.name')不这样写是因为要是没有选择city，直接这样写会报错，所以加了get_字段函数进行字段处理
+    city_name = serializers.SerializerMethodField()
+    county_name = serializers.SerializerMethodField()
+    province_name = serializers.SerializerMethodField()
+    crops_interest = serializers.StringRelatedField(many=True)  # 显示 Crop.__str__() 的值
+
     class Meta:
         model = User
-        fields = ['username', 'mobile', 'avatar', 'email', 'city_name', 'county_name','last_login']
+        fields = ['username', 'mobile', 'avatar', 'email',
+                 'city_name', 'county_name', 'province_name',
+                 'last_login', 'crops_interest']
+
+    def get_city_name(self, obj):
+        return obj.city.name if obj.city else ""  # 安全访问
+
+    def get_county_name(self, obj):
+        return obj.county.name if obj.county else ""
+
+    def get_province_name(self, obj):
+        if obj.city and obj.city.province:  # 双重空值检查
+            return obj.city.province.name
+        return ""

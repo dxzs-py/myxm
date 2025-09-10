@@ -19,7 +19,7 @@ class UserModelAdmin(admin.ModelAdmin):
 
     # 设置用户列表显示的字段
     list_display = ["username", "email", "wechat", "mobile", "is_active", "is_staff", "is_superuser", "city", "county",
-                    "avatar", "get_province"]
+                    "avatar", "get_province","get_crops_interest"]
 
     # 设置用户列表的过滤条件
     list_filter = ["is_active", "is_staff", "is_superuser", "city", "county"]
@@ -39,7 +39,7 @@ class UserModelAdmin(admin.ModelAdmin):
     # 设置用户信息的字段集，将用户信息分为基本信息部分
     fieldsets = (
         ("基本信息", {
-            "fields": ("username", "email", "mobile", "wechat", "city", "county"),
+            "fields": ("username",'password', "email", "mobile", "wechat", "city", "county","crops_interest"),
         }),
         ("权限信息", {
             "fields": ("is_active", "is_staff", "is_superuser"),
@@ -56,6 +56,11 @@ class UserModelAdmin(admin.ModelAdmin):
     get_province.short_description = "省份"
     # 允许按省份排序
     get_province.admin_order_field = "city__province__name"
+
+    def get_crops_interest(self, obj):
+        return ", ".join([crop.crop_class for crop in obj.crops_interest.all()])
+    get_crops_interest.short_description = "关注的作物"  # 列标题
+    get_crops_interest.admin_order_field = "crops_interest"  # 允许按作物排序
 
 
 admin.site.register(User, UserModelAdmin)

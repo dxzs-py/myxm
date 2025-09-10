@@ -9918,3 +9918,876 @@ INFO 2025-09-08 13:44:12,361 basehttp 22383 126752758515264 "GET /media/avatar/d
 INFO 2025-09-08 13:44:17,769 basehttp 22383 126752034395712 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
 INFO 2025-09-08 13:44:17,885 basehttp 22383 126752051181120 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
 INFO 2025-09-08 13:44:18,107 basehttp 22383 126752750122560 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-09 21:22:56,905 autoreload 6290 129624685315136 Watching for file changes with StatReloader
+INFO 2025-09-09 21:23:44,227 basehttp 6290 129620636595776 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-09 21:23:45,661 basehttp 6290 129620723975744 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 158
+INFO 2025-09-09 21:23:45,929 basehttp 6290 129620715583040 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-09 21:23:57,461 basehttp 6290 129620628203072 "GET / HTTP/1.1" 302 0
+INFO 2025-09-09 21:23:57,610 basehttp 6290 129620628203072 "GET /admin/ HTTP/1.1" 200 23042
+INFO 2025-09-09 21:24:34,059 basehttp 6290 129620628203072 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-09-09 21:24:34,101 basehttp 6290 129620628203072 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:24:34,552 basehttp 6290 129620628203072 "GET /admin/crop/growth/ HTTP/1.1" 200 33653
+INFO 2025-09-09 21:24:34,582 basehttp 6290 129620628203072 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:25:43,342 basehttp 6290 129620628203072 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-09 21:25:43,381 basehttp 6290 129620628203072 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:25:45,946 basehttp 6290 129620628203072 "GET /admin/crop/growth/add/ HTTP/1.1" 200 17638
+INFO 2025-09-09 21:25:45,982 basehttp 6290 129620619810368 "GET /static/admin/js/calendar.js HTTP/1.1" 304 0
+INFO 2025-09-09 21:25:45,983 basehttp 6290 129620611417664 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 304 0
+INFO 2025-09-09 21:25:45,992 basehttp 6290 129620628203072 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:25:46,174 basehttp 6290 129620628203072 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 304 0
+INFO 2025-09-09 21:32:31,825 autoreload 6290 129624685315136 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-09-09 21:32:35,686 autoreload 7476 128392226841664 Watching for file changes with StatReloader
+INFO 2025-09-09 21:34:20,562 basehttp 7476 128388265494080 "GET /admin/crop/growth/ HTTP/1.1" 200 33653
+INFO 2025-09-09 21:34:20,598 basehttp 7476 128388265494080 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:35:15,237 basehttp 7476 128388265494080 "GET /admin/ HTTP/1.1" 200 23042
+INFO 2025-09-09 21:35:15,453 basehttp 7476 128388265494080 "GET /admin/crop/growth/ HTTP/1.1" 200 33653
+INFO 2025-09-09 21:35:15,486 basehttp 7476 128388265494080 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 21:35:15,686 basehttp 7476 128388265494080 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-09 21:35:19,518 basehttp 7476 128388265494080 "GET /admin/crop/growth/add/ HTTP/1.1" 200 18161
+INFO 2025-09-09 21:35:19,558 basehttp 7476 128388265494080 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 22:11:50,607 autoreload 7476 128392226841664 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-09-09 22:11:56,965 autoreload 10329 139226525762624 Watching for file changes with StatReloader
+INFO 2025-09-09 22:24:34,157 basehttp 10329 139222556423744 "GET /admin/ HTTP/1.1" 200 23042
+INFO 2025-09-09 22:24:34,493 basehttp 10329 139222556423744 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-09 22:24:34,540 basehttp 10329 139222556423744 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 22:24:34,854 basehttp 10329 139222556423744 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-09 22:24:35,561 basehttp 10329 139222556423744 "GET /admin/crop/growth/ HTTP/1.1" 200 44019
+INFO 2025-09-09 22:24:35,594 basehttp 10329 139222556423744 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 22:31:17,634 autoreload 10329 139226525762624 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-09-09 22:31:21,601 autoreload 12145 125546987332672 Watching for file changes with StatReloader
+INFO 2025-09-09 22:43:19,616 autoreload 12145 125546987332672 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-09-09 22:43:22,040 autoreload 12924 139454816105536 Watching for file changes with StatReloader
+INFO 2025-09-09 22:54:36,006 autoreload 12924 139454816105536 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/models.py changed, reloading.
+INFO 2025-09-09 22:54:38,448 autoreload 13674 134436104086592 Watching for file changes with StatReloader
+INFO 2025-09-09 22:57:39,529 autoreload 13674 134436104086592 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/admin.py changed, reloading.
+INFO 2025-09-09 22:57:41,898 autoreload 13948 124052545098816 Watching for file changes with StatReloader
+INFO 2025-09-09 23:19:18,533 autoreload 16455 123633300587584 Watching for file changes with StatReloader
+INFO 2025-09-09 23:19:27,165 basehttp 16455 123629338969664 "GET /admin/ HTTP/1.1" 200 23042
+INFO 2025-09-09 23:19:27,744 basehttp 16455 123629338969664 "GET /admin/crop/growth/ HTTP/1.1" 200 31581
+INFO 2025-09-09 23:19:27,779 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:19:28,030 basehttp 16455 123629338969664 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-09 23:19:32,257 basehttp 16455 123629338969664 "GET /admin/crop/plantarea/ HTTP/1.1" 200 33688
+INFO 2025-09-09 23:19:32,289 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:19:33,112 basehttp 16455 123629338969664 "GET /admin/crop/crop/ HTTP/1.1" 200 31374
+INFO 2025-09-09 23:19:33,141 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:19:34,281 basehttp 16455 123629338969664 "GET /admin/crop/crop/add/ HTTP/1.1" 200 10272
+INFO 2025-09-09 23:19:34,326 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:19:46,100 basehttp 16455 123629338969664 "POST /admin/crop/crop/add/ HTTP/1.1" 302 0
+INFO 2025-09-09 23:19:46,129 basehttp 16455 123629338969664 "GET /admin/crop/crop/add/ HTTP/1.1" 200 10480
+INFO 2025-09-09 23:19:46,216 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:19:55,172 basehttp 16455 123629338969664 "POST /admin/crop/crop/add/ HTTP/1.1" 302 0
+INFO 2025-09-09 23:19:55,209 basehttp 16455 123629338969664 "GET /admin/crop/crop/add/ HTTP/1.1" 200 10480
+INFO 2025-09-09 23:19:55,309 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:20:20,220 basehttp 16455 123629338969664 "POST /admin/crop/crop/add/ HTTP/1.1" 302 0
+INFO 2025-09-09 23:20:20,250 basehttp 16455 123629338969664 "GET /admin/crop/crop/add/ HTTP/1.1" 200 10486
+INFO 2025-09-09 23:20:20,332 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:20:26,569 basehttp 16455 123629338969664 "POST /admin/crop/crop/add/ HTTP/1.1" 302 0
+INFO 2025-09-09 23:20:26,595 basehttp 16455 123629338969664 "GET /admin/crop/crop/add/ HTTP/1.1" 200 10486
+INFO 2025-09-09 23:20:26,671 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:20:29,084 basehttp 16455 123629338969664 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-09 23:20:29,124 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:35,166 basehttp 16455 123629338969664 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-09 23:22:35,200 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:36,317 basehttp 16455 123629338969664 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-09-09 23:22:36,346 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:37,901 basehttp 16455 123629338969664 "GET /admin/crop/growth/ HTTP/1.1" 200 39408
+INFO 2025-09-09 23:22:37,953 basehttp 16455 123629330576960 "GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+INFO 2025-09-09 23:22:37,959 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:37,972 basehttp 16455 123629308212800 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2025-09-09 23:22:43,259 basehttp 16455 123629338969664 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-09-09 23:22:48,224 basehttp 16455 123629338969664 "POST /admin/forecast/forecast/trigger/ HTTP/1.1" 302 0
+INFO 2025-09-09 23:22:48,259 basehttp 16455 123629338969664 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6139
+INFO 2025-09-09 23:22:49,398 basehttp 16455 123629338969664 "GET /admin/forecast/forecast/results/?_view_results=%E6%9F%A5%E7%9C%8B%E9%A2%84%E6%B5%8B%E7%BB%93%E6%9E%9C HTTP/1.1" 200 11202
+INFO 2025-09-09 23:22:52,005 basehttp 16455 123629338969664 "GET /admin/user/county/ HTTP/1.1" 200 38031
+INFO 2025-09-09 23:22:52,040 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:52,782 basehttp 16455 123629338969664 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-09-09 23:22:52,859 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:53,568 basehttp 16455 123629338969664 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-09 23:22:53,604 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:54,137 basehttp 16455 123629338969664 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-09 23:22:54,170 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-09 23:22:55,701 basehttp 16455 123629338969664 "GET /admin/auth/group/ HTTP/1.1" 200 29184
+INFO 2025-09-09 23:22:55,741 basehttp 16455 123629338969664 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:46:22,456 autoreload 4535 137435297154112 Watching for file changes with StatReloader
+INFO 2025-09-10 09:47:21,118 basehttp 4535 137431335913024 "GET /admin/ HTTP/1.1" 200 22940
+INFO 2025-09-10 09:47:21,690 basehttp 4535 137431335913024 "GET /admin/auth/group/ HTTP/1.1" 200 29184
+INFO 2025-09-10 09:47:25,579 basehttp 4535 137431327520320 "GET /admin/user/county/ HTTP/1.1" 200 38031
+INFO 2025-09-10 09:47:25,616 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:26,257 basehttp 4535 137431327520320 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-09-10 09:47:26,287 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:26,973 basehttp 4535 137431327520320 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 09:47:27,018 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:27,742 basehttp 4535 137431327520320 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-10 09:47:27,772 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:30,787 basehttp 4535 137431327520320 "GET /admin/forecast/forecast/ HTTP/1.1" 200 6056
+INFO 2025-09-10 09:47:32,979 basehttp 4535 137431327520320 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-10 09:47:33,016 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:33,697 basehttp 4535 137431327520320 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-09-10 09:47:33,730 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:47:34,391 basehttp 4535 137431327520320 "GET /admin/crop/growth/ HTTP/1.1" 200 39408
+INFO 2025-09-10 09:47:34,428 basehttp 4535 137431327520320 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 09:54:35,575 basehttp 4535 137431327520320 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-10 09:54:37,961 basehttp 4535 137431335913024 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 09:54:38,110 basehttp 4535 137431327520320 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1251
+INFO 2025-09-10 09:54:39,718 basehttp 4535 137431327520320 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 09:54:42,782 basehttp 4535 137431327520320 "GET //crop/plantArea/?crop=%E5%86%AC%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 530
+INFO 2025-09-10 09:54:44,974 basehttp 4535 137431327520320 "GET //meteorology/?address=%E5%9B%BA%E5%8E%9F%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-09-10 09:54:45,157 basehttp 4535 137431335913024 "GET //meteorology/?address=%E5%9B%BA%E5%8E%9F%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-10 09:54:48,812 basehttp 4535 137431335913024 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-10 09:54:48,864 basehttp 4535 137431335913024 "GET /user/self/ HTTP/1.1" 200 220
+INFO 2025-09-10 10:43:59,045 basehttp 4535 137431335913024 "GET /admin/ HTTP/1.1" 200 22940
+INFO 2025-09-10 10:43:59,531 basehttp 4535 137431335913024 "GET /admin/crop/growth/ HTTP/1.1" 200 41862
+INFO 2025-09-10 10:43:59,607 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 10:43:59,926 basehttp 4535 137431335913024 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 10:44:12,257 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42090
+INFO 2025-09-10 10:44:12,291 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 10:44:16,399 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 34539
+INFO 2025-09-10 10:44:16,441 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 10:44:19,271 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42148
+INFO 2025-09-10 10:44:19,308 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 10:44:22,660 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42090
+INFO 2025-09-10 10:44:22,694 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 12:51:22,976 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42148
+INFO 2025-09-10 12:51:23,111 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:07:31,990 basehttp 4535 137431335913024 "GET /admin/ HTTP/1.1" 200 22940
+INFO 2025-09-10 13:07:32,411 basehttp 4535 137431335913024 "GET /admin/crop/growth/ HTTP/1.1" 200 41803
+INFO 2025-09-10 13:07:32,465 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:07:32,825 basehttp 4535 137431335913024 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 13:07:40,761 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42160
+INFO 2025-09-10 13:07:40,803 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:07:42,306 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 42076
+INFO 2025-09-10 13:07:42,344 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:23:31,652 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42160
+INFO 2025-09-10 13:23:31,685 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:23:33,256 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42089
+INFO 2025-09-10 13:23:33,288 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:23:35,277 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42160
+INFO 2025-09-10 13:23:35,309 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:23:37,140 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 42076
+INFO 2025-09-10 13:23:37,171 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:23:38,533 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42089
+INFO 2025-09-10 13:23:38,565 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:26:54,754 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42160
+INFO 2025-09-10 13:26:54,797 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:26:56,411 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 42076
+INFO 2025-09-10 13:26:56,443 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:26:57,900 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42089
+INFO 2025-09-10 13:26:57,931 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:58:57,343 basehttp 4535 137431335913024 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-09-10 13:58:57,373 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:58:59,448 basehttp 4535 137431335913024 "GET /admin/user/county/ HTTP/1.1" 200 38031
+INFO 2025-09-10 13:58:59,476 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:00,409 basehttp 4535 137431335913024 "GET /admin/user/city/ HTTP/1.1" 200 32409
+INFO 2025-09-10 13:59:00,446 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:01,319 basehttp 4535 137431335913024 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 13:59:01,346 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:02,176 basehttp 4535 137431335913024 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-10 13:59:02,203 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:03,274 basehttp 4535 137431335913024 "GET /admin/auth/group/ HTTP/1.1" 200 29184
+INFO 2025-09-10 13:59:03,303 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:08,213 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42094
+INFO 2025-09-10 13:59:08,242 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:11,002 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 42148
+INFO 2025-09-10 13:59:11,038 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:12,789 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=4 HTTP/1.1" 200 42090
+INFO 2025-09-10 13:59:12,822 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:13,825 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=5 HTTP/1.1" 200 34539
+INFO 2025-09-10 13:59:13,856 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 13:59:16,786 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42094
+INFO 2025-09-10 13:59:16,817 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:06,235 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=2 HTTP/1.1" 200 42094
+INFO 2025-09-10 14:00:06,268 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:08,780 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=3 HTTP/1.1" 200 42148
+INFO 2025-09-10 14:00:08,809 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:10,831 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=4 HTTP/1.1" 200 42090
+INFO 2025-09-10 14:00:10,862 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:11,640 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=5 HTTP/1.1" 200 34539
+INFO 2025-09-10 14:00:11,675 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:13,912 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=4 HTTP/1.1" 200 42090
+INFO 2025-09-10 14:00:13,942 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:00:15,448 basehttp 4535 137431335913024 "GET /admin/crop/growth/?p=1 HTTP/1.1" 200 42094
+INFO 2025-09-10 14:00:15,478 basehttp 4535 137431335913024 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:07:48,232 autoreload 4535 137435297154112 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-09-10 14:08:07,560 autoreload 13696 136053551260736 Watching for file changes with StatReloader
+INFO 2025-09-10 14:08:19,983 autoreload 13696 136053551260736 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-09-10 14:08:23,345 autoreload 13787 135820920185920 Watching for file changes with StatReloader
+INFO 2025-09-10 14:10:47,243 autoreload 13787 135820920185920 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-09-10 14:10:49,735 autoreload 14090 124123665175616 Watching for file changes with StatReloader
+INFO 2025-09-10 14:13:29,099 autoreload 14090 124123665175616 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-09-10 14:13:31,690 autoreload 14365 129388781798464 Watching for file changes with StatReloader
+INFO 2025-09-10 14:14:44,574 basehttp 14365 129384820590144 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:14:44,628 basehttp 14365 129384820590144 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:14:47,452 basehttp 14365 129384820590144 "GET /admin/user/user/1/change/ HTTP/1.1" 200 18629
+INFO 2025-09-10 14:14:47,482 basehttp 14365 129384820590144 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:14:51,543 basehttp 14365 129384820590144 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:14:51,574 basehttp 14365 129384820590144 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:17:57,338 autoreload 15524 132458050712640 Watching for file changes with StatReloader
+INFO 2025-09-10 14:18:23,672 basehttp 15524 132454089573952 "GET /admin/ HTTP/1.1" 200 22940
+INFO 2025-09-10 14:18:24,184 basehttp 15524 132454089573952 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:18:24,338 basehttp 15524 132454089573952 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:18:24,847 basehttp 15524 132454089573952 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 14:18:28,813 basehttp 15524 132454089573952 "GET /admin/user/user/add/ HTTP/1.1" 200 17887
+INFO 2025-09-10 14:18:28,850 basehttp 15524 132454089573952 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:18:33,252 basehttp 15524 132454089573952 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:18:33,297 basehttp 15524 132454089573952 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:19:45,215 autoreload 15524 132458050712640 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-10 14:19:47,973 autoreload 15770 136231367046208 Watching for file changes with StatReloader
+INFO 2025-09-10 14:20:26,985 autoreload 15770 136231367046208 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-10 14:20:29,356 autoreload 15850 140448643032128 Watching for file changes with StatReloader
+INFO 2025-09-10 14:20:42,504 autoreload 15884 127843915707456 Watching for file changes with StatReloader
+INFO 2025-09-10 14:21:05,132 autoreload 15916 130795925300288 Watching for file changes with StatReloader
+INFO 2025-09-10 14:22:11,399 autoreload 16060 139652943463488 Watching for file changes with StatReloader
+INFO 2025-09-10 14:22:19,091 basehttp 16060 139648981878336 "GET /admin/ HTTP/1.1" 200 22940
+INFO 2025-09-10 14:22:19,454 basehttp 16060 139648981878336 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:22:19,497 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:22:19,796 basehttp 16060 139648981878336 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 14:22:22,105 basehttp 16060 139648981878336 "GET /admin/user/user/add/ HTTP/1.1" 200 19127
+INFO 2025-09-10 14:22:22,141 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:22:27,460 basehttp 16060 139648981878336 "GET /admin/crop/crop/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9887
+INFO 2025-09-10 14:22:27,499 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:22:42,896 basehttp 16060 139648981878336 "GET /admin/crop/crop/add/?_to_field=id&_popup=1 HTTP/1.1" 200 9887
+INFO 2025-09-10 14:22:42,930 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:23:35,245 basehttp 16060 139648981878336 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:23:35,288 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:23:38,345 basehttp 16060 139648981878336 "GET /admin/user/user/1/change/ HTTP/1.1" 200 19869
+INFO 2025-09-10 14:23:38,378 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:23:47,281 basehttp 16060 139648981878336 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-10 14:23:47,370 basehttp 16060 139648981878336 "GET /admin/user/user/ HTTP/1.1" 200 43756
+INFO 2025-09-10 14:23:47,445 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:24:14,920 basehttp 16060 139648981878336 "GET /admin/user/user/1/change/ HTTP/1.1" 200 19887
+INFO 2025-09-10 14:24:14,951 basehttp 16060 139648981878336 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:24:53,415 autoreload 16060 139652943463488 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py changed, reloading.
+INFO 2025-09-10 14:24:55,877 autoreload 16250 136910135735360 Watching for file changes with StatReloader
+INFO 2025-09-10 14:25:32,327 basehttp 16250 136906174449216 "GET /admin/crop/growth/ HTTP/1.1" 200 41808
+INFO 2025-09-10 14:25:32,356 basehttp 16250 136906174449216 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:25:34,776 basehttp 16250 136906174449216 "GET /admin/crop/plantarea/ HTTP/1.1" 200 44984
+INFO 2025-09-10 14:25:34,804 basehttp 16250 136906174449216 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:25:40,019 basehttp 16250 136906174449216 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:25:40,050 basehttp 16250 136906174449216 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:25:45,087 basehttp 16250 136906174449216 "GET /admin/user/user/1/change/ HTTP/1.1" 200 19888
+INFO 2025-09-10 14:25:45,158 basehttp 16250 136906174449216 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:32:12,597 basehttp 16250 136906174449216 "GET /admin/user/user/ HTTP/1.1" 200 43604
+INFO 2025-09-10 14:32:12,624 basehttp 16250 136906174449216 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:44:59,609 autoreload 18067 130100095366208 Watching for file changes with StatReloader
+INFO 2025-09-10 14:45:09,234 basehttp 18067 130096133654080 "GET /admin/ HTTP/1.1" 200 22961
+ERROR 2025-09-10 14:45:09,958 log 18067 130096133654080 Internal Server Error: /admin/user/user/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/options.py", line 683, in get_field
+    return self.fields_map[field_name]
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'get_crops_interest'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/utils.py", line 290, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/utils.py", line 330, in _get_non_gfk_field
+    field = opts.get_field(name)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/options.py", line 685, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: User has no field named 'get_crops_interest'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 171, in render
+    return self._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 1016, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/base.py", line 977, in render_annotated
+    return self.render(context)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/templatetags/base.py", line 45, in render
+    return super().render(context)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/template/library.py", line 359, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/templatetags/admin_list.py", line 354, in result_list
+    "results": list(results(cl)),
+               ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/templatetags/admin_list.py", line 327, in results
+    yield ResultList(form, items_for_result(cl, res, form))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/templatetags/admin_list.py", line 321, in __init__
+    super().__init__(*items)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/templatetags/admin_list.py", line 219, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/utils.py", line 299, in lookup_field
+    value = attr(obj)
+            ^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py", line 61, in get_crops_interest
+    return ", ".join([crop.name for crop in obj.crops_interest.all()])
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py", line 61, in <listcomp>
+    return ", ".join([crop.name for crop in obj.crops_interest.all()])
+                      ^^^^^^^^^
+AttributeError: 'Crop' object has no attribute 'name'
+ERROR 2025-09-10 14:45:09,971 basehttp 18067 130096133654080 "GET /admin/user/user/ HTTP/1.1" 500 465347
+INFO 2025-09-10 14:45:10,237 basehttp 18067 130096133654080 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 14:47:24,218 autoreload 18263 134524477273152 Watching for file changes with StatReloader
+INFO 2025-09-10 14:47:37,694 basehttp 18263 134520516200000 "GET /admin/ HTTP/1.1" 200 22961
+INFO 2025-09-10 14:47:37,974 basehttp 18263 134520516200000 "GET /admin/user/user/ HTTP/1.1" 200 44018
+INFO 2025-09-10 14:47:38,012 basehttp 18263 134520516200000 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 14:47:38,331 basehttp 18263 134520516200000 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 14:53:06,080 autoreload 18263 134524477273152 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 14:53:08,778 autoreload 18688 123735341278272 Watching for file changes with StatReloader
+INFO 2025-09-10 14:53:26,649 autoreload 18688 123735341278272 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 14:53:29,133 autoreload 18725 138705289778240 Watching for file changes with StatReloader
+INFO 2025-09-10 14:54:47,063 autoreload 18725 138705289778240 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 14:54:49,469 autoreload 18808 130797929600064 Watching for file changes with StatReloader
+INFO 2025-09-10 14:56:30,879 basehttp 18808 130793959929408 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-10 14:56:34,645 basehttp 18808 130793951536704 "GET /user/self/ HTTP/1.1" 200 260
+INFO 2025-09-10 14:56:45,245 basehttp 18808 130793968322112 "GET /media/avatar/dxtx.jpg HTTP/1.1" 304 0
+INFO 2025-09-10 14:56:54,846 basehttp 18808 130793951536704 "GET /user/self/ HTTP/1.1" 200 260
+INFO 2025-09-10 20:58:28,488 basehttp 18808 130793951536704 "GET /user/self/ HTTP/1.1" 200 260
+INFO 2025-09-10 22:37:38,029 autoreload 5245 134160083694656 Watching for file changes with StatReloader
+INFO 2025-09-10 22:39:35,646 basehttp 5245 134156122408512 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-10 22:39:37,988 basehttp 5245 134156114015808 "GET /admin/ HTTP/1.1" 200 22961
+INFO 2025-09-10 22:39:44,082 basehttp 5245 134156114015808 "GET /admin/user/user/ HTTP/1.1" 200 44018
+INFO 2025-09-10 22:39:44,128 basehttp 5245 134156114015808 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:39:54,083 basehttp 5245 134156114015808 "GET /admin/crop/growth/ HTTP/1.1" 200 41808
+INFO 2025-09-10 22:39:54,113 basehttp 5245 134156114015808 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:41:00,510 basehttp 5245 134156122408512 "GET /admin/ HTTP/1.1" 200 22961
+INFO 2025-09-10 22:41:00,678 basehttp 5245 134156122408512 "GET /admin/crop/growth/ HTTP/1.1" 200 41808
+INFO 2025-09-10 22:41:00,707 basehttp 5245 134156122408512 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:41:00,906 basehttp 5245 134156122408512 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-10 22:41:26,044 basehttp 5245 134156086740544 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:41:26,199 basehttp 5245 134156114015808 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:41:26,425 basehttp 5245 134156095133248 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-10 22:42:56,942 basehttp 5245 134156086740544 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:42:57,114 basehttp 5245 134156095133248 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:42:57,340 basehttp 5245 134156114015808 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-10 22:43:00,562 basehttp 5245 134156114015808 "GET /user/self/ HTTP/1.1" 200 260
+INFO 2025-09-10 22:43:10,076 basehttp 5245 134156114015808 "GET /user/self/ HTTP/1.1" 200 260
+INFO 2025-09-10 22:48:54,432 autoreload 5245 134160083694656 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 22:48:58,730 autoreload 7033 126079395890240 Watching for file changes with StatReloader
+ERROR 2025-09-10 22:49:11,441 log 7033 126075433993792 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1081, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 1177, in get_field_names
+    assert field_name in fields, (
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: The field 'province_name' was declared on serializer SelfModelSerializer, but has not been included in the 'fields' option.
+ERROR 2025-09-10 22:49:11,445 basehttp 7033 126075433993792 "GET /user/self/ HTTP/1.1" 500 162981
+INFO 2025-09-10 22:49:36,478 basehttp 7033 126075342419520 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:49:36,635 basehttp 7033 126075433993792 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:49:36,814 basehttp 7033 126075423503936 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-10 22:50:22,203 autoreload 7033 126079395890240 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 22:50:24,702 autoreload 7214 128529202201664 Watching for file changes with StatReloader
+INFO 2025-09-10 22:50:32,421 autoreload 7214 128529202201664 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 22:50:34,932 autoreload 7238 126547643147328 Watching for file changes with StatReloader
+INFO 2025-09-10 22:50:40,470 basehttp 7238 126543667209792 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:50:40,591 basehttp 7238 126543683995200 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:50:40,860 basehttp 7238 126543675602496 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+ERROR 2025-09-10 22:50:43,876 log 7238 126543675602496 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'User' object has no attribute 'province_city'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `province_city` on serializer `SelfModelSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'User' object has no attribute 'province_city'.
+ERROR 2025-09-10 22:50:43,880 basehttp 7238 126543675602496 "GET /user/self/ HTTP/1.1" 500 152373
+INFO 2025-09-10 22:50:59,438 autoreload 7238 126547643147328 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 22:51:02,015 autoreload 7273 126032309961792 Watching for file changes with StatReloader
+INFO 2025-09-10 22:51:06,865 basehttp 7273 126028334048832 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:51:07,100 basehttp 7273 126028350834240 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:51:07,342 basehttp 7273 126028342441536 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+ERROR 2025-09-10 22:51:09,663 log 7273 126028342441536 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'City' object has no attribute 'province_city'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `province_city` on serializer `SelfModelSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'City' object has no attribute 'province_city'.
+ERROR 2025-09-10 22:51:09,672 basehttp 7273 126028342441536 "GET /user/self/ HTTP/1.1" 500 152438
+INFO 2025-09-10 22:52:02,930 autoreload 7273 126032309961792 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 22:52:05,441 autoreload 7394 124290866725952 Watching for file changes with StatReloader
+INFO 2025-09-10 22:52:09,803 basehttp 7394 124286824085056 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 22:52:09,975 basehttp 7394 124286908319296 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 22:52:10,102 basehttp 7394 124286899926592 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-10 22:52:13,993 basehttp 7394 124286899926592 "GET /user/self/ HTTP/1.1" 200 300
+INFO 2025-09-10 22:52:57,318 basehttp 7394 124286899926592 "GET /user/self/ HTTP/1.1" 200 300
+INFO 2025-09-10 22:53:32,312 basehttp 7394 124286899926592 "GET /user/self/ HTTP/1.1" 200 300
+INFO 2025-09-10 22:54:40,758 basehttp 7394 124286810449472 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-10 22:54:40,793 basehttp 7394 124286810449472 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:54:43,174 basehttp 7394 124286810449472 "GET /admin/user/user/ HTTP/1.1" 200 44018
+INFO 2025-09-10 22:54:43,204 basehttp 7394 124286810449472 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:54:51,789 basehttp 7394 124286810449472 "GET /admin/user/user/add/ HTTP/1.1" 200 19128
+INFO 2025-09-10 22:54:51,823 basehttp 7394 124286810449472 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+ERROR 2025-09-10 22:55:10,874 log 7394 124286810449472 Internal Server Error: /admin/user/user/add/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1984, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1894, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1314, in save_model
+    obj.save()
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py", line 67, in save
+    self.full_clean()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/base.py", line 1679, in full_clean
+    raise ValidationError(errors)
+django.core.exceptions.ValidationError: {'password': ['此字段不能为空。']}
+ERROR 2025-09-10 22:55:10,879 basehttp 7394 124286810449472 "POST /admin/user/user/add/ HTTP/1.1" 500 145052
+INFO 2025-09-10 22:55:13,892 basehttp 7394 124286810449472 "GET /admin/user/user/add/ HTTP/1.1" 200 19128
+INFO 2025-09-10 22:56:16,737 autoreload 7394 124290866725952 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-10 22:56:20,147 autoreload 7732 138448374154304 Watching for file changes with StatReloader
+INFO 2025-09-10 22:56:36,875 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 44018
+INFO 2025-09-10 22:56:36,912 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:56:38,328 basehttp 7732 138444412372544 "GET /admin/user/user/add/ HTTP/1.1" 200 19619
+INFO 2025-09-10 22:56:38,358 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:56:48,737 basehttp 7732 138444412372544 "POST /admin/user/user/add/ HTTP/1.1" 302 0
+INFO 2025-09-10 22:56:48,827 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 45892
+INFO 2025-09-10 22:56:48,901 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:57:32,844 basehttp 7732 138444401882688 "GET //user/captcha/?username=dx HTTP/1.1" 200 140
+INFO 2025-09-10 22:57:44,141 basehttp 7732 138444401882688 "OPTIONS //user/captcha/ HTTP/1.1" 200 0
+INFO 2025-09-10 22:57:44,147 basehttp 7732 138444401882688 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-09-10 22:57:44,197 basehttp 7732 138444401882688 "OPTIONS //user/login/token/ HTTP/1.1" 200 0
+WARNING 2025-09-10 22:57:45,197 log 7732 138444401882688 Unauthorized: /user/login/token/
+WARNING 2025-09-10 22:57:45,198 basehttp 7732 138444401882688 "POST //user/login/token/ HTTP/1.1" 401 55
+INFO 2025-09-10 22:57:46,600 basehttp 7732 138444401882688 "GET //user/captcha/?username=dx HTTP/1.1" 200 140
+INFO 2025-09-10 22:57:52,075 basehttp 7732 138444401882688 "POST //user/captcha/ HTTP/1.1" 200 17
+WARNING 2025-09-10 22:57:53,031 log 7732 138444401882688 Unauthorized: /user/login/token/
+WARNING 2025-09-10 22:57:53,032 basehttp 7732 138444401882688 "POST //user/login/token/ HTTP/1.1" 401 55
+INFO 2025-09-10 22:58:11,666 basehttp 7732 138444412372544 "GET /admin/user/user/2/change/ HTTP/1.1" 200 20329
+INFO 2025-09-10 22:58:11,697 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:58:16,428 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 45745
+INFO 2025-09-10 22:58:16,461 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:58:28,133 basehttp 7732 138444401882688 "GET //user/captcha/?username=dx HTTP/1.1" 200 140
+INFO 2025-09-10 22:58:33,420 basehttp 7732 138444401882688 "POST //user/captcha/ HTTP/1.1" 200 17
+WARNING 2025-09-10 22:58:34,391 log 7732 138444401882688 Unauthorized: /user/login/token/
+WARNING 2025-09-10 22:58:34,391 basehttp 7732 138444401882688 "POST //user/login/token/ HTTP/1.1" 401 55
+INFO 2025-09-10 22:58:51,163 basehttp 7732 138444401882688 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-09-10 22:58:56,615 basehttp 7732 138444401882688 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-09-10 22:58:57,601 basehttp 7732 138444401882688 "POST //user/login/token/ HTTP/1.1" 200 669
+INFO 2025-09-10 22:58:58,875 basehttp 7732 138444401882688 "GET /user/self/ HTTP/1.1" 200 300
+INFO 2025-09-10 22:59:07,039 basehttp 7732 138444412372544 "GET /admin/user/user/2/change/ HTTP/1.1" 200 20329
+INFO 2025-09-10 22:59:07,079 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:10,350 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 45745
+INFO 2025-09-10 22:59:11,580 basehttp 7732 138444412372544 "GET /admin/user/user/1/change/ HTTP/1.1" 200 20477
+INFO 2025-09-10 22:59:11,613 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:14,904 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 45745
+INFO 2025-09-10 22:59:14,934 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:20,702 basehttp 7732 138444412372544 "GET /admin/user/user/2/change/ HTTP/1.1" 200 20329
+INFO 2025-09-10 22:59:20,750 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:37,995 basehttp 7732 138444412372544 "GET /admin/user/user/2/delete/ HTTP/1.1" 200 6028
+INFO 2025-09-10 22:59:38,025 basehttp 7732 138444412372544 "GET /static/admin/js/cancel.js HTTP/1.1" 304 0
+INFO 2025-09-10 22:59:39,415 basehttp 7732 138444412372544 "POST /admin/user/user/2/delete/ HTTP/1.1" 302 0
+INFO 2025-09-10 22:59:39,497 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 44122
+INFO 2025-09-10 22:59:39,569 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:42,222 basehttp 7732 138444412372544 "GET /admin/user/user/1/change/ HTTP/1.1" 200 20477
+INFO 2025-09-10 22:59:42,251 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-10 22:59:49,152 basehttp 7732 138444412372544 "GET /admin/user/city/2/delete/?_to_field=id&_popup=1 HTTP/1.1" 200 6560
+INFO 2025-09-10 23:00:09,286 basehttp 7732 138444412372544 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-10 23:00:09,363 basehttp 7732 138444412372544 "GET /admin/user/user/ HTTP/1.1" 200 44106
+INFO 2025-09-10 23:00:09,449 basehttp 7732 138444412372544 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+ERROR 2025-09-10 23:00:12,704 log 7732 138444401882688 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `city_name` on serializer `SelfModelSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'NoneType' object has no attribute 'name'.
+ERROR 2025-09-10 23:00:12,713 basehttp 7732 138444401882688 "GET /user/self/ HTTP/1.1" 500 151918
+INFO 2025-09-10 23:00:25,078 basehttp 7732 138444401882688 "GET //user/captcha/?username=daixing HTTP/1.1" 200 140
+INFO 2025-09-10 23:00:30,001 basehttp 7732 138444401882688 "POST //user/captcha/ HTTP/1.1" 200 17
+INFO 2025-09-10 23:00:30,969 basehttp 7732 138444401882688 "POST //user/login/token/ HTTP/1.1" 200 669
+ERROR 2025-09-10 23:00:32,164 log 7732 138444401882688 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 437, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 104, in get_attribute
+    instance = getattr(instance, attr)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/mixins.py", line 46, in list
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 715, in to_representation
+    return [
+           ^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 716, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 527, in to_representation
+    attribute = field.get_attribute(instance)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 470, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `city_name` on serializer `SelfModelSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `User` instance.
+Original exception text was: 'NoneType' object has no attribute 'name'.
+ERROR 2025-09-10 23:00:32,167 basehttp 7732 138444401882688 "GET /user/self/ HTTP/1.1" 500 151918
+INFO 2025-09-10 23:10:26,605 autoreload 7732 138448374154304 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-10 23:10:29,432 autoreload 8721 138362184741952 Watching for file changes with StatReloader
+INFO 2025-09-10 23:10:56,642 basehttp 8721 138358135187008 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-10 23:10:56,774 basehttp 8721 138358223619648 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-10 23:10:56,927 basehttp 8721 138358143579712 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-10 23:10:59,502 basehttp 8721 138358143579712 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-10 23:11:12,465 basehttp 8721 138358143579712 "GET /user/self/ HTTP/1.1" 200 241
