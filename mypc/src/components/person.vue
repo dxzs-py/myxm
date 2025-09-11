@@ -41,53 +41,70 @@
       </div>
 
       <!-- 关注区域 -->
+      <!-- 关注区域和作物类型 -->
       <div class="bg-white rounded-lg p-6 mb-6 shadow-sm">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="text-lg font-semibold flex items-center">
+        <!-- 居中的标题 -->
+        <div class="text-center mb-6">
+          <h2 class="text-lg font-semibold inline-flex items-center justify-center bg-green-100 text-green-700 px-3 py-1 rounded-full">
             <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
-            关注区域
+            关注区域和作物类型
           </h2>
-          <span class="text-sm text-gray-500">已选择 {{ selectedAreas.length }}/4</span>
         </div>
-        <div class="grid grid-cols-3 gap-3">
-          <div v-for="(select, index) in areaSelects" :key="index" class="w-full">
-            <select v-model="selectedAreas[index]" class="w-full border border-gray-300 rounded-md p-2 text-sm">
-              <option value="">{{ select.placeholder }}</option>
-              <option v-for="option in select.options" :key="option" :value="option">{{ option }}</option>
-            </select>
+
+        <!-- 左右两列布局 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- 左侧：关注区域选择 -->
+          <div>
+            <h3 class="text-md font-medium mb-4 flex items-center">
+              <i class="fas fa-map-marker-alt text-blue-500 mr-2"></i>
+              选择关注区域
+            </h3>
+
+            <div class="flex flex-col items-start">
+              <!-- 使用Element UI的级联选择器 -->
+              <el-cascader
+                v-model="selectedArea"
+                :options="areaOptions"
+                :props="defaultProps"
+                @change="handleChange"
+                placeholder="请选择省/市/区"
+                clearable
+                class="w-full mb-4"
+              />
+
+              <div v-if="selectedArea.length" class="mt-4 bg-gray-50 p-3 rounded-lg w-full">
+                <p class="text-gray-700">选中结果：{{ selectedAreaLabels }}</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="mt-4 flex flex-wrap gap-2">
-          <div v-for="(area, index) in selectedAreaTags" :key="index"
-               class="!rounded-button whitespace-nowrap bg-green-50 text-green-700 px-3 py-1 text-sm flex items-center">
-            {{ area }}
-            <i class="fas fa-times ml-2 cursor-pointer" @click="removeArea(index)"></i>
-          </div>
-        </div>
-      </div>
-      <!-- 作物类型 -->
-      <div class="bg-white rounded-lg p-6 mb-6 shadow-sm">
-        <h2 class="text-lg font-semibold mb-4 flex items-center">
-          <i class="fas fa-seedling text-green-600 mr-2"></i>
-          作物类型
-        </h2>
-        <div class="grid grid-cols-3 gap-3">
-          <div v-for="crop in crops" :key="crop.name"
-               :class="{'bg-green-50 border-green-600': crop.selected}"
-               class="border rounded-lg p-4 cursor-pointer hover:border-green-600 transition-colors"
-               @click="toggleCrop(crop)">
-            <div class="flex items-center">
-              <img :src="crop.image" class="w-12 h-12 object-cover rounded-lg" :alt="crop.name">
-              <span class="ml-3 text-sm">{{ crop.name }}</span>
+
+          <!-- 右侧：作物类型选择 -->
+          <div>
+            <h3 class="text-md font-medium mb-4 flex items-center">
+              <i class="fas fa-seedling text-green-600 mr-2"></i>
+              选择作物类型
+            </h3>
+
+            <div class="grid grid-cols-1 gap-3">
+              <div v-for="crop in crops" :key="crop.name"
+                   :class="{'bg-green-50 border-green-600': crop.selected}"
+                   class="border rounded-lg p-4 cursor-pointer hover:border-green-600 transition-colors"
+                   @click="toggleCrop(crop)">
+                <div class="flex flex-col items-center">
+                  <img :src="crop.image" class="w-12 h-12 object-cover rounded-lg mb-2" :alt="crop.name">
+                  <span class="text-sm">{{ crop.name }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+
       <!-- 预览确认区 -->
       <div class="bg-green-50 rounded-lg p-6 mb-6">
         <h3 class="font-semibold mb-2">订阅预览</h3>
-        <p class="text-gray-600 mb-4">您将收到：宁夏银川市的枸杞、玉米中度及以上预警，通过短信+微信通知</p>
+        <p class="text-gray-600 mb-4">您将收到：宁夏银川市的枸杞、葡萄中度及以上预警，通过短信</p>
         <div class="flex justify-end space-x-4">
           <button class="!rounded-button whitespace-nowrap px-6 py-2 border border-gray-300 hover:bg-gray-50">
             重置
@@ -111,23 +128,58 @@ export default {
         email: '3309201506@qq.com',
         last_login: '2024-01-20 14:30',
         avatar: null,
+        province_name: "宁夏回族自治区",
+        county_name: "银川市",
+        crops_interest: [
+          "葡萄",
+          "冬小麦"
+        ],
+        province_city: "宁夏回族自治区"
       },
-      selectedAreas: ['', '', ''],
-      selectedAreaTags: ['宁夏银川市兴庆区', '宁夏中卫市沙坡头区'],
-      areaSelects: [
+      selectedArea: ["1","2","5"],
+      areaOptions: [
         {
-          placeholder: '选择省份',
-          options: ['宁夏回族自治区']
+          id: '1',
+          name: '宁夏回族自治区',
+          children: [
+            {
+              id: '2',
+              name: '银川市',
+              children: [
+                {id: '640105', name: '西夏区'},
+                {id: '640121', name: '永宁县'},
+                {id: '640122', name: '贺兰县'}
+              ]
+            },
+            {
+              id: '1',
+              name: '石嘴山市',
+              children: [
+                {id: '640202', name: '大武口区'},
+                {id: '640221', name: '惠农县'}
+              ]
+            }
+          ]
         },
         {
-          placeholder: '选择城市',
-          options: ['银川市', '石嘴山市', '吴忠市', '固原市', '中卫市']
-        },
-        {
-          placeholder: '选择区县',
-          options: ['兴庆区', '金凤区', '西夏区', '贺兰县']
-        },
+          id: '2',
+          name: '新疆维吾尔自治区',
+          children: [
+            {
+              id: '6',
+              name: '乌鲁木齐市',
+              children: [
+                {id: '650102', name: '独山子区'}
+              ]
+            }
+          ]
+        }
       ],
+      defaultProps: {
+        children: 'children',
+        label: 'name',
+        value: 'id'
+      },
       crops: [
         {
           name: '枸杞',
@@ -162,6 +214,26 @@ export default {
       selectedLevel: 2
     };
   },
+  computed: {
+    // 获取选中区域的标签名称
+    selectedAreaLabels() {
+      if (!this.selectedArea.length) return '';
+
+      // 通过递归查找获取所有选中节点的名称
+      const labels = [];
+      let currentNode = this.areaOptions;
+
+      this.selectedArea.forEach(value => {
+        const node = currentNode.find(item => item.id === value);
+        if (node) {
+          labels.push(node.name);
+          currentNode = node.children || [];
+        }
+      });
+
+      return labels.join(' - ');
+    }
+  },
   filters: {
     timeformat(value) {
       let datetime = new Date(value);
@@ -180,6 +252,19 @@ export default {
     }
   },
   methods: {
+    getAreaOptions() {
+      // 获取地区选项
+      this.$axios.get(`${this.$settings.HOST}user/areas/hierarchy/`).then(response => {
+        this.areaOptions = response.data;
+      }).catch(error => {
+        this.$message.error("获取地区选项失败");
+      })
+    },
+    handleChange(value) {
+      console.log('选中值变化:', value);
+      this.$message.success(this.selectedArea);
+      // 这里可以添加其他业务逻辑
+    },
     getuserInfo() {
       // 获取用户信息
       let token = this.check_user_login();
@@ -198,40 +283,33 @@ export default {
         })
       }
     },
-    check_user_login(){
-        let token = localStorage.user_token || sessionStorage.user_token;
-        if( !token ){
-            let self = this;
-            this.$confirm("对不起，您尚未登录！","宁夏气象灾害风险识别预测预警系统",{
-                confirmButtonText: '确定',
-                cancelButtonText: '取消',
-                type: 'warning'
-            }).then(() => {
-                // 保存当前路径，以便登录后跳转回来
-                localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
-                self.$router.push("/user/login");
-            }).catch(() => {
-                // 用户点击取消，跳转到首页
-                self.$router.push("/");
-            });
-            return false; // 阻止js继续往下执行
-        }
-        return token;
-      },
-    removeArea(index) {
-      this.selectedAreaTags.splice(index, 1);
-    }
-    ,
+    check_user_login() {
+      let token = localStorage.user_token || sessionStorage.user_token;
+      if (!token) {
+        let self = this;
+        this.$confirm("对不起，您尚未登录！", "宁夏气象灾害风险识别预测预警系统", {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          // 保存当前路径，以便登录后跳转回来
+          localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
+          self.$router.push("/user/login");
+        }).catch(() => {
+          // 用户点击取消，跳转到首页
+          self.$router.push("/");
+        });
+        return false; // 阻止js继续往下执行
+      }
+      return token;
+    },
     toggleCrop(crop) {
       crop.selected = !crop.selected;
-    }
-    ,
-    toggleNotify(method) {
-      method.selected = !method.selected;
     }
   },
   created() {
     this.getuserInfo();
+    this.getAreaOptions();
   }
 }
 ;
