@@ -2,6 +2,7 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 from rest_framework import serializers
 from rest_framework_simplejwt.tokens import RefreshToken
 
+
 class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
     @classmethod
     def get_token(cls, user):
@@ -111,7 +112,9 @@ class UsernameMobileAuthBackend(ModelBackend):
         else:
             return None
 
+
 from django.contrib.auth.hashers import make_password
+
 
 class UserModelSerializer(serializers.ModelSerializer):
     # 定义短信验证码字段，用于反序列化时接收客户端提交的数据
@@ -129,13 +132,13 @@ class UserModelSerializer(serializers.ModelSerializer):
                                      },
                                      write_only=True, label="短信验证码")
     # token字段用于返回客户端的token，该字段只在序列化（即返回给客户端的数据）时使用，在反序列化（即接收客户端提交的数据）时会被忽略。
-    token = serializers.CharField(max_length=1024, read_only=True, help_text="token认证字符串")   # 存在于fields列表中
+    token = serializers.CharField(max_length=1024, read_only=True, help_text="token认证字符串")  # 存在于fields列表中
 
     class Meta:
         # 指定序列化器关联的模型类
         model = User
         # 定义需要序列化和反序列化的字段
-        fields = ['id', 'username', 'password', 'token', 'mobile', 'sms_code',]
+        fields = ['id', 'username', 'password', 'token', 'mobile', 'sms_code', ]
 
         # 额外定义字段的参数
         # 因为后端不需要提供数据给客户端，但是一开始的models并没有加入write_only=True，所以这里需要加入一个extra_kwargs，进行额外字段声明
@@ -200,12 +203,12 @@ class UserModelSerializer(serializers.ModelSerializer):
             mobile=mobile,
             username=username,
             password=hash_password,
-        ) # 将用户数据保存到数据库中  xxx.objects.create()的参数必须是模型类中实际存在的字段
+        )  # 将用户数据保存到数据库中  xxx.objects.create()的参数必须是模型类中实际存在的字段
 
         # 生成JWT Token
         refresh = RefreshToken.for_user(new_User)
         # 将Token添加到返回的数据中
-        new_User.token = str(refresh.access_token) # 动态添加了token属性到new_User实例，这是Python特性
+        new_User.token = str(refresh.access_token)  # 动态添加了token属性到new_User实例，这是Python特性
         # 这只是在内存中为new_User实例添加了一个临时属性，并不会修改数据库表结构，也不会将token存入数据库
 
         return new_User  # 会传递给序列化器的序列化阶段这个实例会被序列化器用来生成最终的响应数据
@@ -213,24 +216,43 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 class SelfModelSerializer(serializers.ModelSerializer):
     # city_name = serializers.CharField(source='city.name')不这样写是因为要是没有选择city，直接这样写会报错，所以加了get_字段函数进行字段处理
-    city_name = serializers.SerializerMethodField()
-    county_name = serializers.SerializerMethodField()
-    province_name = serializers.SerializerMethodField()
+    city_id = serializers.SerializerMethodField()
+    county_id = serializers.SerializerMethodField()
+    province_id = serializers.SerializerMethodField()
     crops_interest = serializers.StringRelatedField(many=True)  # 显示 Crop.__str__() 的值
 
     class Meta:
         model = User
         fields = ['username', 'mobile', 'avatar', 'email',
-                 'city_name', 'county_name', 'province_name',
-                 'last_login', 'crops_interest']
+                  'city_id', 'county_id', 'province_id',
+                  'last_login', 'crops_interest']
 
-    def get_city_name(self, obj):
-        return obj.city.name if obj.city else ""  # 安全访问
+    def get_city_id(self, obj):
+        return str(obj.city.id) if obj.city else ""  # 安全访问
 
-    def get_county_name(self, obj):
-        return obj.county.name if obj.county else ""
+    def get_county_id(self, obj):
+        return str(obj.county.id) if obj.county else ""
 
-    def get_province_name(self, obj):
+    def get_province_id(self, obj):
         if obj.city and obj.city.province:  # 双重空值检查
-            return obj.city.province.name
+            return str(obj.city.province.id)
         return ""
+
+
+from .models import Province, City, County
+class ProvinceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Province
+        fields = ['id', 'name']
+
+
+class CitySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = City
+        fields = ['id', 'name']
+
+
+class CountySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = County
+        fields = ['id', 'name']

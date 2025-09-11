@@ -10791,3 +10791,281 @@ INFO 2025-09-10 23:10:56,774 basehttp 8721 138358223619648 "GET //meteorology/?a
 INFO 2025-09-10 23:10:56,927 basehttp 8721 138358143579712 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
 INFO 2025-09-10 23:10:59,502 basehttp 8721 138358143579712 "GET /user/self/ HTTP/1.1" 200 241
 INFO 2025-09-10 23:11:12,465 basehttp 8721 138358143579712 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-11 10:48:52,102 autoreload 4988 131613152633920 Watching for file changes with StatReloader
+INFO 2025-09-11 10:50:03,282 basehttp 4988 131609173239360 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-11 10:50:03,368 basehttp 4988 131609190024768 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-11 10:50:03,509 basehttp 4988 131609181632064 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-11 10:50:08,338 basehttp 4988 131609163798080 "GET / HTTP/1.1" 302 0
+INFO 2025-09-11 10:50:08,494 basehttp 4988 131609163798080 "GET /admin/ HTTP/1.1" 200 22941
+INFO 2025-09-11 10:50:12,683 basehttp 4988 131609181632064 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-11 10:50:12,751 basehttp 4988 131609181632064 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-11 11:09:36,553 basehttp 4988 131609181632064 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-11 11:10:18,648 basehttp 4988 131609181632064 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-11 11:10:49,766 basehttp 4988 131609181632064 "GET /user/self/ HTTP/1.1" 200 241
+INFO 2025-09-11 11:10:59,091 basehttp 4988 131609173239360 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 11:10:59,158 basehttp 4988 131609173239360 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:11:00,682 basehttp 4988 131609173239360 "GET /admin/user/user/1/change/ HTTP/1.1" 200 20459
+INFO 2025-09-11 11:11:00,715 basehttp 4988 131609173239360 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:11:13,711 basehttp 4988 131609173239360 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 11:11:13,738 basehttp 4988 131609173239360 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:11:20,589 basehttp 4988 131609173239360 "GET /admin/user/user/1/change/ HTTP/1.1" 200 20459
+INFO 2025-09-11 11:11:20,622 basehttp 4988 131609173239360 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:12:01,753 autoreload 4988 131613152633920 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-11 11:12:11,815 autoreload 7132 135995624481856 Watching for file changes with StatReloader
+INFO 2025-09-11 11:12:18,629 basehttp 7132 135991666230848 "GET /admin/ HTTP/1.1" 200 22941
+INFO 2025-09-11 11:12:18,952 basehttp 7132 135991666230848 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-11 11:12:22,634 basehttp 7132 135991666230848 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 11:12:22,671 basehttp 7132 135991666230848 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:12:24,368 basehttp 7132 135991666230848 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-11 11:12:24,405 basehttp 7132 135991666230848 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:12:24,790 basehttp 7132 135991666230848 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 304 0
+INFO 2025-09-11 11:14:49,735 basehttp 7132 135991666230848 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-11 11:14:49,763 basehttp 7132 135991666230848 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:14:50,751 basehttp 7132 135991666230848 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 11:14:50,782 basehttp 7132 135991666230848 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:14:53,160 basehttp 7132 135991666230848 "GET /admin/user/user/add/ HTTP/1.1" 200 28609
+INFO 2025-09-11 11:14:53,192 basehttp 7132 135991666230848 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:16:11,668 autoreload 7132 135995624481856 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-11 11:16:14,981 autoreload 7560 123195735131200 Watching for file changes with StatReloader
+INFO 2025-09-11 11:16:22,203 basehttp 7560 123191773447744 "GET /admin/user/user/ HTTP/1.1" 200 25510
+INFO 2025-09-11 11:16:22,234 basehttp 7560 123191773447744 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:16:25,635 basehttp 7560 123191773447744 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-11 11:16:25,667 basehttp 7560 123191773447744 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:16:49,133 basehttp 7560 123191773447744 "GET /admin/user/user/ HTTP/1.1" 200 25510
+INFO 2025-09-11 11:16:49,169 basehttp 7560 123191773447744 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 11:52:50,443 autoreload 7560 123195735131200 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/admin.py changed, reloading.
+INFO 2025-09-11 11:52:53,182 autoreload 9918 130031165580352 Watching for file changes with StatReloader
+INFO 2025-09-11 12:27:57,181 autoreload 12024 133830149588032 Watching for file changes with StatReloader
+INFO 2025-09-11 12:28:14,040 basehttp 12024 133826189018688 "GET /admin/ HTTP/1.1" 200 22941
+INFO 2025-09-11 12:28:14,434 basehttp 12024 133826189018688 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 12:28:14,464 basehttp 12024 133826189018688 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:28:14,751 basehttp 12024 133826189018688 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-11 12:28:20,258 basehttp 12024 133826189018688 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-11 12:28:20,291 basehttp 12024 133826189018688 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:28:23,628 basehttp 12024 133826189018688 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 12:28:23,667 basehttp 12024 133826189018688 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:46:11,226 autoreload 12024 133830149588032 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-11 12:46:13,686 autoreload 13234 129406818874432 Watching for file changes with StatReloader
+INFO 2025-09-11 12:49:56,042 autoreload 13234 129406818874432 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-11 12:49:58,410 autoreload 13588 124673398498368 Watching for file changes with StatReloader
+INFO 2025-09-11 12:50:02,978 basehttp 13588 124669440378432 "GET /admin/ HTTP/1.1" 200 22941
+INFO 2025-09-11 12:50:03,520 basehttp 13588 124669440378432 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 12:50:03,561 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:03,865 basehttp 13588 124669440378432 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-11 12:50:05,730 basehttp 13588 124669440378432 "GET /admin/user/county/ HTTP/1.1" 200 36525
+INFO 2025-09-11 12:50:05,762 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:08,008 basehttp 13588 124669440378432 "GET /admin/user/county/?p=3 HTTP/1.1" 200 32527
+INFO 2025-09-11 12:50:08,041 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:09,638 basehttp 13588 124669440378432 "GET /admin/user/county/?p=1 HTTP/1.1" 200 36811
+INFO 2025-09-11 12:50:09,670 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:11,439 basehttp 13588 124669440378432 "GET /admin/user/city/ HTTP/1.1" 200 33163
+INFO 2025-09-11 12:50:11,466 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:14,187 basehttp 13588 124669440378432 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-11 12:50:14,217 basehttp 13588 124669440378432 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 12:50:42,472 autoreload 13588 124673398498368 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-11 12:50:45,766 autoreload 13756 136003055973440 Watching for file changes with StatReloader
+INFO 2025-09-11 12:51:42,024 basehttp 13756 135999094343232 "GET /user/provinces HTTP/1.1" 301 0
+INFO 2025-09-11 12:51:42,051 basehttp 13756 135999094343232 "GET /user/provinces/ HTTP/1.1" 200 41
+WARNING 2025-09-11 12:51:57,787 log 13756 135999094343232 Not Found: /user/provinces/1/citys
+WARNING 2025-09-11 12:51:57,787 basehttp 13756 135999094343232 "GET /user/provinces/1/citys HTTP/1.1" 404 6215
+INFO 2025-09-11 12:52:08,659 basehttp 13756 135999094343232 "GET /user/provinces/1/cities/ HTTP/1.1" 200 144
+INFO 2025-09-11 12:52:29,657 basehttp 13756 135999094343232 "GET /user/cities/2/counties/ HTTP/1.1" 200 172
+INFO 2025-09-11 16:56:43,241 autoreload 5001 132713246684224 Watching for file changes with StatReloader
+INFO 2025-09-11 16:56:58,114 basehttp 5001 132709285709376 "GET /admin/ HTTP/1.1" 200 22941
+INFO 2025-09-11 16:56:58,482 basehttp 5001 132709285709376 "GET /admin/user/county/ HTTP/1.1" 200 36525
+INFO 2025-09-11 16:56:58,566 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 16:56:58,875 basehttp 5001 132709285709376 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-11 16:57:00,722 basehttp 5001 132709285709376 "GET /admin/user/user/ HTTP/1.1" 200 43954
+INFO 2025-09-11 16:57:00,754 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 16:57:01,999 basehttp 5001 132709285709376 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-11 16:57:02,030 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+ERROR 2025-09-11 16:57:19,562 log 5001 132709285709376 Internal Server Error: /admin/user/user/1/change/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 719, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/cache.py", line 80, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 246, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1987, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 48, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 192, in _view_wrapper
+    result = _process_exception(request, e)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/utils/decorators.py", line 190, in _view_wrapper
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1843, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1888, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/forms/forms.py", line 206, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/forms/forms.py", line 201, in errors
+    self.full_clean()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/forms/forms.py", line 339, in full_clean
+    self._post_clean()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/forms/models.py", line 498, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/base.py", line 1654, in full_clean
+    self.clean()
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/models.py", line 59, in clean
+    raise ValidationError("所选县必须属于指定城市")
+rest_framework.exceptions.ValidationError: [ErrorDetail(string='所选县必须属于指定城市', code='invalid')]
+ERROR 2025-09-11 16:57:19,568 basehttp 5001 132709285709376 "POST /admin/user/user/1/change/ HTTP/1.1" 500 158997
+INFO 2025-09-11 16:57:23,899 basehttp 5001 132709285709376 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-11 16:57:30,474 basehttp 5001 132709285709376 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-11 16:57:30,559 basehttp 5001 132709285709376 "GET /admin/user/user/ HTTP/1.1" 200 44154
+INFO 2025-09-11 16:57:30,631 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 16:59:34,786 basehttp 5001 132709277316672 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-11 16:59:36,552 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:02:23,084 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:03:09,555 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:07:16,788 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:07:43,391 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:12:30,338 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:12:32,268 basehttp 5001 132709285709376 "GET /admin/user/province/ HTTP/1.1" 200 30803
+INFO 2025-09-11 17:12:32,353 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 17:12:33,032 basehttp 5001 132709285709376 "GET /admin/user/city/ HTTP/1.1" 200 33163
+INFO 2025-09-11 17:12:33,069 basehttp 5001 132709285709376 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-11 17:13:16,278 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:15:29,193 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:16:00,862 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+WARNING 2025-09-11 17:16:51,896 log 5001 132709263681088 Not Found: /user/province/
+WARNING 2025-09-11 17:16:51,898 basehttp 5001 132709263681088 "GET /user/province/ HTTP/1.1" 404 6191
+INFO 2025-09-11 17:17:08,162 basehttp 5001 132709263681088 "GET /user/provinces/ HTTP/1.1" 200 41
+WARNING 2025-09-11 17:17:25,007 log 5001 132709263681088 Not Found: /user/provinces/cities/
+WARNING 2025-09-11 17:17:25,007 basehttp 5001 132709263681088 "GET /user/provinces/cities/ HTTP/1.1" 404 6215
+INFO 2025-09-11 17:17:39,722 basehttp 5001 132709263681088 "GET /user/provinces/1/cities/ HTTP/1.1" 200 144
+INFO 2025-09-11 17:18:04,089 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:18:25,114 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:18:32,762 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:18:41,881 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:18:52,460 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 17:19:10,194 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:09:41,612 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:11:07,656 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:11:16,001 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:11:29,323 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:12:50,284 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:13:20,573 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:13:35,131 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:14:20,769 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:14:31,130 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:25:32,718 basehttp 5001 132709277316672 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-11 22:25:32,760 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:25:38,141 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:26:44,474 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:28:25,532 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:32:05,122 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:33:17,671 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:33:26,588 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:35:02,376 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:36:50,745 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:36:56,915 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:39:29,606 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:39:48,151 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:42:08,223 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:47:19,688 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:47:29,575 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:53:03,035 basehttp 5001 132709277316672 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 22:56:07,635 autoreload 5001 132713246684224 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/urls.py changed, reloading.
+INFO 2025-09-11 22:56:34,230 autoreload 16881 140458182562880 Watching for file changes with StatReloader
+INFO 2025-09-11 22:59:48,220 autoreload 16881 140458182562880 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-11 22:59:50,138 autoreload 17087 124718987580480 Watching for file changes with StatReloader
+ERROR 2025-09-11 22:59:59,899 log 17087 124715026171456 Internal Server Error: /user/areas/hierarchy/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py", line 217, in get
+    for province in provinces:
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 384, in __iter__
+    self._fetch_all()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 1937, in _fetch_all
+    self._prefetch_related_objects()
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 1325, in _prefetch_related_objects
+    prefetch_related_objects(self._result_cache, *self._prefetch_related_lookups)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/db/models/query.py", line 2358, in prefetch_related_objects
+    raise AttributeError(
+AttributeError: Cannot find 'city_set' on Province object, 'city_set__county_set' is an invalid parameter to prefetch_related()
+ERROR 2025-09-11 22:59:59,902 basehttp 17087 124715026171456 "GET /user/areas/hierarchy/ HTTP/1.1" 500 122382
+INFO 2025-09-11 23:03:05,975 autoreload 17087 124718987580480 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-11 23:03:09,879 autoreload 17309 138346967245888 Watching for file changes with StatReloader
+INFO 2025-09-11 23:03:15,914 basehttp 17309 138343006684736 "GET /user/areas/hierarchy/ HTTP/1.1" 200 915
+INFO 2025-09-11 23:04:26,566 basehttp 17309 138342988850752 "GET /user/areas/hierarchy/ HTTP/1.1" 200 915
+INFO 2025-09-11 23:04:26,835 basehttp 17309 138342997243456 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 23:04:35,239 basehttp 17309 138342988850752 "GET /user/areas/hierarchy/ HTTP/1.1" 200 915
+INFO 2025-09-11 23:04:35,249 basehttp 17309 138342997243456 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 23:05:26,268 basehttp 17309 138342988850752 "GET /user/areas/hierarchy/ HTTP/1.1" 200 915
+INFO 2025-09-11 23:05:26,269 basehttp 17309 138342997243456 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 23:06:56,275 autoreload 17309 138346967245888 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-11 23:06:58,931 autoreload 17624 138416259421248 Watching for file changes with StatReloader
+INFO 2025-09-11 23:07:34,763 basehttp 17624 138412289242688 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:07:34,774 basehttp 17624 138412297635392 "GET /user/self/ HTTP/1.1" 200 273
+INFO 2025-09-11 23:09:12,507 autoreload 17624 138416259421248 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-11 23:09:15,135 autoreload 17776 127920177333312 Watching for file changes with StatReloader
+INFO 2025-09-11 23:09:32,465 autoreload 17776 127920177333312 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-11 23:09:34,851 autoreload 17859 133584956802112 Watching for file changes with StatReloader
+INFO 2025-09-11 23:09:41,179 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:09:41,211 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:10:19,142 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:10:19,144 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:10:30,878 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:10:30,883 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:12:17,693 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:12:17,696 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:12:59,565 basehttp 17859 133580996298304 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:12:59,577 basehttp 17859 133580987905600 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:14:14,820 basehttp 17859 133580987905600 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:14:14,836 basehttp 17859 133580996298304 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:14:55,861 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-11 23:14:55,866 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:14:56,913 basehttp 17859 133580977415744 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-11 23:14:56,978 basehttp 17859 133580996298304 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-11 23:14:57,127 basehttp 17859 133580987905600 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-11 23:14:59,525 basehttp 17859 133580987905600 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=1 HTTP/1.1" 200 156
+INFO 2025-09-11 23:14:59,777 basehttp 17859 133580996298304 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1253
+INFO 2025-09-11 23:15:05,950 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-11 23:15:05,950 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959

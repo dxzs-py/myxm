@@ -76,6 +76,7 @@ class County(BaseModel):
         related_name="city_county",
         on_delete=models.PROTECT,
         verbose_name="所属城市",
+        db_index=True,  # 添加索引
     )
 
     class Meta:
@@ -97,6 +98,7 @@ class City(BaseModel):
         verbose_name="所属省",
         null=True,
         blank=True,
+        db_index=True,  # 添加索引
     )
 
     class Meta:
