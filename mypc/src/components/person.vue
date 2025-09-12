@@ -45,7 +45,8 @@
       <div class="bg-white rounded-lg p-6 mb-6 shadow-sm">
         <!-- 居中的标题 -->
         <div class="text-center mb-6">
-          <h2 class="text-lg font-semibold inline-flex items-center justify-center bg-green-100 text-green-700 px-3 py-1 rounded-full">
+          <h2
+            class="text-lg font-semibold inline-flex items-center justify-center bg-green-100 text-green-700 px-3 py-1 rounded-full">
             <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
             关注区域和作物类型
           </h2>
@@ -85,7 +86,7 @@
               选择作物类型
             </h3>
 
-            <div class="grid grid-cols-1 gap-3">
+            <div class="grid grid-cols-2 gap-2">
               <div v-for="crop in crops" :key="crop.name"
                    :class="{'bg-green-50 border-green-600': crop.selected}"
                    class="border rounded-lg p-4 cursor-pointer hover:border-green-600 transition-colors"
@@ -106,11 +107,13 @@
         <h3 class="font-semibold mb-2">订阅预览</h3>
         <p class="text-gray-600 mb-4">您将收到：宁夏银川市的枸杞、葡萄中度及以上预警，通过短信</p>
         <div class="flex justify-end space-x-4">
-          <button class="!rounded-button whitespace-nowrap px-6 py-2 border border-gray-300 hover:bg-gray-50">
+          <button @click="reset()"
+                  class="!rounded-button whitespace-nowrap px-6 py-2 border border-gray-300 hover:bg-gray-50">
             重置
           </button>
-          <button class="!rounded-button whitespace-nowrap px-6 py-2 bg-green-600 text-white hover:bg-green-700">
-            保存订阅
+          <button @click="save()"
+                  class="!rounded-button whitespace-nowrap px-6 py-2 bg-green-600 text-white hover:bg-green-700">
+            保存修改
           </button>
         </div>
       </div>
@@ -130,13 +133,11 @@ export default {
         avatar: null,
         province_name: "宁夏回族自治区",
         county_name: "银川市",
-        crops_interest: [
-          "葡萄",
-          "冬小麦"
-        ],
+        crops_interest: [],
         province_city: "宁夏回族自治区"
       },
-      selectedArea: ["1","2","5"],
+      selectedArea: [],
+      selectedArea0: [],
       areaOptions: [
         {
           id: '1',
@@ -180,37 +181,35 @@ export default {
         label: 'name',
         value: 'id'
       },
+      selectedCrops: [],
+      selectedCrops0: [],
       crops: [
         {
           name: '枸杞',
+          value: 2,
           selected: true,
-          image: 'https://ai-public.mastergo.com/ai/img_res/c00369851c4fd793d1b22c1a91525c5e.jpg'
-        },
-        {
-          name: '小麦',
-          selected: false,
-          image: 'https://ai-public.mastergo.com/ai/img_res/1f10c17cf7e568fc689437e723dcc6e5.jpg'
+          image: 'http://www.mtl.cn:8000/media/crop_img/gq.jpg'
         },
         {
           name: '葡萄',
+          value: 1,
           selected: false,
-          image: 'https://ai-public.mastergo.com/ai/img_res/a21ed9725da973eb4cd0924a3c5c4f28.jpg'
-        }
-      ],
-      notifyMethods: [
-        {
-          type: 'wechat',
-          name: '微信通知',
-          icon: 'fab fa-weixin',
-          selected: true
+          image: 'http://www.mtl.cn:8000/media/crop_img/pt3.jpg'
         },
         {
-          type: 'app',
-          name: '短信通知',
-          icon: 'fas fa-mobile-alt',
-          selected: false
-        }
+          name: '冬小麦',
+          value: 4,
+          selected: false,
+          image: 'http://www.mtl.cn:8000/media/crop_img/xm3.jpg'
+        },
+        {
+          name: '春小麦',
+          value: 3,
+          selected: false,
+          image: 'http://www.mtl.cn:8000/media/crop_img/xm.jpg'
+        },
       ],
+
       selectedLevel: 2
     };
   },
@@ -252,19 +251,6 @@ export default {
     }
   },
   methods: {
-    getAreaOptions() {
-      // 获取地区选项
-      this.$axios.get(`${this.$settings.HOST}user/areas/hierarchy/`).then(response => {
-        this.areaOptions = response.data;
-      }).catch(error => {
-        this.$message.error("获取地区选项失败");
-      })
-    },
-    handleChange(value) {
-      console.log('选中值变化:', value);
-      this.$message.success(this.selectedArea);
-      // 这里可以添加其他业务逻辑
-    },
     getuserInfo() {
       // 获取用户信息
       let token = this.check_user_login();
@@ -275,6 +261,12 @@ export default {
           },
         }).then(response => {
           this.userInfo = response.data[0];
+          this.selectedArea0 = [this.userInfo.province_id, this.userInfo.city_id, this.userInfo.county_id]
+          this.selectedArea = this.selectedArea0.length === 3 ? this.selectedArea0 : [];
+          // console.log(this.selectedArea0.length)
+          this.selectedCrops0 = this.userInfo.crops_interest
+          this.selectedCrops = this.selectedCrops0
+          this.getCrops()
         }).catch(error => {
           this.$message.error("未登录或者登录已过期，请重新登陆");
           // 保存当前路径，以便登录后跳转回来
@@ -305,6 +297,77 @@ export default {
     },
     toggleCrop(crop) {
       crop.selected = !crop.selected;
+      const selectedCrops = this.crops.filter(crop => crop.selected);
+      this.selectedCrops = selectedCrops.map(crop => crop.value);
+      // this.$message.success(`已${crop.selected ? '添加' : '删除'}作物：${crop.name}`);
+    },
+    getAreaOptions() {
+      // 获取地区选项
+      this.$axios.get(`${this.$settings.HOST}user/areas/hierarchy/`).then(response => {
+        this.areaOptions = response.data;
+      }).catch(error => {
+        this.$message.error("获取地区选项失败");
+      })
+    },
+    handleChange(value) {
+      console.log('选中值变化:', value);
+      // 这里可以添加其他业务逻辑
+    },
+    getCrops() {
+      this.$axios.get(`${this.$settings.HOST}crop/cropClass/`).then(response => {
+        this.crops = response.data['crops'];
+        for (let i = 0; i < this.crops.length; i++) {
+          if (this.userInfo.crops_interest.includes(this.crops[i].value)) {
+            this.crops[i].selected = true;
+          }
+        }
+      }).catch(error => {
+        this.$message.error("获取作物选项失败");
+      })
+    },
+    reset() {
+      // 创建selectedArea0的副本而不是直接引用
+      this.selectedArea = this.selectedArea0 ? [...this.selectedArea0] : [];
+      // 创建selectedCrops0的副本而不是直接引用
+      this.selectedCrops = this.selectedCrops0 ? [...this.selectedCrops0] : [];
+      /*this.crops.forEach(crop => {
+        crop.selected = this.selectedCrops.includes(crop.value);
+      });*/  // 这是我的写法，下面是优化的写法这种语法我不太清楚
+      const selectedCropValues = new Set(this.selectedCrops);
+      this.crops = this.crops.map(crop => ({
+        ...crop,
+        selected: selectedCropValues.has(crop.value)
+      }));
+      this.$message.success("已重置");
+    },
+    save() {
+      // 使用 parseInt（更明确地指定基数为 10）
+      let token = this.check_user_login();
+      if (!token) return; // 未登录直接返回
+      if (!this.selectedArea.length === 3) {
+        this.$message.error("请选择地区");
+        return;
+      }
+      const numericArea = this.selectedArea.map(id => parseInt(id, 10));
+      this.$axios.post(`${this.$settings.HOST}user/self/`, {
+        selectedArea: numericArea,
+        selectedCrops: this.selectedCrops,
+      }, {
+        headers: {
+          "Authorization": `Bearer ${token}`
+        }
+      }).then(response => {
+        this.$message.success("保存成功");
+        this.getuserInfo();
+      }).catch(error => {
+        if (error.response.status === 401) {
+          this.$message.error("身份验证失效，请重新登录");
+          this.$router.push("/user/login");
+        } else {
+          this.$message.error("保存失败：" + (error.message || "未知错误"));
+        }
+      });
+
     }
   },
   created() {
