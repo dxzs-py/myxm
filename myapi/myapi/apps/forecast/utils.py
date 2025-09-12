@@ -86,7 +86,6 @@ class PredictionService:
 
         return result[:, feature_idx].reshape(-1)
 
-import numpy as np
 import pandas as pd
 
 

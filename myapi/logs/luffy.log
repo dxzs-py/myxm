@@ -11069,3 +11069,780 @@ INFO 2025-09-11 23:14:59,525 basehttp 17859 133580987905600 "GET //meteorology/?
 INFO 2025-09-11 23:14:59,777 basehttp 17859 133580996298304 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1253
 INFO 2025-09-11 23:15:05,950 basehttp 17859 133580996298304 "GET /user/self/ HTTP/1.1" 200 231
 INFO 2025-09-11 23:15:05,950 basehttp 17859 133580987905600 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 09:54:11,150 autoreload 5519 139938331010112 Watching for file changes with StatReloader
+INFO 2025-09-12 09:57:21,112 basehttp 5519 139934352877120 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 09:57:21,194 basehttp 5519 139934369662528 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 09:57:21,402 basehttp 5519 139934361269824 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1247
+INFO 2025-09-12 09:57:22,211 basehttp 5519 139934343435840 "GET / HTTP/1.1" 302 0
+INFO 2025-09-12 09:57:22,378 basehttp 5519 139934343435840 "GET /admin/ HTTP/1.1" 200 22963
+INFO 2025-09-12 09:57:27,182 basehttp 5519 139934361269824 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-12 09:57:27,223 basehttp 5519 139934369662528 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 09:57:27,255 basehttp 5519 139934361269824 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 09:59:10,754 basehttp 5519 139934369662528 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 09:59:10,760 basehttp 5519 139934361269824 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:02:07,738 basehttp 5519 139934361269824 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:02:07,763 basehttp 5519 139934369662528 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:02:07,778 basehttp 5519 139934128141888 "GET /media/crop_img/pt3.jpg HTTP/1.1" 200 68038
+INFO 2025-09-12 10:02:07,781 basehttp 5519 139934343435840 "GET /media/crop_img/gq3.jpg HTTP/1.1" 200 38104
+INFO 2025-09-12 10:02:07,784 basehttp 5519 139934119749184 "GET /media/crop_img/xm.jpg HTTP/1.1" 200 410454
+INFO 2025-09-12 10:02:40,693 basehttp 5519 139934361269824 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:02:40,699 basehttp 5519 139934369662528 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:03:19,139 basehttp 5519 139934119749184 "GET /admin/crop/crop/ HTTP/1.1" 200 33366
+INFO 2025-09-12 10:03:19,190 basehttp 5519 139934119749184 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:03:21,624 basehttp 5519 139934119749184 "GET /admin/crop/crop/2/change/ HTTP/1.1" 200 11247
+INFO 2025-09-12 10:03:21,664 basehttp 5519 139934119749184 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:03:35,958 basehttp 5519 139934119749184 "POST /admin/crop/crop/2/change/ HTTP/1.1" 302 0
+INFO 2025-09-12 10:03:36,001 basehttp 5519 139934119749184 "GET /admin/crop/crop/ HTTP/1.1" 200 33511
+INFO 2025-09-12 10:03:36,083 basehttp 5519 139934119749184 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:03:59,742 basehttp 5519 139934119749184 "GET /media/crop_img/gq.jpg HTTP/1.1" 200 63476
+INFO 2025-09-12 10:03:59,747 basehttp 5519 139934361269824 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:03:59,754 basehttp 5519 139934369662528 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:04:27,471 basehttp 5519 139934361269824 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:04:27,487 basehttp 5519 139934119749184 "GET /media/crop_img/xm3.jpg HTTP/1.1" 200 38104
+INFO 2025-09-12 10:04:27,489 basehttp 5519 139934369662528 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:08:31,214 basehttp 5519 139934361269824 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:08:31,220 basehttp 5519 139934369662528 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:08:31,268 basehttp 5519 139934119749184 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 10:13:43,322 autoreload 5519 139938331010112 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:13:51,331 autoreload 8151 139013531444288 Watching for file changes with StatReloader
+INFO 2025-09-12 10:17:20,383 autoreload 8151 139013531444288 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/urls.py changed, reloading.
+INFO 2025-09-12 10:17:24,213 autoreload 8516 124742429353024 Watching for file changes with StatReloader
+WARNING 2025-09-12 10:18:21,464 log 8516 124738468136512 Not Found: /crop/crops/
+WARNING 2025-09-12 10:18:21,465 basehttp 8516 124738468136512 "GET /crop/crops/ HTTP/1.1" 404 3868
+WARNING 2025-09-12 10:18:33,551 log 8516 124738468136512 Not Found: /crop/cropclass/
+WARNING 2025-09-12 10:18:33,552 basehttp 8516 124738468136512 "GET /crop/cropclass/ HTTP/1.1" 404 3880
+ERROR 2025-09-12 10:18:40,955 log 8516 124738468136512 Internal Server Error: /crop/cropClass/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 517, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 429, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2025-09-12 10:18:40,958 basehttp 8516 124738468136512 "GET /crop/cropClass/ HTTP/1.1" 500 89602
+ERROR 2025-09-12 10:19:00,280 log 8516 124738468136512 Internal Server Error: /crop/cropClass/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 517, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 429, in finalize_response
+    assert isinstance(response, HttpResponseBase), (
+AssertionError: Expected a `Response`, `HttpResponse` or `StreamingHttpResponse` to be returned from the view, but received a `<class 'NoneType'>`
+ERROR 2025-09-12 10:19:00,281 basehttp 8516 124738468136512 "GET /crop/cropClass/ HTTP/1.1" 500 89602
+INFO 2025-09-12 10:20:40,706 autoreload 8516 124742429353024 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:20:44,012 autoreload 8777 125040690050112 Watching for file changes with StatReloader
+INFO 2025-09-12 10:20:51,340 basehttp 8777 125036729288256 "GET /crop/cropClass/ HTTP/1.1" 200 319
+WARNING 2025-09-12 10:21:40,456 log 8777 125036729288256 Unauthorized: /user/self/
+WARNING 2025-09-12 10:21:40,457 basehttp 8777 125036729288256 "GET /user/self/ HTTP/1.1" 401 43
+INFO 2025-09-12 10:24:34,805 autoreload 8777 125040690050112 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:24:37,233 autoreload 9055 133286190838848 Watching for file changes with StatReloader
+INFO 2025-09-12 10:24:41,616 basehttp 9055 133282232878656 "GET /crop/plantArea/ HTTP/1.1" 200 496
+INFO 2025-09-12 10:26:36,369 autoreload 9055 133286190838848 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:26:38,821 autoreload 9210 139468375233600 Watching for file changes with StatReloader
+INFO 2025-09-12 10:26:51,555 basehttp 9210 139464413627968 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 5898
+INFO 2025-09-12 10:26:51,633 basehttp 9210 139464395793984 "GET /static/rest_framework/css/prettify.css HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,633 basehttp 9210 139464387401280 "GET /static/rest_framework/css/default.css HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,633 basehttp 9210 139464405235264 "GET /static/rest_framework/css/bootstrap-tweaks.css HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,636 basehttp 9210 139464413627968 "GET /static/rest_framework/css/bootstrap.min.css HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,638 basehttp 9210 139464379008576 "GET /static/rest_framework/js/jquery-3.7.1.min.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,639 basehttp 9210 139464030549568 "GET /static/rest_framework/js/csrf.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,640 basehttp 9210 139464387401280 "GET /static/rest_framework/js/bootstrap.min.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,647 basehttp 9210 139464405235264 "GET /static/rest_framework/js/prettify-min.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,648 basehttp 9210 139464395793984 "GET /static/rest_framework/js/default.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,651 basehttp 9210 139464379008576 "GET /static/rest_framework/js/load-ajax-form.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,651 basehttp 9210 139464413627968 "GET /static/rest_framework/js/ajax-form.js HTTP/1.1" 304 0
+INFO 2025-09-12 10:26:51,676 basehttp 9210 139464030549568 "GET /static/rest_framework/img/grid.png HTTP/1.1" 304 0
+INFO 2025-09-12 10:27:03,036 basehttp 9210 139464005371456 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 10:27:03,247 basehttp 9210 139464022156864 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 10:27:03,422 basehttp 9210 139464013764160 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1247
+INFO 2025-09-12 10:27:08,630 basehttp 9210 139464013764160 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 10:27:08,825 basehttp 9210 139464022156864 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-12 10:27:11,066 basehttp 9210 139464022156864 "GET //crop/plantArea/?crop=%E6%98%A5%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 532
+INFO 2025-09-12 10:27:19,542 basehttp 9210 139464395793984 "GET //crop/plantArea/?crop=%E5%86%AC%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 530
+INFO 2025-09-12 10:27:26,210 basehttp 9210 139464395793984 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 10:27:28,422 basehttp 9210 139464395793984 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-12 10:27:30,330 basehttp 9210 139464395793984 "GET //crop/plantArea/?crop=%E6%98%A5%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 532
+INFO 2025-09-12 10:27:32,432 basehttp 9210 139464395793984 "GET //crop/plantArea/?crop=%E5%86%AC%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 530
+INFO 2025-09-12 10:27:34,384 basehttp 9210 139464395793984 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=1 HTTP/1.1" 200 156
+INFO 2025-09-12 10:27:34,560 basehttp 9210 139464413627968 "GET //meteorology/?address=%E5%90%B4%E5%BF%A0%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1250
+INFO 2025-09-12 10:27:38,209 basehttp 9210 139464413627968 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-12 10:27:42,860 basehttp 9210 139464413627968 "GET //meteorology/?address=%E5%9B%BA%E5%8E%9F%E5%B8%82&choose=1 HTTP/1.1" 200 156
+INFO 2025-09-12 10:27:43,001 basehttp 9210 139464395793984 "GET //meteorology/?address=%E5%9B%BA%E5%8E%9F%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-12 10:28:14,325 basehttp 9210 139464030549568 "GET /crop/cropClass/ HTTP/1.1" 200 319
+INFO 2025-09-12 10:28:38,983 autoreload 9210 139468375233600 /home/dx/Desktop/my_pr/myapi/myapi/settings/constants.py changed, reloading.
+INFO 2025-09-12 10:28:41,522 autoreload 9417 131725240382528 Watching for file changes with StatReloader
+INFO 2025-09-12 10:28:57,020 basehttp 9417 131721279653440 "GET /user/self/ HTTP/1.1" 200 5775
+INFO 2025-09-12 10:29:07,094 basehttp 9417 131721243985472 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 10:29:07,274 basehttp 9417 131721260770880 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 10:29:07,442 basehttp 9417 131721252378176 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1247
+INFO 2025-09-12 10:29:10,490 basehttp 9417 131721260770880 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:29:10,510 basehttp 9417 131721252378176 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:29:10,513 basehttp 9417 131721279653440 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 10:29:24,503 basehttp 9417 131721252378176 "GET /user/self/ HTTP/1.1" 200 231
+INFO 2025-09-12 10:29:24,505 basehttp 9417 131721260770880 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:34:17,035 autoreload 9417 131725240382528 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:34:19,574 autoreload 9844 137556270498880 Watching for file changes with StatReloader
+INFO 2025-09-12 10:34:29,552 basehttp 9844 137552310126144 "GET /crop/cropClass/ HTTP/1.1" 200 407
+INFO 2025-09-12 10:34:32,571 basehttp 9844 137552300684864 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 200 38104
+INFO 2025-09-12 10:34:41,980 basehttp 9844 137552300684864 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 200 410454
+INFO 2025-09-12 10:34:48,926 basehttp 9844 137552300684864 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 200 68038
+INFO 2025-09-12 10:35:28,512 autoreload 9844 137556270498880 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:35:31,013 autoreload 10083 140049491141696 Watching for file changes with StatReloader
+INFO 2025-09-12 10:35:52,123 basehttp 10083 140045530252864 "GET /crop/cropClass/ HTTP/1.1" 200 403
+INFO 2025-09-12 10:40:42,478 autoreload 10083 140049491141696 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 10:40:44,915 autoreload 10453 138826083841088 Watching for file changes with StatReloader
+INFO 2025-09-12 10:40:52,350 basehttp 10453 138822123079232 "GET /admin/user/user/ HTTP/1.1" 200 44002
+INFO 2025-09-12 10:40:52,390 basehttp 10453 138822123079232 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:40:55,949 basehttp 10453 138822123079232 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29734
+INFO 2025-09-12 10:40:55,984 basehttp 10453 138822123079232 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:41:06,615 basehttp 10453 138822123079232 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-12 10:41:06,696 basehttp 10453 138822123079232 "GET /admin/user/user/ HTTP/1.1" 200 44159
+INFO 2025-09-12 10:41:06,781 basehttp 10453 138822123079232 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 10:41:24,877 basehttp 10453 138822103148096 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:41:24,888 basehttp 10453 138822111540800 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:41:24,927 basehttp 10453 138822123079232 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 10:43:20,081 basehttp 10453 138822111540800 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:43:20,092 basehttp 10453 138822103148096 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:44:07,041 autoreload 10453 138826083841088 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 10:44:11,195 autoreload 10770 137670150054976 Watching for file changes with StatReloader
+INFO 2025-09-12 10:44:32,180 basehttp 10770 137666189674048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 10:47:05,062 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:47:05,085 basehttp 10770 137666180232768 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:47:23,790 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:47:23,810 basehttp 10770 137666180232768 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:48:15,482 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:48:15,511 basehttp 10770 137666180232768 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:48:23,891 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 10:48:23,896 basehttp 10770 137666180232768 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 10:48:24,101 basehttp 10770 137666162398784 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 11:05:05,738 basehttp 10770 137666162398784 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:05:05,750 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:06:25,069 basehttp 10770 137666162398784 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:06:25,090 basehttp 10770 137666171840064 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:50:37,812 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:50:37,858 basehttp 10770 137666162398784 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:51:10,187 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:51:10,206 basehttp 10770 137666162398784 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:51:23,777 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:51:23,780 basehttp 10770 137666162398784 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:51:24,130 basehttp 10770 137666180232768 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 11:51:50,396 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:51:50,409 basehttp 10770 137666162398784 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:51:50,443 basehttp 10770 137666154006080 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:52:28,608 basehttp 10770 137666162398784 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:52:28,613 basehttp 10770 137666171840064 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:52:28,640 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:53:00,150 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:53:00,162 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:53:00,169 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:53:10,105 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:53:10,119 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:53:10,127 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:54:02,832 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:54:02,848 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:54:02,851 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:55:57,149 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:55:57,163 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:55:57,173 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:56:22,209 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:56:22,219 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:56:22,219 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:56:34,626 basehttp 10770 137666171840064 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:56:34,629 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:56:34,636 basehttp 10770 137666154006080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:57:02,706 basehttp 10770 137666171840064 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:57:02,754 basehttp 10770 137666162398784 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:57:02,766 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:57:18,833 basehttp 10770 137666162398784 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:57:18,836 basehttp 10770 137666171840064 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:57:18,849 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:57:39,074 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:57:39,086 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:57:39,092 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:58:02,000 basehttp 10770 137666162398784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 11:58:02,016 basehttp 10770 137666171840064 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:58:02,026 basehttp 10770 137666154006080 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:58:41,972 autoreload 10770 137670150054976 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 11:59:03,153 autoreload 14732 133501265605696 Watching for file changes with StatReloader
+INFO 2025-09-12 11:59:16,507 basehttp 14732 133497288468032 "GET /crop/cropClass/ HTTP/1.1" 200 445
+INFO 2025-09-12 11:59:16,525 basehttp 14732 133497296860736 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:59:16,575 basehttp 14732 133497305253440 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:59:21,163 basehttp 14732 133497288468032 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 11:59:21,281 basehttp 14732 133497305253440 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 11:59:21,546 basehttp 14732 133497296860736 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 11:59:25,157 basehttp 14732 133497288468032 "GET /crop/cropClass/ HTTP/1.1" 200 445
+INFO 2025-09-12 11:59:25,166 basehttp 14732 133497305253440 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:59:25,170 basehttp 14732 133497296860736 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 11:59:56,885 basehttp 14732 133497288468032 "GET /crop/cropClass/ HTTP/1.1" 200 445
+INFO 2025-09-12 11:59:56,893 basehttp 14732 133497305253440 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 11:59:56,909 basehttp 14732 133497296860736 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:00:06,330 basehttp 14732 133497288468032 "GET /crop/cropClass/ HTTP/1.1" 200 445
+INFO 2025-09-12 12:00:06,334 basehttp 14732 133497305253440 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:00:06,349 basehttp 14732 133497296860736 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:00:47,929 autoreload 14732 133501265605696 /home/dx/Desktop/my_pr/myapi/myapi/apps/crop/views.py changed, reloading.
+INFO 2025-09-12 12:00:51,452 autoreload 14886 127051484562496 Watching for file changes with StatReloader
+INFO 2025-09-12 12:01:15,044 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:01:15,062 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:01:15,076 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:01:28,348 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:01:28,363 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:01:28,368 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:02:22,367 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:02:22,377 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:02:22,378 basehttp 14886 127047495390784 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:02:22,379 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:02:28,596 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:02:28,597 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:02:28,600 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:06:27,479 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:06:27,486 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:06:27,498 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:06:36,233 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:06:36,245 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:06:36,258 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:09:24,115 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:09:24,148 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:09:24,199 basehttp 14886 127047495390784 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:09:24,206 basehttp 14886 127047271704128 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:09:24,212 basehttp 14886 127047280096832 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:09:24,213 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:09:32,377 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:09:32,397 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:09:32,436 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:10:18,559 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:10:18,566 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:10:18,579 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:11:21,253 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:11:21,267 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:11:21,274 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:11:28,946 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:11:28,946 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:11:28,957 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:12:12,419 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:12:12,426 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:12:12,433 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:13:54,285 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:13:54,323 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:13:54,334 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:14:12,958 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:14:12,967 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:14:12,974 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:15:48,610 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:15:48,616 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:15:48,668 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:16:17,329 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:16:17,329 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:16:17,333 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:16:17,523 basehttp 14886 127047495390784 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:18:01,728 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:18:01,743 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:18:01,753 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:18:50,769 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:18:50,825 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:18:50,840 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:19:15,597 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:19:15,599 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:19:15,609 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:19:24,549 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:19:24,564 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:19:24,574 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:20:13,015 basehttp 14886 127047514273344 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:20:13,018 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:20:13,024 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:21:24,305 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:21:24,309 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:21:24,311 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:25:53,550 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:25:53,556 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:25:53,562 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:27:43,012 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:27:43,014 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:27:43,025 basehttp 14886 127047514273344 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:29:13,466 basehttp 14886 127047522666048 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-12 12:29:13,535 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:29:13,563 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:29:13,573 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:29:52,081 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:29:52,097 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:29:52,100 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:31:28,790 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:31:28,809 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:31:28,813 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:32:06,926 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:32:06,940 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:32:06,943 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:32:17,001 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:32:17,011 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:32:17,017 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:32:17,058 basehttp 14886 127047495390784 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:32:18,091 basehttp 14886 127047495390784 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:32:18,097 basehttp 14886 127047280096832 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:32:18,098 basehttp 14886 127047271704128 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:34:54,517 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:34:54,547 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:34:54,558 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:36:21,393 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:36:21,397 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:36:21,401 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:37:24,837 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:37:24,844 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:37:24,846 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:37:33,046 basehttp 14886 127047514273344 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:37:33,059 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:37:33,063 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:39:49,274 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:39:49,280 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:39:49,337 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:40:10,607 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:40:10,620 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:40:10,668 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:40:25,922 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:40:25,924 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 232
+INFO 2025-09-12 12:40:27,074 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:41:33,939 basehttp 14886 127047271704128 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29743
+INFO 2025-09-12 12:41:34,248 basehttp 14886 127047271704128 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:41:39,780 basehttp 14886 127047271704128 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-12 12:41:39,941 basehttp 14886 127047271704128 "GET /admin/user/user/ HTTP/1.1" 200 44178
+INFO 2025-09-12 12:41:40,025 basehttp 14886 127047271704128 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:41:47,373 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:41:47,378 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:41:48,849 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:43:46,577 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:43:46,581 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:43:46,642 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:43:54,115 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:43:54,120 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:43:55,219 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:44:48,647 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:44:48,651 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:44:48,673 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:45:31,501 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:45:31,507 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:45:31,548 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:48:57,598 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:48:57,604 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:48:57,633 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:49:47,408 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:49:47,416 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:49:47,441 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:50:04,765 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:50:04,774 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:50:04,830 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:50:16,836 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:50:16,841 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:50:16,870 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:50:32,380 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:50:32,392 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:50:32,630 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:50:41,092 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:50:41,096 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:50:41,304 basehttp 14886 127047271704128 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:50:42,035 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:50:42,145 basehttp 14886 127047271704128 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:50:42,149 basehttp 14886 127047514273344 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:50:42,150 basehttp 14886 127047280096832 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 12:52:36,808 basehttp 14886 127047280096832 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29761
+INFO 2025-09-12 12:52:36,842 basehttp 14886 127047280096832 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:52:40,551 basehttp 14886 127047280096832 "GET /admin/user/county/5/delete/?_to_field=id&_popup=1 HTTP/1.1" 200 6143
+INFO 2025-09-12 12:52:52,353 basehttp 14886 127047280096832 "GET /admin/user/county/5/change/?_to_field=id&_popup=1 HTTP/1.1" 200 11420
+INFO 2025-09-12 12:52:52,385 basehttp 14886 127047280096832 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:54:05,678 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:54:05,680 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:54:05,741 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:54:22,287 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:54:22,293 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:54:23,308 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:54:42,876 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:54:42,883 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:54:42,980 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:54:50,648 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:54:50,650 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:54:51,549 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:55:22,156 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:55:22,164 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:55:22,204 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:57:27,635 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:57:27,644 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:57:27,677 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:57:45,249 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:57:45,251 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 236
+INFO 2025-09-12 12:57:46,179 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:57:54,044 basehttp 14886 127047280096832 "GET /admin/user/user/ HTTP/1.1" 200 44026
+INFO 2025-09-12 12:57:54,080 basehttp 14886 127047280096832 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:57:56,453 basehttp 14886 127047280096832 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29761
+INFO 2025-09-12 12:57:56,499 basehttp 14886 127047280096832 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:58:04,571 basehttp 14886 127047280096832 "POST /admin/user/user/1/change/ HTTP/1.1" 302 0
+INFO 2025-09-12 12:58:04,658 basehttp 14886 127047280096832 "GET /admin/user/user/ HTTP/1.1" 200 44178
+INFO 2025-09-12 12:58:04,732 basehttp 14886 127047280096832 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 12:58:11,593 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:58:11,603 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 12:58:13,154 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 12:59:53,219 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 12:59:53,221 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 12:59:53,252 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:00:16,977 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:00:16,978 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:00:17,943 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:02:26,656 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:02:26,661 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:02:26,700 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:03:12,826 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:03:12,827 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:03:12,869 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:03:58,311 basehttp 14886 127047505880640 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:03:58,316 basehttp 14886 127047522666048 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:03:58,363 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:10:29,480 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:10:29,486 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:10:29,514 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:11:38,977 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:11:38,983 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:11:39,031 basehttp 14886 127047505880640 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:15:53,098 basehttp 14886 127047505880640 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 13:15:53,104 basehttp 14886 127047522666048 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:15:53,153 basehttp 14886 127047522666048 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 13:32:57,266 autoreload 14886 127051484562496 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 13:33:19,237 autoreload 21126 136352478032960 Watching for file changes with StatReloader
+INFO 2025-09-12 13:40:34,053 autoreload 21126 136352478032960 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 13:40:37,944 autoreload 21608 132973540103232 Watching for file changes with StatReloader
+INFO 2025-09-12 13:40:55,402 basehttp 21608 132969570580032 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:40:55,435 basehttp 21608 132969578972736 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 13:40:55,575 basehttp 21608 132969562187328 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 13:41:04,756 basehttp 21608 132969551697472 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 13:41:04,853 basehttp 21608 132969578972736 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 13:41:05,078 basehttp 21608 132969570580032 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 13:41:07,445 basehttp 21608 132969578972736 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:41:07,446 basehttp 21608 132969570580032 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 13:41:13,897 autoreload 21608 132973540103232 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 13:41:16,534 autoreload 21725 134260469199936 Watching for file changes with StatReloader
+INFO 2025-09-12 13:41:29,619 autoreload 21725 134260469199936 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 13:41:32,185 autoreload 21755 132892919780416 Watching for file changes with StatReloader
+INFO 2025-09-12 13:41:37,504 basehttp 21755 132888952911424 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:41:37,523 basehttp 21755 132888961304128 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 13:41:57,910 basehttp 21755 132888942421568 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 13:41:58,030 basehttp 21755 132888961304128 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 13:41:58,161 basehttp 21755 132888952911424 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 13:42:01,516 basehttp 21755 132888961304128 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:42:01,518 basehttp 21755 132888952911424 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 13:45:05,597 basehttp 21755 132888961304128 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:45:05,644 basehttp 21755 132888952911424 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 13:45:22,884 basehttp 21755 132888942421568 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 13:45:23,035 basehttp 21755 132888952911424 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 13:45:23,317 basehttp 21755 132888961304128 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 13:45:27,081 basehttp 21755 132888952911424 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 13:45:27,082 basehttp 21755 132888961304128 "GET /user/self/ HTTP/1.1" 200 235
+WARNING 2025-09-12 13:46:04,267 log 21755 132888931931712 Unauthorized: /user/self/
+WARNING 2025-09-12 13:46:04,268 basehttp 21755 132888931931712 "GET /user/self/ HTTP/1.1" 401 43
+INFO 2025-09-12 16:03:25,122 autoreload 21755 132892919780416 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:03:47,314 autoreload 23039 123179046995008 Watching for file changes with StatReloader
+ERROR 2025-09-12 16:04:08,574 log 23039 123175085360704 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py", line 151, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py", line 236, in get_city_id
+    return str(obj.city.id) if obj.city else ""  # 安全访问
+                               ^^^^^^^^
+AttributeError: 'AnonymousUser' object has no attribute 'city'
+ERROR 2025-09-12 16:04:08,578 basehttp 23039 123175085360704 "GET /user/self/ HTTP/1.1" 500 130308
+INFO 2025-09-12 16:05:04,769 autoreload 23039 123179046995008 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:05:08,053 autoreload 23130 137537598235712 Watching for file changes with StatReloader
+ERROR 2025-09-12 16:05:18,331 log 23130 137533637084736 Internal Server Error: /user/self/
+Traceback (most recent call last):
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py", line 151, in get
+    return Response(serializer.data)
+                    ^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 573, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/serializers.py", line 540, in to_representation
+    ret[field.field_name] = field.to_representation(attribute)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dx/anaconda3/envs/myapi/lib/python3.11/site-packages/rest_framework/fields.py", line 1870, in to_representation
+    return method(value)
+           ^^^^^^^^^^^^^
+  File "/home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py", line 232, in get_city_id
+    return str(obj.city.id) if obj.city else ""  # 安全访问
+                               ^^^^^^^^
+AttributeError: 'AnonymousUser' object has no attribute 'city'
+ERROR 2025-09-12 16:05:18,336 basehttp 23130 137533637084736 "GET /user/self/ HTTP/1.1" 500 131903
+INFO 2025-09-12 16:05:47,950 autoreload 23130 137537598235712 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:05:50,582 autoreload 23220 135678830597184 Watching for file changes with StatReloader
+INFO 2025-09-12 16:06:24,616 autoreload 23220 135678830597184 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:06:27,073 autoreload 23265 127000841909312 Watching for file changes with StatReloader
+INFO 2025-09-12 16:06:32,639 basehttp 23265 126996882736704 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 16:06:49,422 autoreload 23265 127000841909312 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:06:51,978 autoreload 23346 129920873092160 Watching for file changes with StatReloader
+INFO 2025-09-12 16:07:10,268 basehttp 23346 129916903700032 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:07:10,302 basehttp 23346 129916912092736 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 16:07:10,495 basehttp 23346 129916895307328 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 16:07:11,323 basehttp 23346 129916912092736 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:07:11,435 basehttp 23346 129916895307328 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 16:07:11,446 basehttp 23346 129916895307328 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 16:07:11,447 basehttp 23346 129916885866048 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 16:08:25,123 basehttp 23346 129916876424768 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 16:08:25,249 basehttp 23346 129916912092736 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 16:08:25,475 basehttp 23346 129916903700032 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 16:08:27,307 basehttp 23346 129916912092736 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:08:27,321 basehttp 23346 129916903700032 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 16:08:27,361 basehttp 23346 129916903700032 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:18:56,451 autoreload 23346 129920873092160 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:18:59,013 autoreload 24105 128535368606784 Watching for file changes with StatReloader
+WARNING 2025-09-12 16:19:08,526 log 24105 128531407652416 Unauthorized: /user/self/
+WARNING 2025-09-12 16:19:08,530 basehttp 24105 128531407652416 "GET /user/self/ HTTP/1.1" 401 43
+INFO 2025-09-12 16:19:24,823 autoreload 24105 128535368606784 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:19:27,316 autoreload 24139 124319545508928 Watching for file changes with StatReloader
+INFO 2025-09-12 16:19:33,355 basehttp 24139 124315584775744 "GET /user/self/ HTTP/1.1" 200 215
+INFO 2025-09-12 16:20:12,551 autoreload 24139 124319545508928 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:20:15,125 autoreload 24220 130347259790400 Watching for file changes with StatReloader
+INFO 2025-09-12 16:20:25,456 basehttp 24220 130343281960512 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 16:20:25,607 basehttp 24220 130343298745920 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 16:20:26,092 basehttp 24220 130343290353216 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 16:20:27,748 basehttp 24220 130343298745920 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:20:27,785 basehttp 24220 130343290353216 "GET /user/self/ HTTP/1.1" 200 215
+INFO 2025-09-12 16:20:27,814 basehttp 24220 130343290353216 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:20:42,072 basehttp 24220 130343298745920 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:20:42,087 basehttp 24220 130343290353216 "GET /user/self/ HTTP/1.1" 200 215
+INFO 2025-09-12 16:20:43,287 basehttp 24220 130343290353216 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:20:56,273 basehttp 24220 130343063516736 "GET /user/self/ HTTP/1.1" 200 7378
+INFO 2025-09-12 16:22:02,711 autoreload 24220 130347259790400 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:22:05,320 autoreload 24424 128238893888576 Watching for file changes with StatReloader
+INFO 2025-09-12 16:22:20,356 basehttp 24424 128234932225600 "GET /user/self/ HTTP/1.1" 200 7378
+INFO 2025-09-12 16:22:20,437 basehttp 24424 128234932225600 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-12 16:22:20,447 basehttp 24424 128234932225600 "GET /static/favicon.ico HTTP/1.1" 304 0
+INFO 2025-09-12 16:22:23,323 basehttp 24424 128234932225600 "GET /user/self/ HTTP/1.1" 200 7378
+INFO 2025-09-12 16:22:31,242 basehttp 24424 128234830161472 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:22:31,255 basehttp 24424 128234838554176 "GET /user/self/ HTTP/1.1" 200 215
+INFO 2025-09-12 16:22:32,281 basehttp 24424 128234838554176 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:22:40,364 basehttp 24424 128234932225600 "GET /user/self/ HTTP/1.1" 200 7378
+INFO 2025-09-12 16:23:02,949 autoreload 24424 128238893888576 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:23:05,568 autoreload 24530 131443945534528 Watching for file changes with StatReloader
+INFO 2025-09-12 16:26:43,253 autoreload 24530 131443945534528 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:26:46,651 autoreload 24823 132599153308736 Watching for file changes with StatReloader
+WARNING 2025-09-12 16:26:52,314 log 24823 132595194349120 Unauthorized: /user/self/
+WARNING 2025-09-12 16:26:52,315 basehttp 24823 132595194349120 "GET /user/self/ HTTP/1.1" 401 43
+INFO 2025-09-12 16:26:58,389 basehttp 24823 132595183859264 "GET /user/self/ HTTP/1.1" 200 7474
+INFO 2025-09-12 16:27:08,894 basehttp 24823 132595085989440 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:27:08,914 basehttp 24823 132595094382144 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 16:27:09,837 basehttp 24823 132595094382144 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:33:40,097 autoreload 24823 132599153308736 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/serializers.py changed, reloading.
+INFO 2025-09-12 16:33:42,845 autoreload 25282 134782028473408 Watching for file changes with StatReloader
+INFO 2025-09-12 16:34:03,898 basehttp 25282 134778059044416 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 16:34:03,919 basehttp 25282 134778067437120 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 16:34:04,896 basehttp 25282 134778067437120 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 16:45:31,567 autoreload 25282 134782028473408 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:45:34,471 autoreload 26095 135904248489024 Watching for file changes with StatReloader
+INFO 2025-09-12 16:46:04,036 autoreload 26095 135904248489024 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:46:06,433 autoreload 26126 136768428164160 Watching for file changes with StatReloader
+INFO 2025-09-12 16:46:49,611 autoreload 26126 136768428164160 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:46:52,149 autoreload 26200 128894456964160 Watching for file changes with StatReloader
+INFO 2025-09-12 16:47:26,163 autoreload 26200 128894456964160 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:47:29,018 autoreload 26258 130126016095296 Watching for file changes with StatReloader
+INFO 2025-09-12 16:57:11,887 autoreload 26258 130126016095296 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 16:57:14,718 autoreload 26936 126808935859264 Watching for file changes with StatReloader
+INFO 2025-09-12 17:29:33,741 autoreload 26936 126808935859264 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 17:29:37,250 autoreload 28896 126382937424960 Watching for file changes with StatReloader
+INFO 2025-09-12 17:31:50,415 autoreload 28896 126382937424960 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 17:31:53,183 autoreload 29073 123626779300928 Watching for file changes with StatReloader
+INFO 2025-09-12 17:35:47,960 autoreload 29073 123626779300928 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 17:35:50,392 autoreload 29324 137500686574656 Watching for file changes with StatReloader
+INFO 2025-09-12 17:36:26,432 basehttp 29324 137496725112384 "OPTIONS /user/self/ HTTP/1.1" 200 0
+INFO 2025-09-12 17:36:26,487 basehttp 29324 137496716719680 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:36:26,522 basehttp 29324 137496725112384 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:36:26,533 basehttp 29324 137496708326976 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 17:36:27,482 basehttp 29324 137496725112384 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:36:27,571 basehttp 29324 137496708326976 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 17:36:27,577 basehttp 29324 137496698885696 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 17:36:27,581 basehttp 29324 137496690492992 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 17:38:17,226 basehttp 29324 137496716719680 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:38:17,234 basehttp 29324 137496725112384 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:38:17,901 basehttp 29324 137496725112384 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:38:25,250 autoreload 29324 137500686574656 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 17:38:39,635 autoreload 29564 123404813575232 Watching for file changes with StatReloader
+INFO 2025-09-12 17:39:03,206 basehttp 29564 123400843769408 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:39:03,288 basehttp 29564 123400852162112 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:39:03,342 basehttp 29564 123400852162112 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:43:14,508 basehttp 29564 123400843769408 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:43:14,546 basehttp 29564 123400852162112 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:43:14,586 basehttp 29564 123400852162112 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:46:11,401 basehttp 29564 123400843769408 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:46:11,416 basehttp 29564 123400852162112 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:46:11,502 basehttp 29564 123400852162112 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:52:23,515 autoreload 29564 123404813575232 /home/dx/Desktop/my_pr/myapi/myapi/apps/user/views.py changed, reloading.
+INFO 2025-09-12 17:52:48,220 autoreload 30603 138786135823424 Watching for file changes with StatReloader
+INFO 2025-09-12 17:53:18,326 basehttp 30603 138782157645376 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 17:53:18,444 basehttp 30603 138782174430784 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 17:53:18,625 basehttp 30603 138782166038080 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 17:53:23,461 basehttp 30603 138782157645376 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 17:53:23,579 basehttp 30603 138782166038080 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 17:53:23,767 basehttp 30603 138782174430784 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 17:53:28,003 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:53:28,050 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:53:28,086 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+WARNING 2025-09-12 17:53:43,419 log 30603 138782174430784 Unauthorized: /user/self/
+WARNING 2025-09-12 17:53:43,419 basehttp 30603 138782174430784 "POST /user/self/ HTTP/1.1" 401 43
+INFO 2025-09-12 17:57:56,352 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:57:56,365 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 17:57:57,287 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:58:21,718 basehttp 30603 138782174430784 "POST /user/self/ HTTP/1.1" 200 38
+INFO 2025-09-12 17:58:21,768 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 17:58:21,840 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:58:30,982 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:58:30,989 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 235
+INFO 2025-09-12 17:58:32,553 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:58:42,294 basehttp 30603 138782174430784 "POST /user/self/ HTTP/1.1" 200 38
+INFO 2025-09-12 17:58:42,340 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 17:58:42,402 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:58:48,206 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:58:48,216 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 17:58:49,112 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:58:57,013 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:58:57,025 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 17:58:58,009 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:59:08,474 basehttp 30603 138782174430784 "POST /user/self/ HTTP/1.1" 200 38
+INFO 2025-09-12 17:59:08,505 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 233
+INFO 2025-09-12 17:59:08,576 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 17:59:13,689 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 17:59:13,692 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 233
+INFO 2025-09-12 17:59:14,669 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:06:59,373 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 18:06:59,403 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 233
+INFO 2025-09-12 18:06:59,462 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:08:39,322 basehttp 30603 138782157645376 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 18:08:39,946 basehttp 30603 138782174430784 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 158
+INFO 2025-09-12 18:08:40,102 basehttp 30603 138782166038080 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:09:03,885 basehttp 30603 138782157645376 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 18:09:04,074 basehttp 30603 138782166038080 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 158
+INFO 2025-09-12 18:09:04,235 basehttp 30603 138782174430784 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:09:05,179 basehttp 30603 138782166038080 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 18:09:05,192 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 233
+INFO 2025-09-12 18:09:05,225 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:09:15,313 basehttp 30603 138782174430784 "POST /user/self/ HTTP/1.1" 200 38
+INFO 2025-09-12 18:09:15,349 basehttp 30603 138782174430784 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 18:09:15,408 basehttp 30603 138782174430784 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:09:20,082 basehttp 30603 138782147155520 "GET /admin/user/user/1/change/ HTTP/1.1" 200 29752
+INFO 2025-09-12 18:09:20,358 basehttp 30603 138782147155520 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 18:09:29,534 basehttp 30603 138782147155520 "GET /admin/user/user/ HTTP/1.1" 200 44015
+INFO 2025-09-12 18:10:47,525 basehttp 30603 138782157645376 "GET /forecast/disaster-identification/ HTTP/1.1" 200 188
+INFO 2025-09-12 18:26:41,080 autoreload 30603 138786135823424 /home/dx/Desktop/my_pr/myapi/myapi/apps/forecast/utils.py changed, reloading.
+INFO 2025-09-12 18:26:59,684 autoreload 33166 136420020823104 Watching for file changes with StatReloader
+INFO 2025-09-12 18:28:46,350 basehttp 33166 136416042755648 "GET //crop/plantArea/?crop=%E8%91%A1%E8%90%84 HTTP/1.1" 200 496
+INFO 2025-09-12 18:28:46,521 basehttp 33166 136416059541056 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=1 HTTP/1.1" 200 159
+INFO 2025-09-12 18:28:46,655 basehttp 33166 136416051148352 "GET //meteorology/?address=%E9%93%B6%E5%B7%9D%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1248
+INFO 2025-09-12 18:30:07,312 basehttp 33166 136416051148352 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-12 18:30:14,838 basehttp 33166 136416051148352 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 18:30:15,044 basehttp 33166 136416059541056 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:30:22,937 basehttp 33166 136416051148352 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 18:30:22,942 basehttp 33166 136416032265792 "GET /media/crop_img/gq.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 18:30:23,002 basehttp 33166 136416059541056 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 18:30:23,027 basehttp 33166 136416059541056 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:30:23,088 basehttp 33166 136416032265792 "GET /media/crop_img/xm3_9hPgcma.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 18:30:23,090 basehttp 33166 136416023873088 "GET /media/crop_img/xm_1QeCpDw.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 18:30:23,090 basehttp 33166 136415677511232 "GET /media/crop_img/pt3_ScqQgwy.jpg HTTP/1.1" 304 0
+INFO 2025-09-12 18:31:07,845 basehttp 33166 136416042755648 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-12 18:31:07,972 basehttp 33166 136416059541056 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 18:31:08,213 basehttp 33166 136416051148352 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:35:53,310 basehttp 33166 136416059541056 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 18:35:53,322 basehttp 33166 136416051148352 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 18:35:53,382 basehttp 33166 136416051148352 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:35:55,809 basehttp 33166 136416042755648 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-12 18:35:55,939 basehttp 33166 136416051148352 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=1 HTTP/1.1" 200 155
+INFO 2025-09-12 18:35:56,096 basehttp 33166 136416059541056 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:36:43,192 basehttp 33166 136416051148352 "GET /user/areas/hierarchy/ HTTP/1.1" 200 959
+INFO 2025-09-12 18:36:43,217 basehttp 33166 136416059541056 "GET /user/self/ HTTP/1.1" 200 234
+INFO 2025-09-12 18:36:43,244 basehttp 33166 136416059541056 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:37:13,860 basehttp 33166 136416059541056 "POST /user/self/ HTTP/1.1" 200 38
+INFO 2025-09-12 18:37:13,902 basehttp 33166 136416059541056 "GET /user/self/ HTTP/1.1" 200 237
+INFO 2025-09-12 18:37:13,976 basehttp 33166 136416059541056 "GET /crop/cropClass/ HTTP/1.1" 200 443
+INFO 2025-09-12 18:37:19,417 basehttp 33166 136416023873088 "GET /admin/ HTTP/1.1" 200 23044
+INFO 2025-09-12 18:37:20,006 basehttp 33166 136416023873088 "GET /admin/user/user/ HTTP/1.1" 200 44026
+INFO 2025-09-12 18:37:20,063 basehttp 33166 136416023873088 "GET /admin/jsi18n/ HTTP/1.1" 200 9327
+INFO 2025-09-12 18:37:20,358 basehttp 33166 136416023873088 "GET /favicon.ico HTTP/1.1" 302 0
+INFO 2025-09-12 18:37:24,507 basehttp 33166 136416042755648 "GET //crop/plantArea/?crop=%E6%9E%B8%E6%9D%9E HTTP/1.1" 200 351
+INFO 2025-09-12 18:37:24,625 basehttp 33166 136416059541056 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=1 HTTP/1.1" 200 156
+INFO 2025-09-12 18:37:24,863 basehttp 33166 136416051148352 "GET //meteorology/?address=%E4%B8%AD%E5%8D%AB%E5%B8%82&choose=2&days=7 HTTP/1.1" 200 1249
+INFO 2025-09-12 18:38:25,864 basehttp 33166 136416032265792 "GET /forecast/disaster-identification/ HTTP/1.1" 200 188
+INFO 2025-09-12 18:39:44,293 basehttp 33166 136416051148352 "GET //crop/plantArea/?crop=%E5%86%AC%E5%B0%8F%E9%BA%A6 HTTP/1.1" 200 530

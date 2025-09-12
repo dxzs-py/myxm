@@ -22,4 +22,4 @@ QWEATHER_KEY = "02e8d7ad5e39436eb62ccbbd05df7081"
 
 API_HOST = "p64ewr8ayt.re.qweatherapi.com"
 
-CITY_LIST = ['石嘴山市', '银川市', '吴忠市', '中卫市', '固原市']
+HOST = "http://www.mtl.cn:8000"

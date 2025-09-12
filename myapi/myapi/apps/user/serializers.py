@@ -216,16 +216,51 @@ class UserModelSerializer(serializers.ModelSerializer):
 
 class SelfModelSerializer(serializers.ModelSerializer):
     # city_name = serializers.CharField(source='city.name')不这样写是因为要是没有选择city，直接这样写会报错，所以加了get_字段函数进行字段处理
-    city_id = serializers.SerializerMethodField()
-    county_id = serializers.SerializerMethodField()
-    province_id = serializers.SerializerMethodField()
-    crops_interest = serializers.StringRelatedField(many=True)  # 显示 Crop.__str__() 的值
+    city_id = serializers.SerializerMethodField(read_only=True)
+    county_id = serializers.SerializerMethodField(read_only=True)
+    province_id = serializers.SerializerMethodField(read_only=True)
+    avatar = serializers.SerializerMethodField(read_only=True)
+    # crops_interest = serializers.StringRelatedField(many=True)  # 显示 Crop.__str__() 的值
+    crops_interest = serializers.PrimaryKeyRelatedField(many=True, read_only=True)  # 显示 Crop.id 的值
+
 
     class Meta:
         model = User
         fields = ['username', 'mobile', 'avatar', 'email',
                   'city_id', 'county_id', 'province_id',
                   'last_login', 'crops_interest']
+        extra_kwargs = {
+            'username': {'read_only': True},'mobile': {'read_only': True},
+            'email': {'read_only': True},'last_login': {'read_only': True},
+        }
+
+    def get_avatar(self, obj):
+        """
+        获取用户头像的完整URL
+
+        参数:
+            obj: User对象实例，包含头像字段
+
+        返回:
+            str: 完整的头像URL字符串（当头像存在时）
+            None: 当头像不存在或无效时
+
+        功能说明:
+            1. 从序列化器上下文中获取request对象
+            2. 检查用户对象是否存在有效头像字段
+            3. 使用request.build_absolute_uri()生成完整URL
+            4. 处理头像缺失的边界情况
+        """
+        # 获取请求上下文对象
+        request = self.context.get('request')
+
+        # 校验头像字段有效性
+        if obj.avatar and hasattr(obj.avatar, 'url'):
+            # 生成绝对URL路径
+            return request.build_absolute_uri(obj.avatar.url)
+
+            # 处理头像缺失情况
+        return None
 
     def get_city_id(self, obj):
         return str(obj.city.id) if obj.city else ""  # 安全访问
@@ -240,6 +275,8 @@ class SelfModelSerializer(serializers.ModelSerializer):
 
 
 from .models import Province, City, County
+
+
 class ProvinceSerializer(serializers.ModelSerializer):
     class Meta:
         model = Province

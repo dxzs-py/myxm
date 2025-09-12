@@ -1,7 +1,9 @@
-from rest_framework.exceptions import NotFound
+from rest_framework.exceptions import NotFound, ValidationError, PermissionDenied
 from rest_framework.pagination import PageNumberPagination
 from .serializers import MyTokenObtainPairSerializer
 from rest_framework_simplejwt.views import TokenObtainPairView
+
+from crop.models import Crop
 
 
 class MyObtainTokenPairView(TokenObtainPairView):
@@ -9,11 +11,10 @@ class MyObtainTokenPairView(TokenObtainPairView):
 
 
 from myapi.libs.geetest import GeetestLib
-from rest_framework.response import Response
 from .serializers import get_account_by_mobile
 from rest_framework import status as http_status
 from rest_framework.views import APIView
-from rest_framework.generics import ListAPIView
+from rest_framework.generics import ListAPIView, get_object_or_404
 
 # 请在官网申请ID使用，示例ID不可使用
 pc_geetest_id = "6386fee5f38474b4d6bb30209dfbcde3"
@@ -127,20 +128,77 @@ class SmSAPIView(APIView):
 
 from .serializers import SelfModelSerializer
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.views import APIView
+from django.db import transaction, IntegrityError
+import logging
+
+logger = logging.getLogger("django")
 
 
-class SelfAPIView(ListAPIView):
+class SelfAPIView(APIView):
     """用户信息视图"""
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         # 获取当前登录用户
-        queryset = super().get_queryset()
+        queryset = User.objects.all()
         user_id = self.request.user.id
         return queryset.filter(id=user_id)
 
-    permission_classes = [IsAuthenticated]
-    queryset = User.objects.all()
-    serializer_class = SelfModelSerializer
+    def get(self, request):
+        queryset = self.get_queryset()
+        serializer = SelfModelSerializer(queryset, many=True, context={'request': request})
+        return Response(serializer.data)
+
+    def post(self, request):
+        user_id = request.user.id
+        crops_ids = request.data.get("selectedCrops", [])
+        area_ids = request.data.get("selectedArea")
+        avatar = request.data.get("avatar")
+
+        # 校验地区数据完整性
+        if not area_ids or len(area_ids) != 3:
+            raise ValidationError("请选择完整的省-市-县三级地区")
+        province_id, city_id, county_id = area_ids
+
+        # 获取关联对象
+        city = get_object_or_404(City, id=city_id)
+        county = get_object_or_404(County, id=county_id)
+        # 获取用户实例
+        user = get_object_or_404(User, id=user_id)
+        """# 等价功能写法
+        try:
+            user = User.objects.get(id=user_id)
+        except User.DoesNotExist:
+            raise Http404("用户不存在")
+        """
+        # 验证县-市关联
+        if county.city_belong != city:
+            raise ValidationError("所选县不属于指定城市")
+
+        try:
+            with transaction.atomic():
+                # 更新字段
+                if avatar and avatar != str(user.avatar):
+                    user.avatar = avatar
+                user.city = city
+                user.county = county
+                # 更新用户信息
+                user.save()
+                # 更新关注作物
+                if isinstance(crops_ids, list):
+                    crops = Crop.objects.filter(id__in=crops_ids)
+                    # user.crops_interest = [1,2,3]  # ❌ 错误：不能直接赋值ID列表
+                    user.crops_interest.set(crops)
+                else:
+                    user.crops_interest.clear()
+            return Response({"message": "用户信息更新成功"}, status=200)
+        except IntegrityError as e:
+            logger.error(f"数据完整性错误: {str(e)}")
+            return Response({"error": "数据完整性错误"}, status=400)
+        except Exception as e:
+            logger.error(f"用户更新失败: {str(e)}")
+            return Response({"error": "内部服务器错误"}, status=500)
 
 
 from django.utils.decorators import method_decorator
