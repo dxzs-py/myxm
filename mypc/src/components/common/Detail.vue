@@ -1,6 +1,6 @@
 <template>
   <div class="p-4">
-     <!-- 作物选择下拉框 -->
+    <!-- 作物选择下拉框 -->
     <div class=" top-4 z-10">
       <el-select
         v-model="currentCrop"
@@ -226,12 +226,11 @@
 </template>
 
 
-
 <script>
 export default {
   name: "App",
-  props:{
-    environment:{
+  props: {
+    environment: {
       type: Object,
       default: () => {
         return {
@@ -250,12 +249,12 @@ export default {
       detailType: '',
       // 作物选项
       cropOptions: [
-        { label: '葡萄', value: '葡萄' },
-        { label: '枸杞', value: '枸杞' },
-        { label: '春小麦', value: '春小麦' },
-        { label: '冬小麦', value: '冬小麦' }
+        /*{label: '葡萄', value: '葡萄'},
+        {label: '枸杞', value: '枸杞'},
+        {label: '春小麦', value: '春小麦'},
+        {label: '冬小麦', value: '冬小麦'}*/
       ],
-      currentCrop: this.$store.state.selectedCrop, // 从 Vuex 获取默认作物
+      currentCrop: this.$store.getters.selectedCrop, // 从 Vuex 获取默认作物
       growthStage: {
         current: '开花期',
         next: '结果期',
@@ -296,6 +295,9 @@ export default {
       }
     }
   },
+  created() {
+    this.getCropOptions()
+  },
   methods: {
     // 处理作物选择变化
     handleCropChange(value) {
@@ -313,6 +315,15 @@ export default {
       });
     },
     closeDetailModal() {
+      // 在关闭弹窗前销毁图表实例
+      if (this.environmentDetailChart) {
+        try {
+          this.environmentDetailChart.dispose();
+        } catch (error) {
+          console.error('ECharts 销毁失败:', error);
+        }
+        this.environmentDetailChart = null;
+      }
       this.showDetailModal = false;
     },
     markAlertsAsRead() {
@@ -320,7 +331,18 @@ export default {
       this.alerts = [];
       // 你也可以在这里添加其他逻辑，比如调用 API 标记为已读、本地存储等
     },
-
+    getCropOptions() {
+      this.$axios.get(`${this.$settings.HOST}crop/cropClass/`).then(response => {
+        for (let item of response.data.crops) {
+          this.cropOptions.push({
+            label: item.name,
+            value: item.name
+          })
+        }
+      }).catch(error => {
+        this.$message.error("获取作物选项失败");
+      });
+    },
     initEnvironmentDetailChart() {
       // 如果图表已经初始化，则更新数据而不是重新创建
       if (this.environmentDetailChart) {
@@ -383,7 +405,7 @@ export default {
             name: '温度',
             type: 'line',
             smooth: true,
-            data: this.generateRealisticData(7, 15, 30, this.environment.temperature),
+            data: this.generateRealisticData(7, 15, 30, this.environment.currentTemp),
             itemStyle: {
               color: '#EF4444'
             }
@@ -393,7 +415,7 @@ export default {
             type: 'line',
             smooth: true,
             yAxisIndex: 0,
-            data: this.generateRealisticData(7, 40, 80, this.environment.humidity),
+            data: this.generateRealisticData(7, 40, 80, this.environment.currentHumidity),
             itemStyle: {
               color: '#3B82F6'
             }
@@ -403,7 +425,7 @@ export default {
             type: 'line',
             smooth: true,
             yAxisIndex: 1,
-            data: this.generateRealisticData(7, 30, 60, this.environment.soilMoisture),
+            data: this.generateRealisticData(7, 30, 60, this.environment.currentWindLevel),
             itemStyle: {
               color: '#10B981'
             }

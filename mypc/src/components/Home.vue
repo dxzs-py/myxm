@@ -9,7 +9,7 @@
             <div class="flex items-center justify-between mb-4">
               <h3 class="text-lg font-medium text-gray-700">当前气象状况</h3>
               <p class="ml-auto text-sm text-gray-500">更新时间: {{ currentTime }}</p>
-              <i class="fas fa-sync-alt cursor-pointer text-blue-500" style="padding-left: 5px"
+              <i class="fas fa-sync-alt cursor-pointer text-blue-500" style="padding-left: 5px" ref="refreshIcon"
                  @click="refreshData"></i>
             </div>
             <div class="text-sm text-gray-600">
@@ -55,8 +55,8 @@
               <div class="flex items-center justify-between mb-4">
                 <h2 class="mb-6 text-2xl font-bold text-slate-800">气象预测</h2>
                 <p class="ml-auto text-sm text-gray-500">更新时间: {{ currentTime }}</p>
-                <i class="fas fa-sync-alt cursor-pointer text-blue-500" style="padding-left: 5px">
-                </i>
+                <i class="fas fa-sync-alt cursor-pointer text-blue-500" style="padding-left: 5px" ref="refreshIcon"
+                 @click="refreshData"></i>
               </div>
               <div class="grid grid-cols-2 gap-4">
                 <div class="text-center">

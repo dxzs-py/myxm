@@ -1,0 +1,28 @@
+<svg width="200" height="180" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+  <!-- 定义渐变：枸杞果实（橙红渐变，增强立体感）、果柄（绿色渐变） -->
+  <defs>
+    <!-- 枸杞果实渐变（从亮橙红到暗橙红） -->
+    <linearGradient id="wolfberryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F97316" /> <!-- 亮橙红 -->
+      <stop offset="100%" stop-color="#DC2626" /> <!-- 暗橙红 -->
+    </linearGradient>
+    <!-- 枸杞果柄渐变（浅绿到深绿） -->
+    <linearGradient id="wolfberryStemGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4ADE80" /> <!-- 浅绿 -->
+      <stop offset="100%" stop-color="#16A34A" /> <!-- 深绿 -->
+    </linearGradient>
+  </defs>
+
+  <!-- 枸杞果柄（3根，连接部分果实） -->
+  <path d="M75 60 C65 50, 60 40, 70 35" stroke="url(#wolfberryStemGradient)" stroke-width="2" fill="none" stroke-linecap="round" />
+  <path d="M120 55 C130 45, 135 35, 125 30" stroke="url(#wolfberryStemGradient)" stroke-width="2" fill="none" stroke-linecap="round" />
+  <path d="M150 90 C160 80, 165 70, 155 65" stroke="url(#wolfberryStemGradient)" stroke-width="2" fill="none" stroke-linecap="round" />
+
+  <!-- 枸杞果实（椭圆形，错落排列，模拟自然形态） -->
+  <ellipse cx="80" cy="75" rx="12" ry="18" fill="url(#wolfberryGradient)" /> <!-- 左上果实 -->
+  <ellipse cx="125" cy="70" rx="11" ry="16" fill="url(#wolfberryGradient)" /> <!-- 中上果实 -->
+  <ellipse cx="65" cy="110" rx="10" ry="15" fill="url(#wolfberryGradient)" /> <!-- 左下果实 -->
+  <ellipse cx="110" cy="105" rx="13" ry="19" fill="url(#wolfberryGradient)" /> <!-- 中下果实 -->
+  <ellipse cx="155" cy="100" rx="11" ry="17" fill="url(#wolfberryGradient)" /> <!-- 右下果实 -->
+  <ellipse cx="100" cy="140" rx="12" ry="18" fill="url(#wolfberryGradient)" /> <!-- 底部果实 -->
+</svg>

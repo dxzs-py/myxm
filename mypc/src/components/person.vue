@@ -105,7 +105,7 @@
       <!-- 预览确认区 -->
       <div class="bg-green-50 rounded-lg p-6 mb-6">
         <h3 class="font-semibold mb-2">订阅预览</h3>
-        <p class="text-gray-600 mb-4">您将收到：宁夏银川市的枸杞、葡萄中度及以上预警，通过短信</p>
+        <p class="text-gray-600 mb-4">您将收到：{{ selectedAreaLabels }}的{{ this.$store.state.selectedCropClass.join('、') }}中度及以上预警，通过短信</p>
         <div class="flex justify-end space-x-4">
           <button @click="reset()"
                   class="!rounded-button whitespace-nowrap px-6 py-2 border border-gray-300 hover:bg-gray-50">
@@ -316,11 +316,14 @@ export default {
     getCrops() {
       this.$axios.get(`${this.$settings.HOST}crop/cropClass/`).then(response => {
         this.crops = response.data['crops'];
+        const selectedCropClass = []
         for (let i = 0; i < this.crops.length; i++) {
           if (this.userInfo.crops_interest.includes(this.crops[i].value)) {
             this.crops[i].selected = true;
+            selectedCropClass.push(this.crops[i].name);
           }
         }
+        this.$store.commit('change_selectedCropClass', selectedCropClass);
       }).catch(error => {
         this.$message.error("获取作物选项失败");
       })
@@ -357,7 +360,9 @@ export default {
           "Authorization": `Bearer ${token}`
         }
       }).then(response => {
-        this.$message.success("保存成功");
+        this.$message.success("保存成功", {
+          duration: 100
+        });
         this.getuserInfo();
       }).catch(error => {
         if (error.response.status === 401) {

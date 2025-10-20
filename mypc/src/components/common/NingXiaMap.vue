@@ -44,7 +44,8 @@ export default {
         },
       ],
       myChart: null, // 保存图表实例
-      chartOption: null // 保存图表配置
+      chartOption: null, // 保存图表配置
+      totalAreaByCity: {}, // 用于存储各城市的种植总面积
     }
   },
   created() {
@@ -52,7 +53,7 @@ export default {
   },
   computed: {
     selectedCrop() {
-      return this.$store.state.selectedCrop;
+      return this.$store.getters.selectedCrop;
     },
   },
   mounted() {
@@ -65,13 +66,20 @@ export default {
         if (this.myChart && this.chartOption) {
           // 更新数据
           const flattenProductionArea = [];
+          const totalAreaByCity = {};
           newVal.forEach(item => {
+            let totalArea = 0;
             if (Array.isArray(item.value)) {
               item.value.forEach(area => {
                 flattenProductionArea.push(area);
+                if (area.value && area.value.length >= 3) {
+                  totalArea += area.value[2]; // 第三个元素是面积数据
+                }
               });
             }
+            totalAreaByCity[item.city] = totalArea;
           });
+          this.totalAreaByCity = totalAreaByCity;
 
           // 更新图表配置中的数据
           this.chartOption.series[0].data = flattenProductionArea;
@@ -82,10 +90,10 @@ export default {
       },
       deep: true
     },
-    selectedCrop(newVal){
+    selectedCrop(newVal) {
       // 当作物种类改变时，重新获取数据
-        this.getProductionArea();
-        this.resetToProvince();
+      this.getProductionArea();
+      this.resetToProvince();
     }
   },
   methods: {
@@ -130,7 +138,7 @@ export default {
           map: 'NingXiaMap',
           zoom: 1.2,
           itemStyle: {
-            areaColor: '#afdca8', // 默认区块颜色
+            areaColor: '#9e9e9e', // 默认区块颜色
             borderColor: '#183663', // 区块描边颜色
             borderWidth: 1 // 区块描边颜色
           },
@@ -162,7 +170,14 @@ export default {
               },
               itemStyle: {
                 // areaColor: '#73C0DE'
-              }
+              },
+              tooltip: {
+                formatter: (params) => {
+                  const cityName = params.name;
+                  const totalArea = this.totalAreaByCity[cityName] || 0;
+                  return totalArea === 0 ? `${cityName}<br/>未种植${this.selectedCrop}` : `${cityName}<br/>种植${this.selectedCrop}总面积：${totalArea}万亩`;
+                }
+              },
             },
             {
               name: '银川市',
@@ -175,7 +190,14 @@ export default {
               },
               itemStyle: {
                 // areaColor: '#91CC75'
-              }
+              },
+              tooltip: {
+                formatter: (params) => {
+                  const cityName = params.name;
+                  const totalArea = this.totalAreaByCity[cityName] || 0;
+                  return totalArea === 0 ? `${cityName}<br/>未种植${this.selectedCrop}` : `${cityName}<br/>种植${this.selectedCrop}总面积：${totalArea}万亩`;
+                }
+              },
             },
             {
               name: '吴忠市',
@@ -188,6 +210,13 @@ export default {
               },
               itemStyle: {
                 // areaColor: '#EE6666'
+              },
+              tooltip: {
+                formatter: (params) => {
+                  const cityName = params.name;
+                  const totalArea = this.totalAreaByCity[cityName] || 0;
+                  return totalArea === 0 ? `${cityName}<br/>未种植${this.selectedCrop}` : `${cityName}<br/>种植${this.selectedCrop}总面积：${totalArea}万亩`;
+                }
               }
             },
             {
@@ -201,6 +230,13 @@ export default {
               },
               itemStyle: {
                 // areaColor: '#FC8452'
+              },
+              tooltip: {
+                formatter: (params) => {
+                  const cityName = params.name;
+                  const totalArea = this.totalAreaByCity[cityName] || 0;
+                  return totalArea === 0 ? `${cityName}<br/>未种植${this.selectedCrop}` : `${cityName}<br/>种植${this.selectedCrop}总面积：${totalArea}万亩`;
+                }
               }
             },
             {
@@ -212,8 +248,15 @@ export default {
                   hideOverlap: true     // 隐藏完全重叠的标签
                 }
               },
-              itemStyle: {
-                // areaColor: '#9A60B4'
+              itemStyle: function (params) {
+                // areaColor: '#708a6a'
+              },
+              tooltip: {
+                formatter: (params) => {
+                  const cityName = params.name;
+                  const totalArea = this.totalAreaByCity[cityName] || 0;
+                  return totalArea === 0 ? `${cityName}<br/>未种植${this.selectedCrop}` : `${cityName}<br/>种植${this.selectedCrop}总面积：${totalArea}万亩`;
+                }
               }
             }
           ]
@@ -269,6 +312,7 @@ export default {
         layoutCenter: ['49%', '50%'], // 地图位置
         tooltip: {
           trigger: 'item',
+          show: true,
           // formatter: '{b}'
           formatter: function (params) {
             return params.name + '<br/>' + "种植面积：" + params.value[2] + '万亩';
@@ -285,10 +329,20 @@ export default {
               show: true // 开启产区hover显示
             },
             coordinateSystem: 'geo',
-            symbol: 'circle',
+            symbol: (params) => {
+              if (this.selectedCrop === '葡萄') {
+                return 'image://../../../static/svg/grapes.svg';
+              } else if (this.selectedCrop === '枸杞') {
+                // return 'image://' + require('../../../static/image/gq1.jpg');
+                return 'image://../../../static/svg/gouqi.svg';
+              } else if (this.selectedCrop === '春小麦' || this.selectedCrop === '冬小麦') {
+                // return 'image://' + require('../../../static/image/xm.jpg');
+                return 'image://../../../static/svg/wheat-drawing.svg';
+              }
+            },
             symbolSize: function (val) {
               // 用平方根确保面积与数据值成正比
-              return Math.sqrt(val[2]) * 5;
+              return Math.sqrt(val[2]) * 8;
             },
             label: {
               position: function (params) {
@@ -321,8 +375,20 @@ export default {
               }
             },
             itemStyle: {
-              color: '#578bd1',
-              opacity: 0.7 // 增加透明度，使圆面叠加时更清晰
+              /*color: (params) => {
+                // 根据 selectedCrop 的值返回不同颜色
+                if (this.selectedCrop === '葡萄') {
+                  return '#9A60B4'; // 紫色
+                } else if (this.selectedCrop === '枸杞') {
+                  return '#EE6666'; // 红色
+                } else if (this.selectedCrop === '春小麦') {
+                  return '#F5DEB3'; // 橙色
+                } else if (this.selectedCrop === '冬小麦') {
+                  return '#DEB887'; // 橙色
+                }
+                return '#578bd1'; // 蓝色
+              },
+              opacity: 0.7 // 增加透明度，使圆面叠加时更清晰*/
             },
             emphasis: {
               label: {
