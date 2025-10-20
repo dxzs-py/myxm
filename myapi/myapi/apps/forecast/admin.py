@@ -192,3 +192,69 @@ class Forecast(models.Model):
 
 # 注册到admin站点
 admin.site.register(Forecast, ForecastAdminSite)
+
+from .models import DisasterJudgment, DisasterType, DisasterLevel, DisasterParameter
+
+
+class DisasterJudgmentAdmin(admin.ModelAdmin):
+    """
+    DisasterJudgmentAdmin类继承自admin.ModelAdmin，用于定制灾害判断模型在管理员界面的显示和操作。
+    该类设置了灾害判断列表的显示字段、过滤条件、搜索字段、每页显示数量、排序方式以及可编辑字段，
+    并组织了灾害判断信息的基本显示格式。
+    """
+
+    class Meta:
+        model = DisasterJudgment
+        verbose_name = "灾害判断"
+        verbose_name_plural = "灾害判断"
+
+
+admin.site.register(DisasterJudgment, DisasterJudgmentAdmin)
+
+
+class DisasterTypeAdmin(admin.ModelAdmin):
+    """
+    DisasterTypeAdmin类继承自admin.ModelAdmin，用于定制灾害类型模型在管理员界面的显示和操作。
+    该类设置了灾害类型列表的显示字段、过滤条件、搜索字段、每页显示数量、排序方式以及可编辑字段，
+    并组织了灾害类型信息的基本显示格式。
+    """
+
+    class Meta:
+        model = DisasterType
+        verbose_name = "灾害类型"
+        verbose_name_plural = "灾害类型"
+
+
+admin.site.register(DisasterType, DisasterTypeAdmin)
+
+
+class DisasterLevelAdmin(admin.ModelAdmin):
+    """
+    DisasterLevelAdmin类继承自admin.ModelAdmin，用于定制灾害等级模型在管理员界面的显示和操作。
+    该类设置了灾害等级列表的显示字段、过滤条件、搜索字段、每页显示数量、排序方式以及可编辑字段，
+    并组织了灾害等级信息的基本显示格式。
+    """
+
+    class Meta:
+        model = DisasterLevel
+        verbose_name = "灾害等级"
+        verbose_name_plural = "灾害等级"
+
+
+admin.site.register(DisasterLevel, DisasterLevelAdmin)
+
+
+class DisasterParameterAdmin(admin.ModelAdmin):
+    """
+    DisasterParameterAdmin类继承自admin.ModelAdmin，用于定制灾害参数模型在管理员界面的显示和操作。
+    该类设置了灾害参数列表的显示字段、过滤条件、搜索字段、每页显示数量、排序方式以及可编辑字段，
+    并组织了灾害参数信息的基本显示格式。
+    """
+
+    class Meta:
+        model = DisasterParameter
+        verbose_name = "灾害参数"
+        verbose_name_plural = "灾害参数"
+
+
+admin.site.register(DisasterParameter, DisasterParameterAdmin)

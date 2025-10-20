@@ -83,7 +83,7 @@ class Growth(BaseModel):
         ordering = ["crop", "cycle_order"]  # 建议按照作物和生长顺序默认排序
 
     def __str__(self):
-        return f"{self.begin_time_month+self.begin_time_day} - {self.crop} - {self.end_time_month+self.end_time_day}"
+        return f"{self.growth_cycle}:{self.begin_time_month}.{self.begin_time_day} - {self.crop} - {self.end_time_month}.{self.end_time_day}"
 
     def clean(self):
         # 添加数据验证
@@ -138,7 +138,6 @@ class Growth(BaseModel):
                 raise ValidationError(f"结束日期的月份 {month} 的日期不能超过30天")
             elif month == 2 and day > 28:
                 raise ValidationError("结束日期的2月日期不能超过28天")
-
 
 
 class PlantArea(BaseModel):
