@@ -4,7 +4,7 @@
     <div class="bg-white p-8 shadow-sm">
       <div class="max-w-7xl mx-auto">
         <h2 class="text-2xl font-medium mb-6">宁夏特色作物基本信息</h2>
-        <div class="grid grid-cols-3 gap-6">
+        <div class="grid grid-cols-4 gap-6">
           <div class="p-6 rounded-lg bg-gradient-to-br from-red-50 to-white border border-red-100">
             <div class="flex items-center mb-4">
               <img src="/static/image/gq2.jpg"
@@ -15,7 +15,7 @@
               </div>
             </div>
             <div class="space-y-2">
-              <p class="text-gray-600"><span class="font-medium">生长周期：</span>4 - 5 年</p>
+              <p class="text-gray-600"><span class="font-medium">生长周期：</span>180 - 220 天</p>
               <p class="text-gray-600"><span class="font-medium">最适温度：</span>20 - 25℃</p>
               <p class="text-gray-600"><span class="font-medium">易发灾害：</span>干旱、霜冻</p>
             </div>
@@ -30,7 +30,7 @@
               </div>
             </div>
             <div class="space-y-2">
-              <p class="text-gray-600"><span class="font-medium">生长周期：</span>20 - 30 年</p>
+              <p class="text-gray-600"><span class="font-medium">生长周期：</span>150 - 180 天</p>
               <p class="text-gray-600"><span class="font-medium">最适温度：</span>25 - 30℃</p>
               <p class="text-gray-600"><span class="font-medium">易发灾害：</span>冰雹、病虫害</p>
             </div>
@@ -38,14 +38,29 @@
           <div class="p-6 rounded-lg bg-gradient-to-br from-green-50 to-white border border-green-100">
             <div class="flex items-center mb-4">
               <img src="/static/image/xm.jpg"
-                   class="w-20 h-20 object-cover rounded-lg" alt="硒砂瓜"/>
+                   class="w-20 h-20 object-cover rounded-lg" alt="小麦"/>
               <div class="ml-4">
                 <h3 class="text-xl font-medium">小麦</h3>
                 <p class="text-gray-500 text-sm mt-1">主产区：固原、中卫</p>
               </div>
             </div>
             <div class="space-y-2">
-              <p class="text-gray-600"><span class="font-medium">生长周期：</span>3 - 4 年</p>
+              <p class="text-gray-600"><span class="font-medium">生长周期：</span>270 - 290 天</p>
+              <p class="text-gray-600"><span class="font-medium">最适温度：</span>15 - 20℃</p>
+              <p class="text-gray-600"><span class="font-medium">易发灾害：</span>涝灾、病虫害</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-lg bg-gradient-to-br from-green-50 to-white border border-green-100">
+            <div class="flex items-center mb-4">
+              <img src="/static/image/xm1.png"
+                   class="w-20 h-20 object-cover rounded-lg" alt="小麦"/>
+              <div class="ml-4">
+                <h3 class="text-xl font-medium">春小麦</h3>
+                <p class="text-gray-500 text-sm mt-1">主产区：固原、中卫</p>
+              </div>
+            </div>
+            <div class="space-y-2">
+              <p class="text-gray-600"><span class="font-medium">生长周期：</span>90 - 110 天</p>
               <p class="text-gray-600"><span class="font-medium">最适温度：</span>15 - 20℃</p>
               <p class="text-gray-600"><span class="font-medium">易发灾害：</span>涝灾、病虫害</p>
             </div>
@@ -190,9 +205,9 @@ export default {
           bgColor: 'bg-blue-50',
           level: '蓝色预警',
           levelBg: 'bg-blue-600 text-white',
-          time: '2024-01-15 08:00',
+          time: '2025-11-25 08:00',
           title: '暴雨预警',
-          description: '预计未来24小时内，中卫市南部地区将出现强降雨天气',
+          description: '预计中卫市南部地区将出现强降雨天气',
           crops: '枸杞、葡萄'
         },
         {
@@ -202,10 +217,10 @@ export default {
           bgColor: 'bg-red-50',
           level: '红色预警',
           levelBg: 'bg-red-600 text-white',
-          time: '2024-01-15 10:00',
-          title: '高温预警',
-          description: '银川市未来三天最高气温将达到38℃以上',
-          crops: '硒砂瓜、甘草'
+          time: '2025-11-25 10:00',
+          title: '低温预警',
+          description: '银川市最低气温将达到-2℃以下',
+          crops: '冬小麦'
         },
         {
           icon: 'fa-wind',
@@ -214,9 +229,9 @@ export default {
           bgColor: 'bg-yellow-50',
           level: '黄色预警',
           levelBg: 'bg-yellow-600 text-white',
-          time: '2024-01-15 09:00',
+          time: '2025-11-25 09:00',
           title: '大风预警',
-          description: '吴忠市局部地区将出现8级以上大风',
+          description: '吴忠市局部地区将出现4级以上大风',
           crops: '中宁枣、枸杞'
         }
       ]

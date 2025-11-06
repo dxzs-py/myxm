@@ -7,7 +7,7 @@ class GrowthSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Growth
-        exclude = ["update_time", "create_time"]
+        fields = ["id", "crop","growth_cycle"]
 
 
 

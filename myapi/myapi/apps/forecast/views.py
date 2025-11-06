@@ -66,18 +66,20 @@ class TriggerPredictionView(APIView):
         try:
             # 初始化预测服务
             predictor = PredictionService(target_indices=target_indices)
-            prediction = predictor.make_prediction()
 
             # 获取最新数据日期
-            last_date = predictor.data_loader.get_last_date()
-            last_date_dt = datetime(
-                year=last_date['year'],
-                month=last_date['month'],
-                day=last_date['day']
+            now_date = predictor.data_loader.get_now_date()
+
+            prediction = predictor.make_prediction(now_date["time_difference"])
+
+            now_date_dt = datetime(
+                year=now_date['year'],
+                month=now_date['month'],
+                day=now_date['day']
             )
 
             # 预测开始日期为最后日期的下1天
-            forecast_start_date = last_date_dt + timedelta(days=1)
+            forecast_start_date = now_date_dt + timedelta(days=1)
             # 预测结束日期为预测开始日期的后15天
             forecast_end_date = forecast_start_date + timedelta(days=14)
 
@@ -133,5 +135,22 @@ class DisasterIdentificationView(APIView):
             identifier = NingxiaDisasterIdentifier()
             disasters = identifier.identify_all(today, prev_days)
             return Response({'disasters': disasters, 'status': 'success'}, status=status.HTTP_200_OK)
+        except Exception as e:
+            return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+from myapi.apps.forecast.utils import WeatherDataLoader
+
+class Meteorological_DataView(APIView):
+    def get(self, request):
+        use_future = request.GET.get('use_future', "False")
+        if use_future == "true":
+            use_future = True
+        else:
+            use_future = False
+        try:
+            data_loader = WeatherDataLoader()
+            now_date = data_loader.get_now_date()
+            data = data_loader.get_now_sequence(15, now_date['time_difference'], future=use_future)
+            return Response({'data': data.to_dict(orient='records'), 'status': 'success'}, status=status.HTTP_200_OK)
         except Exception as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

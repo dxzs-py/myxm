@@ -3,17 +3,18 @@ import numpy as np
 from django.conf import settings
 from .data_loader import WeatherDataLoader
 from .predictors.transformer_lstm import TransformerLSTM
+import pandas as pd
 
 
 class PredictionService:
-    def __init__(self,target_indices):
+    def __init__(self, target_indices):
         self.config = {
             'input_window': 60,
             'output_window': 15,
             'target_indices': target_indices,
             'model_class': TransformerLSTM,
             'model_path': os.path.join(
-                settings.BASE_DIR,  'apps', 'forecast', 'static', f'best_model_{target_indices}.pth'
+                settings.BASE_DIR, 'apps', 'forecast', 'static', f'best_model_{target_indices}.pth'
             )
         }
         self.data_loader = WeatherDataLoader()
@@ -36,10 +37,11 @@ class PredictionService:
         model.load_weights(self.config['model_path'])
         return model
 
-    def make_prediction(self):
+    def make_prediction(self, time_difference=0):
         """执行预测并返回结果"""
         # 获取最新输入序列
-        input_sequence = self.data_loader.get_latest_sequence(self.config['input_window'])
+        input_sequence = self.data_loader.get_now_sequence(self.config['input_window'], time_difference=time_difference,
+                                                           use_processed=True)
 
         # 执行预测
         predictions = self.model.predict(input_sequence)
@@ -48,7 +50,7 @@ class PredictionService:
 
         feature_name = self.data_loader.feature_names[self.config['target_indices']]
         pred_values = self.inverse_transform(predictions[0, :], self.config['target_indices'])
-        results={
+        results = {
             'feature_name': feature_name,
             'values': pred_values.tolist()
         }
@@ -85,8 +87,6 @@ class PredictionService:
                 result[:, remainder_cols] = dummy[:, remainder_cols]
 
         return result[:, feature_idx].reshape(-1)
-
-import pandas as pd
 
 
 class NingxiaDisasterIdentifier:

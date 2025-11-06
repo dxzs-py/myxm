@@ -23,3 +23,16 @@ QWEATHER_KEY = "02e8d7ad5e39436eb62ccbbd05df7081"
 API_HOST = "p64ewr8ayt.re.qweatherapi.com"
 
 HOST = "http://www.mtl.cn:8000"
+
+TIME_ZONE = 'Asia/Shanghai'
+
+import datetime
+import pytz
+
+# UTC时区对象
+UTC_TZ = datetime.timezone.utc
+
+# 北京时间时区对象
+BEIJING_TZ = pytz.timezone(TIME_ZONE)
+
+POSTPONE_THE_YEAR = 3

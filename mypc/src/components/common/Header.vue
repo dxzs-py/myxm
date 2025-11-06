@@ -114,9 +114,24 @@ export default {
     }
   },
   created() {
-    this.check_user_login();
+    this.getuserInfo();
   },
   methods: {
+    getuserInfo() {
+      // 获取用户信息
+      let token = this.check_user_login();
+      if (token) {
+        this.$axios.get(`${this.$settings.HOST}user/self/`, {
+          headers: {
+            "Authorization": `Bearer ${token}`
+          },
+        }).then(response => {
+          this.$store.commit('change_selectedArea', response.data[0].city);
+        }).catch(error => {
+          this.$message.error("未登录或者登录已过期");
+        })
+      }
+    },
     check_user_login() {
       // 获取用户登录状态
       this.token = localStorage.user_token || sessionStorage.user_token;
@@ -207,6 +222,7 @@ button, .el-menu-item {
 a.router-link-active {
   background-color: #10B981;
 }
+
 a:hover {
   background-color: #555;
 }

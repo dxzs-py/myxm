@@ -219,6 +219,7 @@ class SelfModelSerializer(serializers.ModelSerializer):
     city_id = serializers.SerializerMethodField(read_only=True)
     county_id = serializers.SerializerMethodField(read_only=True)
     province_id = serializers.SerializerMethodField(read_only=True)
+    city = serializers.SerializerMethodField(read_only=True)
     avatar = serializers.SerializerMethodField(read_only=True)
     # crops_interest = serializers.StringRelatedField(many=True)  # 显示 Crop.__str__() 的值
     crops_interest = serializers.PrimaryKeyRelatedField(many=True, read_only=True)  # 显示 Crop.id 的值
@@ -228,7 +229,7 @@ class SelfModelSerializer(serializers.ModelSerializer):
         model = User
         fields = ['username', 'mobile', 'avatar', 'email',
                   'city_id', 'county_id', 'province_id',
-                  'last_login', 'crops_interest']
+                  'last_login', 'crops_interest','city']
         extra_kwargs = {
             'username': {'read_only': True},'mobile': {'read_only': True},
             'email': {'read_only': True},'last_login': {'read_only': True},
@@ -271,6 +272,10 @@ class SelfModelSerializer(serializers.ModelSerializer):
     def get_province_id(self, obj):
         if obj.city and obj.city.province:  # 双重空值检查
             return str(obj.city.province.id)
+        return ""
+    def get_city(self, obj):
+        if obj.city:
+            return obj.city.name
         return ""
 
 

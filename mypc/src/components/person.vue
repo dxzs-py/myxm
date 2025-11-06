@@ -1,4 +1,3 @@
-<!-- 代码已包含 CSS：使用 TailwindCSS , 安装 TailwindCSS 后方可看到布局样式效果 -->
 <template>
   <div class="min-h-screen bg-gray-50">
     <!-- 主体内容区 -->
@@ -105,7 +104,9 @@
       <!-- 预览确认区 -->
       <div class="bg-green-50 rounded-lg p-6 mb-6">
         <h3 class="font-semibold mb-2">订阅预览</h3>
-        <p class="text-gray-600 mb-4">您将收到：{{ selectedAreaLabels }}的{{ this.$store.state.selectedCropClass.join('、') }}中度及以上预警，通过短信</p>
+        <p class="text-gray-600 mb-4">您将收到：{{
+            selectedAreaLabels
+          }}的{{ this.$store.state.selectedCropClass.join('、') }}中度及以上预警，通过短信</p>
         <div class="flex justify-end space-x-4">
           <button @click="reset()"
                   class="!rounded-button whitespace-nowrap px-6 py-2 border border-gray-300 hover:bg-gray-50">
@@ -229,7 +230,7 @@ export default {
           currentNode = node.children || [];
         }
       });
-
+      this.$store.commit('change_selectedArea', labels[1]);
       return labels.join(' - ');
     }
   },
@@ -360,7 +361,9 @@ export default {
           "Authorization": `Bearer ${token}`
         }
       }).then(response => {
-        this.$message.success("保存成功", {
+        this.$message({
+          message: "保存成功",
+          type: "success",
           duration: 100
         });
         this.getuserInfo();
