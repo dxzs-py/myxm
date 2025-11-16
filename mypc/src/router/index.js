@@ -5,9 +5,10 @@ import Home from '../components/Home.vue'
 import Login from '../components/Login.vue'
 import Register from '../components/Register.vue'
 import KLG from "../components/Knowledge.vue";
-import MAP from "../components/common/NingXiaMap.vue";
 import PS from "../components/person.vue"
 import Header from "../components/common/Header.vue"
+import Advice from "../components/advice.vue";
+import zhishi from "../components/zhishi.vue";
 
 Vue.use(Router)
 
@@ -33,6 +34,16 @@ export default new Router({
           path: '/person',
           name: "ps",
           component: PS
+        },
+        {
+          path: '/advice',
+          name: "Advice",
+          component: Advice
+        },
+        {
+          path: '/zhishi',
+          name: "zhishi",
+          component: zhishi
         },
       ]
     },

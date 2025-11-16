@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status
 from myapi.utils.Qweatherinfo import QWeatherService
 
+
 # Create your views here.
 
 class MeteorologyViewSet(ViewSet):
@@ -19,15 +20,17 @@ class MeteorologyViewSet(ViewSet):
         else:
             days = int(days)
         if not addresses:
-            addresses="银川"
+            addresses = "银川"
         else:
             addresses = addresses.split(",")
         results = []
         for addr in addresses:
             if "市" in addr:
-                addr = addr.replace("市","")
+                addr = addr.replace("市", "")
             try:
-                weather_info = QWeatherService.get_weather_info(addr,choose,days)
+                weather_info = QWeatherService.get_weather_info(addr, choose, days)
+                if weather_info is None:
+                    continue
                 results.append(weather_info)
             except Exception as e:
                 results.append({addr: str(e)})

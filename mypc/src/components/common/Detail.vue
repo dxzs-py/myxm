@@ -87,6 +87,9 @@
         <p class="text-xs">暂无警报</p>
       </div>
     </div>
+    <button @click="getAlertDetail">
+      查看详情
+    </button>
 
     <!-- 弹窗详情 -->
     <div v-if="showDetailModal"
@@ -332,6 +335,21 @@ export default {
     this.getCropGrowthStage();
   },
   methods: {
+    getAlertDetail() {
+      const selectedArea = this.$store.state.selectedArea
+      this.$axios.get(`${this.$settings.HOST}/meteorology/`, {
+        params: {
+          address: "银川,石嘴山,固原,吴忠,中卫",
+          choose: 4
+        }
+      }).then(response => {
+        console.log(response.data)
+      }).catch(error => {
+        this.$message.error('获取预警详情失败:', error);
+      });
+
+
+    },
     // 处理作物选择变化
     handleCropChange(value) {
       // 更新 Vuex 状态
@@ -382,13 +400,13 @@ export default {
             growth.push(item)
           }
         }
-        console.log(growth)
+        // console.log(growth)
         if (growth.length === 3) {
           this.growthStage.current = growth[1].growth_cycle
           // this.growthStage.startDate = growth[1].start_date
           new Date()
-          console.log((new Date(growth[1].end_date) - new Date()) / (1000 * 60 * 60 * 24))
-          console.log((new Date(growth[2].start_date) - new Date()) / (1000 * 60 * 60 * 24))
+          // console.log((new Date(growth[1].end_date) - new Date()) / (1000 * 60 * 60 * 24))
+          // console.log((new Date(growth[2].start_date) - new Date()) / (1000 * 60 * 60 * 24))
           this.growthStage.daysLeft = ((new Date(growth[2].start_date) - new Date()) / (1000 * 60 * 60 * 24)).toFixed(2)
           this.growthStage.progress = ((new Date() - (new Date(growth[1].start_date))) / (new Date(growth[1].end_date) - new Date(growth[1].start_date)) * 100).toFixed(2)
           this.growthStage.next = growth[2].growth_cycle
