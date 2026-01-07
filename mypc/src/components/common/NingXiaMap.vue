@@ -138,12 +138,12 @@ export default {
           map: 'NingXiaMap',
           zoom: 1.2,
           itemStyle: {
-            areaColor: '#9e9e9e', // 默认区块颜色
+            areaColor: '#87CEEB', // 默认区块颜色
             borderColor: '#183663', // 区块描边颜色
             borderWidth: 1 // 区块描边颜色
           },
           emphasis: {
-            itemStyle: {areaColor: '#708a6a'}
+            itemStyle: {areaColor: '#88C9A1'}
           },
           label: {
             show: true,

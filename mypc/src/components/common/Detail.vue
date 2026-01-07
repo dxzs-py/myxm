@@ -71,25 +71,32 @@
          class="mb-6 cursor-pointer rounded-lg border-gray-200 p-4 shadow-sm transition-all hover:shadow-md">
       <div class="mb-3 flex items-center justify-between">
         <h3 class="text-base font-semibold text-gray-800">预警信息</h3>
-        <i class="fas fa-exclamation-triangle text-red-500"></i>
+        <div class="flex items-center">
+      <span v-if="alerts.length > 0" class="mr-2 rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800">
+        {{ alerts.length }} 条警报
+      </span>
+          <i class="fas fa-exclamation-triangle text-red-500"></i>
+        </div>
       </div>
-      <div v-if="alerts.length" class="space-y-2">
-        <div v-for="(alert, index) in alerts" :key="index"
-             class="flex items-start rounded border-l-4 border-red-500 bg-red-50 p-2 text-xs">
-          <i :class="['mt-1 mr-2', alert.icon]" :style="{ color: '#ef4444' }"></i>
-          <div>
-            <p class="font-medium text-red-800">{{ alert.title }}</p>
-            <p class="text-red-600">{{ alert.message }}</p>
+      <div v-if="alerts.length" class="max-h-60 overflow-y-auto pr-2">
+        <div class="space-y-3">
+          <div v-for="(alert, index) in alerts" :key="index"
+               class="flex items-start rounded-lg border-l-4 p-3 shadow-sm transition-all hover:shadow-md"
+               :class="alert.alertClass">
+            <i :class="['mt-1 mr-3', alert.icon,alert.textClass]"></i>
+            <div class="flex-1 overflow-hidden">
+              <p class="font-medium truncate" :class="alert.textClass">{{ alert.title }}</p>
+              <p class="mt-1 text-xs line-clamp-2" :class="alert.subTextClass">{{ alert.message }}</p>
+            </div>
           </div>
         </div>
       </div>
-      <div v-else class="text-center text-gray-400">
-        <p class="text-xs">暂无警报</p>
+      <div v-else class="flex flex-col items-center justify-center rounded-lg bg-gray-50 p-6 text-center text-gray-500">
+        <i class="fas fa-check-circle mb-2 text-xl text-green-500"></i>
+        <p class="text-sm">暂无警报</p>
       </div>
     </div>
-    <button @click="getAlertDetail">
-      查看详情
-    </button>
+
 
     <!-- 弹窗详情 -->
     <div v-if="showDetailModal"
@@ -207,23 +214,44 @@
           </div>
 
           <!-- 预警详情 -->
-          <div v-if="detailType === 'alerts'" class="space-y-3">
-            <div v-if="alerts.length" class="space-y-3">
+          <div v-if="detailType === 'alerts'" class="space-y-4">
+            <div v-if="alerts.length" class="max-h-96 overflow-y-auto pr-2 space-y-4 custom-scrollbar">
               <div v-for="(alert, index) in alerts" :key="index"
-                   class="flex items-start rounded border-l-4 border-red-500 bg-red-50 p-3">
-                <i :class="alert.icon" class="mt-1 mr-3 text-red-500"></i>
-                <div>
-                  <p class="text-sm font-medium text-red-800">{{ alert.title }}</p>
-                  <p class="text-xs text-red-600">{{ alert.message }}</p>
-                  <p class="mt-1 text-xs text-gray-500">检测时间: {{ alert.time }}</p>
+                   class="rounded-lg border p-4 shadow-sm transition-all hover:shadow-md"
+                   :class="alert.alertClass">
+                <div class="flex items-start">
+                  <i :class="['mt-1 mr-3', alert.icon,alert.textClass]" style="font-size: 1.25rem;"></i>
+                  <div class="flex-1">
+                    <p class="font-medium" :class="alert.textClass">{{ alert.title }}</p>
+                    <p class="mt-2 text-sm" :class="alert.subTextClass">{{ alert.message }}</p>
+                    <div class="mt-3 flex flex-wrap gap-2">
+            <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800">
+              {{ alert.urgency }}
+            </span>
+                      <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800">
+              {{ alert.severity }}
+            </span>
+                      <span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-800">
+              到期时间: {{ alert.time }}
+            </span>
+                    </div>
+
+                    <!-- 显示应对措施 -->
+                    <div v-if="alert.instruction" class="mt-3 rounded bg-white p-3 text-sm text-gray-700">
+                      <p class="mb-1 font-medium">应对措施:</p>
+                      <p class="whitespace-pre-line">{{ alert.instruction }}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div v-else class="text-center text-gray-500">
-              <p class="text-sm">当前没有预警信息</p>
+            <div v-else
+                 class="flex flex-col items-center justify-center rounded-lg border border-gray-200 p-8 text-center text-gray-500">
+              <i class="fas fa-check-circle mb-3 text-3xl text-green-500"></i>
+              <p class="text-lg font-medium">当前没有预警信息</p>
+              <p class="mt-2 text-sm">天气状况良好，可以安心管理作物</p>
             </div>
           </div>
-
         </div>
 
         <!-- 按钮 -->
@@ -231,11 +259,6 @@
           <button @click="closeDetailModal"
                   class="rounded border border-gray-300 px-4 py-1 text-sm text-gray-700 hover:bg-gray-50">
             关闭
-          </button>
-          <button v-if="detailType === 'alerts' && alerts.length > 0"
-                  @click="markAlertsAsRead"
-                  class="rounded bg-blue-600 px-4 py-1 text-sm text-white hover:bg-blue-700">
-            标记为已读
           </button>
         </div>
       </div>
@@ -283,20 +306,7 @@ export default {
         nextIcon: 'fas fa-apple-alt',
         hasData: false
       },
-      alerts: [
-        {
-          title: '温度异常',
-          message: '昨日最低温度低于0°C，可能影响作物生长',
-          time: '2025-11-04 14:30',
-          icon: 'fas fa-temperature-high'
-        },
-        {
-          title: '湿度不足',
-          message: '土壤湿度低于40%，建议增加灌溉',
-          time: '2025-11-06 09:15',
-          icon: 'fas fa-tint'
-        }
-      ],
+      alerts: [],
       environmentDetailChart: null,
       use_future: false,
       // 添加真实气象数据
@@ -333,6 +343,7 @@ export default {
     this.getCropOptions();
     this.updateDate();
     this.getCropGrowthStage();
+    this.getAlertDetail();
   },
   methods: {
     getAlertDetail() {
@@ -343,12 +354,72 @@ export default {
           choose: 4
         }
       }).then(response => {
-        console.log(response.data)
+        // 处理新的alerts数据结构
+        const newAlerts = [];
+
+        // 遍历返回的数据数组
+        response.data.forEach(item => {
+          // 只处理有alert且不为null的项
+          if (item.alert && item.alert.length > 0) {
+            // 遍历每个alert
+            item.alert.forEach(alertData => {
+              // 根据alert类型生成不同的图标
+              let alertIcon = 'fas fa-exclamation-triangle';
+              if (alertData.eventType === '寒潮') {
+                alertIcon = 'fas fa-snowflake';
+              } else if (alertData.eventType === '高温') {
+                alertIcon = 'fas fa-temperature-high';
+              } else if (alertData.eventType === '暴雨') {
+                alertIcon = 'fas fa-cloud-showers-heavy';
+              } else if (alertData.eventType === '大风') {
+                alertIcon = 'fas fa-wind';
+              }
+
+              // 根据颜色代码设置样式类
+              let alertClass = 'border-red-500 bg-red-50';
+              let textClass = 'text-red-800';
+              let subTextClass = 'text-red-600';
+
+              if (alertData.color && alertData.color.code === 'blue') {
+                alertClass = 'border-blue-500 bg-blue-50';
+                textClass = 'text-blue-800';
+                subTextClass = 'text-blue-600';
+              } else if (alertData.color && alertData.color.code === 'yellow') {
+                alertClass = 'border-yellow-500 bg-yellow-50';
+                textClass = 'text-yellow-800';
+                subTextClass = 'text-yellow-600';
+              } else if (alertClass.color && alertClass.color.code === 'orange') {
+                alertClass = 'border-orange-500 bg-orange-50';
+                textClass = 'text-orange-800';
+                subTextClass = 'text-orange-600';
+              } else if (alertClass.color && alertClass.color.code === 'red') {
+                alertClass = 'border-red-500 bg-red-50';
+                textClass = 'text-red-800';
+                subTextClass = 'text-red-600';
+              }
+
+              // 添加到新的alerts数组
+              newAlerts.push({
+                title: alertData.headline || alertData.eventType,
+                message: alertData.description,
+                time: new Date(alertData.expireTime).toLocaleString('zh-CN'),
+                icon: alertIcon,
+                alertClass: alertClass,
+                textClass: textClass,
+                subTextClass: subTextClass,
+                severity: alertData["severity "],
+                urgency: alertData.urgency,
+                instruction: alertData["instruction "]
+              });
+            });
+          }
+        });
+
+        // 更新组件的alerts数据
+        this.alerts = newAlerts;
       }).catch(error => {
         this.$message.error('获取预警详情失败:', error);
       });
-
-
     },
     // 处理作物选择变化
     handleCropChange(value) {
@@ -379,11 +450,7 @@ export default {
       }
       this.showDetailModal = false;
     },
-    markAlertsAsRead() {
-      // 示例：清空警报
-      this.alerts = [];
-      // 你也可以在这里添加其他逻辑，比如调用 API 标记为已读、本地存储等
-    },
+
     getCropGrowthStage() {
       this.$axios.get(`${this.$settings.HOST}crop/growth/`, {
         params: {
@@ -781,5 +848,44 @@ export default {
 
 
 <style scoped>
+/* 自定义滚动条样式 */
+.max-h-48::-webkit-scrollbar,
+.max-h-\[50vh\]::-webkit-scrollbar {
+  width: 6px;
+}
 
+.max-h-48::-webkit-scrollbar-track,
+.max-h-\[50vh\]::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.max-h-48::-webkit-scrollbar-thumb,
+.max-h-\[50vh\]::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.max-h-48::-webkit-scrollbar-thumb:hover,
+.max-h-\[50vh\]::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
 </style>

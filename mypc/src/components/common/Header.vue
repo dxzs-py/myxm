@@ -6,7 +6,7 @@
         <!-- 左侧Logo区 -->
         <div class="flex items-center space-x-3 flex-1">
           <i class="fas fa-seedling text-2xl text-green-500 transform hover:rotate-12 transition-all"></i>
-          <h1 class="text-xl font-medium text-gray-800">宁夏特色作物气象灾害风险识别与预警系统</h1>
+          <h1 class="text-xl font-medium text-gray-800">宁夏特色作物气象灾害风险预测与预警系统</h1>
         </div>
 
         <!-- 中间导航区 -->
