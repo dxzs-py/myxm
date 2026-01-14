@@ -83,7 +83,8 @@
 
 （3）用户交互界面：设计出可视化的系统界面，采用HTML，CSS，Vue2，Bootstrap，使用AJax发送异步请求前端连接实现前端系统界面；
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps2.jpg) 
+<img width="480" height="426" alt="image" src="https://github.com/user-attachments/assets/7edbca52-20a2-495e-94a8-81f5aaac27bc" />
+
 
 图2 系统架构图
 
@@ -105,11 +106,12 @@ CPU：AMD Ryzen 7 7840H w/Radeon 780M Graphics，内存：16G
 
 用户访问系统网址后，进入宁夏特色作物气象灾害风险识别与预警平台。用户需要登录，才能够访问系统详细内容，会跳转到登录页面（如图3所示）。用户输入账号和密码完成登录。若无账号，可点击注册，填写必要信息并设置密码进行注册。（如图4所示）
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps3.jpg) 
+<img width="517" height="227" alt="image" src="https://github.com/user-attachments/assets/1c571e5c-b333-47a6-b804-215586aa6f33" />
+
 
 图 3登录页面
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps4.jpg) 
+<img width="520" height="228" alt="image" src="https://github.com/user-attachments/assets/513ef5dd-21a4-4e38-b74c-7e8332e44fc8" />
 
 图4 注册主页
 
@@ -117,15 +119,14 @@ CPU：AMD Ryzen 7 7840H w/Radeon 780M Graphics，内存：16G
 
 用户登录成功后，进入平台主页。主页展示当前用户关注地区的气象数据、种植作物分布面积地图及详情模块，上方设有功能导航菜单，可进入首页、种植指南、用户中心等模块（如图5所示）。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps5.jpg) 
+<img width="511" height="226" alt="image" src="https://github.com/user-attachments/assets/d57fbb63-6ed6-4c12-93b0-3a63891525e1" />
 
 图5 系统主页面
 
 若用户想查看未来几天的气象数据，可点击 “气象预测” 下拉框，查看未来几天的平均气温、湿度、风速等信息（如图 6 所示）。
 
+<img width="411" height="351" alt="image" src="https://github.com/user-attachments/assets/4e3142cc-a0a2-4acd-b768-5e24599e387b" />
  
-
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps6.jpg) 
 
 图6 系统主页面（气象数据部分1）
 
@@ -133,19 +134,20 @@ CPU：AMD Ryzen 7 7840H w/Radeon 780M Graphics，内存：16G
 
 也可点击 “环境参数”，查看最近 15 天的气象数据变化图，点击 “查看未来预测数据” 还能查看未来 15 天的气象数据预测变化图（如图 7 所示）。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps7.jpg) 
+<img width="479" height="221" alt="image" src="https://github.com/user-attachments/assets/b536b143-f03e-40dc-97d8-81de16b2bfd8" />
 
 图7 系统主页面（气象数据部分2）
 
 当种植者点击 “生长阶段” 模块，可查看其关注作物当前的生长阶段详情，从而充分掌握作物生长状态，为后续种植管理提供精准依据（如图8所示）。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps8.jpg) 
+<img width="470" height="246" alt="image" src="https://github.com/user-attachments/assets/acd0fa82-99dd-4715-8f81-c83dabf9533e" />
+
 
 图8 系统主页面（生长阶段详情）
 
 系统主页面设有预警信息模块，用户点击该模块可查看更全面的预警详情，助力用户及时掌握气象灾害风险，提前做好作物防护决策（如图9所示）。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps9.jpg) 
+<img width="483" height="243" alt="image" src="https://github.com/user-attachments/assets/10dfc789-3626-4133-9086-99ac9c5a6c37" />
 
 图9 系统主页面（预警信息详情）
 
@@ -153,7 +155,8 @@ CPU：AMD Ryzen 7 7840H w/Radeon 780M Graphics，内存：16G
 
 用户可进入 “种植指南” 页面（如图10所示），查看宁夏特色作物基本信息、易受气象灾害类型及对应防护措施、气象灾害预警信息，这些内容对种植决策具有重要参考价值。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps10.jpg) 
+<img width="497" height="268" alt="image" src="https://github.com/user-attachments/assets/ee7f0d73-5656-47ca-8061-6b75f246482b" />
+
 
 图10 种植指南页面
 
@@ -161,6 +164,7 @@ CPU：AMD Ryzen 7 7840H w/Radeon 780M Graphics，内存：16G
 
 在个人中心页面，用户可进行多项操作：包括修改个人资料、重置账号密码、更换绑定的手机号与邮箱；同时，为方便用户进入主页面后能第一时间查看关注的地区与作物，还可在此页面自主选择关注区域及作物类型，完成选择后点击保存即可（如图11所示）。
 
-![img](file:///C:\Users\ADMINI~1.DES\AppData\Local\Temp\ksohtml12300\wps11.jpg) 
+<img width="494" height="268" alt="image" src="https://github.com/user-attachments/assets/2fce1ea7-7395-435e-99b4-82d32266cfc6" />
+
 
 图11 用户中心页面
