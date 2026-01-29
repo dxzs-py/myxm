@@ -123,23 +123,8 @@ export default {
         username: this.loginForm.username,
         password: this.loginForm.password,
       }).then(res => {
-        if (this.loginForm.remember) {
-          // 记住登录状态
-          sessionStorage.removeItem('user_token'); // 为了避免登录状态被覆盖
-          sessionStorage.removeItem('user_id');
-          sessionStorage.removeItem('user_name');
-          localStorage.user_token = res.data.access;
-          localStorage.user_id = res.data.id;
-          localStorage.user_name = res.data.username;
-        } else {
-          // 不记住登录状态
-          localStorage.removeItem('user_token');  // 为了避免登录状态被覆盖
-          localStorage.removeItem('user_id');
-          localStorage.removeItem('user_name');
-          sessionStorage.user_token = res.data.access;
-          sessionStorage.user_id = res.data.id;
-          sessionStorage.user_name = res.data.username;
-        }
+        // 保存登录状态
+        this.$auth.saveLoginStatus(res.data.access, res.data.id, res.data.username, this.loginForm.remember);
         // 页面跳转 - 检查是否有保存的跳转路径
         let self = this;
         this.$alert("登陆成功", "欢迎回来", {}, {
@@ -147,17 +132,8 @@ export default {
           cancelButtonText: '取消',
           type: 'success'
         }).then(() => {
-          // 检查是否有保存的跳转路径
-          const redirectPath = localStorage.getItem('redirectAfterLogin');
-          if (redirectPath) {
-            // 清除保存的路径
-            localStorage.removeItem('redirectAfterLogin');
-            // 跳转到原页面
-            self.$router.push(redirectPath);
-          } else {
-            // 默认跳转到首页
-            self.$router.push('/');
-          }
+          // 处理登录后跳转
+          this.$auth.handleLoginRedirect(this);
         });
       }).catch(err => {
         const h = this.$createElement;
@@ -234,4 +210,3 @@ export default {
 <style scoped>
 
 </style>
-

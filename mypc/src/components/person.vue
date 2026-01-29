@@ -269,29 +269,14 @@ export default {
           this.selectedCrops = this.selectedCrops0
           this.getCrops()
         }).catch(error => {
-          this.$message.error("未登录或者登录已过期，请重新登陆");
-          // 保存当前路径，以便登录后跳转回来
-          localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
-          this.$router.push("/user/login");
+          this.$auth.handleLoginExpired(this);
         })
       }
     },
     check_user_login() {
-      let token = localStorage.user_token || sessionStorage.user_token;
+      const token = this.$auth.checkLogin();
       if (!token) {
-        let self = this;
-        this.$confirm("对不起，您尚未登录！", "宁夏气象灾害风险识别预测预警系统", {
-          confirmButtonText: '确定',
-          cancelButtonText: '取消',
-          type: 'warning'
-        }).then(() => {
-          // 保存当前路径，以便登录后跳转回来
-          localStorage.setItem('redirectAfterLogin', this.$route.fullPath);
-          self.$router.push("/user/login");
-        }).catch(() => {
-          // 用户点击取消，跳转到首页
-          self.$router.push("/");
-        });
+        this.$auth.handleNotLogin(this);
         return false; // 阻止js继续往下执行
       }
       return token;

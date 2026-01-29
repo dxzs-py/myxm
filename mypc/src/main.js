@@ -24,6 +24,10 @@ import axios from "axios"
 axios.defaults.withCredentials = false; // false表示阻止ajax请求携带cookie
 Vue.prototype.$axios = axios; // 把对象挂载vue中
 
+// 导入认证工具
+import * as auth from './utils/auth'
+Vue.prototype.$auth = auth; // 把认证工具挂载到Vue原型上
+
 // 导入gt极验
 import '../static/js/gt.js'
 

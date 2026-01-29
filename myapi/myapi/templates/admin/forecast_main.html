@@ -14,10 +14,35 @@
     <div class="module">
         <h2>预测管理</h2>
 
-        <div class="submit-row">
+        <div class="module" style="padding: 20px; margin-bottom: 20px; background: #f8f8f8; border: 1px solid #eee; border-radius: 4px;">
+            <h3>触发预测任务</h3>
             <form method="post" action="{% url 'admin:forecast-trigger' %}">
                 {% csrf_token %}
-                <input type="submit" value="触发预测任务" class="default" name="_trigger">
+                
+                <div style="margin-bottom: 15px;">
+                    <label for="model_name" style="display: block; margin-bottom: 5px; font-weight: bold;">选择模型：</label>
+                    <select name="model_name" id="model_name" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        {% for model in available_models %}
+                            <option value="{{ model }}">{{ model }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 15px;">
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">选择要预测的特征（可多选）：</label>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px;">
+                        {% for feature_name in feature_names %}
+                            <label style="display: flex; align-items: center;">
+                                <input type="checkbox" name="features" value="{{ forloop.counter0 }}" checked>
+                                <span style="margin-left: 5px;">{{ feature_name }}</span>
+                            </label>
+                        {% endfor %}
+                    </div>
+                </div>
+                
+                <div style="text-align: center;">
+                    <input type="submit" value="触发预测任务" class="default" name="_trigger" style="padding: 10px 20px; font-size: 16px;">
+                </div>
             </form>
         </div>
 

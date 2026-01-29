@@ -7,14 +7,14 @@ import pandas as pd
 
 
 class PredictionService:
-    def __init__(self, target_indices):
+    def __init__(self, target_indices, model_name="best_model"):
         self.config = {
             'input_window': 60,
             'output_window': 15,
             'target_indices': target_indices,
             'model_class': TransformerLSTM,
             'model_path': os.path.join(
-                settings.BASE_DIR, 'apps', 'forecast', 'static', f'best_model_{target_indices}.pth'
+                settings.BASE_DIR, 'apps', 'forecast', 'static', model_name, f'{model_name}_{target_indices}.pth'
             )
         }
         self.data_loader = WeatherDataLoader()

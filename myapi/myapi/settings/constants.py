@@ -68,3 +68,5 @@ CERTAINTY = {
     "possible": "有可能发生，但概率较低（≤ 50%）",
     "observed": "事件已经发生或正在发生"
 }
+
+ORIENTATION = "agqae7zVleUZIAZbUH4ifILrLcykDbgz"

@@ -43,9 +43,26 @@ class ForecastAdminSite(admin.ModelAdmin):
         Returns:
             HttpResponse: 渲染后的主页面模板响应
         """
+        # 获取可用模型列表
+        import os
+        from django.conf import settings
+        models_dir = os.path.join(settings.BASE_DIR, 'apps', 'forecast', 'static')
+        available_models = [d for d in os.listdir(models_dir) if os.path.isdir(os.path.join(models_dir, d))]
+        
+        # 获取特征名称列表
+        from myapi.apps.forecast.data_loader import WeatherDataLoader
+        data_loader = WeatherDataLoader()
+        try:
+            _, _, feature_names = data_loader.load_and_preprocess()
+        except Exception as e:
+            feature_names = [f"特征{i}" for i in range(7)]
+            messages.warning(request, f"无法加载特征名称: {str(e)}")
+        
         context = dict(
             self.admin_site.each_context(request),
             title="预测管理",
+            available_models=available_models,
+            feature_names=feature_names,
         )
         return render(request, 'admin/forecast_main.html', context)
 
@@ -62,6 +79,16 @@ class ForecastAdminSite(admin.ModelAdmin):
         """
         if request.method == 'POST':
             try:
+                # 获取用户选择的模型和特征
+                selected_model = request.POST.get('model_name', 'best_model')
+                selected_features = request.POST.getlist('features')
+                
+                # 转换特征列表为整数索引
+                if selected_features:
+                    target_indices = [int(idx) for idx in selected_features]
+                else:
+                    target_indices = [0, 1, 2, 3, 4, 5, 6]  # 默认预测所有特征
+                
                 # 直接调用已有的视图类
                 from myapi.apps.forecast.views import TriggerPredictionView
 
@@ -69,17 +96,17 @@ class ForecastAdminSite(admin.ModelAdmin):
                 api_request = HttpRequest()
                 api_request.method = 'POST'
                 api_request.user = request.user
-                api_request._full_data = {'target_indices': [0, 1, 2, 3, 4, 5, 6]}
+                api_request._full_data = {'target_indices': target_indices, 'model_name': selected_model}
                 api_request.META = request.META
                 api_request.parsers = [JSONParser()]
-                api_request.data = {'target_indices': [0, 1, 2, 3, 4, 5, 6]}
+                api_request.data = {'target_indices': target_indices, 'model_name': selected_model}
 
                 # 实例化视图并处理请求
                 view = TriggerPredictionView()
                 response = view.post(api_request)
 
                 if response.status_code == 202:
-                    messages.success(request, '预测任务已成功提交')
+                    messages.success(request, f'预测任务已成功提交（模型：{selected_model}，特征数：{len(target_indices)}）')
                 else:
                     messages.error(request, f'预测任务提交失败: {response.data.get("error", "未知错误")}')
             except Exception as e:

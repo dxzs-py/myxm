@@ -9,8 +9,7 @@ from rest_framework_simplejwt.views import (
 )
 
 # 引入自定义的视图类
-from .views import MyObtainTokenPairView, CaptchaAPIView, UserAPIView, MobileAPIView, SmSAPIView, SelfAPIView, \
-    ProvinceListView, ProvinceCityListView, CityCountyListView,AreaHierarchyView
+from .views import *
 
 urlpatterns = [
     # DRF 提供的一系列身份认证的接口，用于在页面中认证身份，详情查阅DRF文档
@@ -31,6 +30,6 @@ urlpatterns = [
     path('provinces/<int:province_id>/cities/', ProvinceCityListView.as_view(), name='province-cities'),
     path('cities/<int:city_id>/counties/', CityCountyListView.as_view(), name='city-counties'),
     path('areas/hierarchy/', AreaHierarchyView.as_view(), name='area-hierarchy'),
-
+    path('user-location/', UserLocationView.as_view(), name='user-location'),
 
 ]

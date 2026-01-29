@@ -331,3 +331,102 @@ class AreaHierarchyView(APIView):  # ✅ 使用class定义类视图
             hierarchy_data.append(province_data)
 
         return Response(hierarchy_data)
+
+from myapi.utils.IP_Orientation import IPLocationService
+from rest_framework import status
+import requests
+import ipaddress
+
+class UserLocationView(APIView):
+    """
+    获取用户IP地址及其地理位置信息
+    """
+
+    def get_user_ip(self, request):
+        """
+        获取用户真实IP地址（兼容开发/生产环境）
+        开发环境下通过外部API获取公网IP，生产环境从请求头获取
+        """
+        # 1. 生产环境：优先从代理头获取真实IP
+        ip_headers = [
+            'HTTP_X_FORWARDED_FOR',  # 最常用的代理头
+            'HTTP_X_REAL_IP',  # Nginx常用配置
+            'HTTP_CLIENT_IP',  # 某些代理使用
+        ]
+
+        for header in ip_headers:
+            ip_value = request.META.get(header)
+            if ip_value:
+                # 处理多个IP的情况，取第一个
+                ip = ip_value.split(',')[0].strip()
+                # 验证是否为公网IP
+                if self.is_valid_public_ip(ip):
+                    return ip
+
+        # 2. 开发环境：获取REMOTE_ADDR
+        ip = request.META.get('REMOTE_ADDR', '127.0.0.1')
+
+        # 3. 如果是本地IP，尝试通过外部API获取公网IP
+        if ip in ('127.0.0.1', '::1'):
+            public_ip = self.get_public_ip()
+            if public_ip:
+                return public_ip
+
+        return ip
+
+    def is_valid_public_ip(self, ip):
+        """检查IP是否为公网IP"""
+        try:
+            ip_obj = ipaddress.ip_address(ip)
+            return not ip_obj.is_private and not ip_obj.is_loopback
+        except ValueError:
+            return False
+
+    def get_public_ip(self):
+        """通过外部API获取公网IP（开发环境使用）"""
+        services = [
+            'https://api.ipify.org?format=json',
+            'https://ipinfo.io/ip'
+        ]
+
+        for service in services:
+            try:
+                response = requests.get(service, timeout=3)
+                if service.endswith('json'):
+                    return response.json().get('ip', '')
+                return response.text.strip()
+            except requests.RequestException:
+                continue
+
+        return ''
+
+    def get(self, request):
+        """处理GET请求，返回用户IP及其地理位置"""
+        try:
+            # 获取用户IP
+            user_ip = self.get_user_ip(request)
+            logger.info(f"获取到用户IP: {user_ip}")
+
+            # 获取地理位置信息
+            ip_service = IPLocationService()
+            location_data = ip_service.get_location_by_ip(user_ip)
+
+            return Response({
+                "user_ip": user_ip,
+                "location": location_data,
+                "status": "success"
+            }, status=status.HTTP_200_OK)
+
+        except requests.exceptions.RequestException as e:
+            logger.error(f"IP定位服务请求失败: {str(e)}")
+            return Response({
+                "error": "定位服务暂时不可用",
+                "status": "fail"
+            }, status=status.HTTP_503_SERVICE_UNAVAILABLE)
+
+        except Exception as e:
+            logger.error(f"获取用户位置信息失败: {str(e)}")
+            return Response({
+                "error": "获取位置信息失败",
+                "status": "fail"
+            }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

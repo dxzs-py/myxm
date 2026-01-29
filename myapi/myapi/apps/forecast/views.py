@@ -62,10 +62,10 @@ class PredictionListView(APIView):
 
 
 class TriggerPredictionView(APIView):
-    def periodic_prediction(self, target_indices, pipe):
+    def periodic_prediction(self, target_indices, pipe, model_name="best_model"):
         try:
             # 初始化预测服务
-            predictor = PredictionService(target_indices=target_indices)
+            predictor = PredictionService(target_indices=target_indices, model_name=model_name)
 
             # 获取最新数据日期
             now_date = predictor.data_loader.get_now_date()
@@ -104,13 +104,14 @@ class TriggerPredictionView(APIView):
     def post(self, request):
         """手动触发预测任务"""
         target_indices = request.data.get('target_indices', [0, 1, 2, 3, 4, 5, 6])
+        model_name = request.data.get('model_name', 'best_model')
         try:
             # 获取redis连接对象
             redis_conn = get_redis_connection('forecast')
             results = []
             with redis_conn.pipeline() as pipe:
                 for target_index in target_indices:
-                    result = self.periodic_prediction(target_index, pipe)
+                    result = self.periodic_prediction(target_index, pipe, model_name=model_name)
                     results.append(result) if target_indices else 1
                 pipe.execute()
 

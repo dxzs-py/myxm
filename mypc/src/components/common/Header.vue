@@ -129,23 +129,21 @@ export default {
           this.$store.commit('change_selectedArea', response.data[0].city);
         }).catch(error => {
           this.$message.error("未登录或者登录已过期");
+          this.$store.dispatch('fetchSelectedArea');
         })
+      } else {
+        this.$store.dispatch('fetchSelectedArea');
       }
     },
     check_user_login() {
       // 获取用户登录状态
-      this.token = localStorage.user_token || sessionStorage.user_token;
-      this.username = localStorage.user_name || sessionStorage.user_name; // 获取 username
+      this.token = this.$auth.checkLogin();
+      this.username = this.$auth.getUsername(); // 获取 username
       return this.token;
     },
     logoutHander() {
       // 退出登录
-      localStorage.removeItem('user_token');
-      localStorage.removeItem('user_id');
-      localStorage.removeItem('user_name');
-      sessionStorage.removeItem('user_token');
-      sessionStorage.removeItem('user_id');
-      sessionStorage.removeItem('user_name');
+      this.$auth.clearLoginStatus();
       this.check_user_login();
     }
   },
