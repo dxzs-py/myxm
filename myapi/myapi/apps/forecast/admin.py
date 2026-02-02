@@ -29,6 +29,7 @@ class ForecastAdminSite(admin.ModelAdmin):
             path('', self.admin_site.admin_view(self.forecast_main_view), name='forecast-main'),
             path('trigger/', self.admin_site.admin_view(self.trigger_forecast), name='forecast-trigger'),
             path('results/', self.admin_site.admin_view(self.view_results), name='forecast-results'),
+            # self.admin_site.admin_view()  ：将普通视图函数转换为Admin视图
         ]
         return custom_urls + urls
 
@@ -48,18 +49,18 @@ class ForecastAdminSite(admin.ModelAdmin):
         from django.conf import settings
         models_dir = os.path.join(settings.BASE_DIR, 'apps', 'forecast', 'static')
         available_models = [d for d in os.listdir(models_dir) if os.path.isdir(os.path.join(models_dir, d))]
-        
+
         # 获取特征名称列表
         from myapi.apps.forecast.data_loader import WeatherDataLoader
         data_loader = WeatherDataLoader()
         try:
             _, _, feature_names = data_loader.load_and_preprocess()
+            feature_names = [feature for feature in feature_names if 'day' not in feature]
         except Exception as e:
             feature_names = [f"特征{i}" for i in range(7)]
             messages.warning(request, f"无法加载特征名称: {str(e)}")
-        
         context = dict(
-            self.admin_site.each_context(request),
+            self.admin_site.each_context(request),  # 提供的上下文：包括当前用户、权限信息、站点名称、应用列表等
             title="预测管理",
             available_models=available_models,
             feature_names=feature_names,
@@ -82,13 +83,12 @@ class ForecastAdminSite(admin.ModelAdmin):
                 # 获取用户选择的模型和特征
                 selected_model = request.POST.get('model_name', 'best_model')
                 selected_features = request.POST.getlist('features')
-                
+
                 # 转换特征列表为整数索引
                 if selected_features:
                     target_indices = [int(idx) for idx in selected_features]
                 else:
                     target_indices = [0, 1, 2, 3, 4, 5, 6]  # 默认预测所有特征
-                
                 # 直接调用已有的视图类
                 from myapi.apps.forecast.views import TriggerPredictionView
 
@@ -115,7 +115,7 @@ class ForecastAdminSite(admin.ModelAdmin):
         return redirect(reverse('admin:forecast_forecast_changelist'))
 
     def view_results(self, request):
-        """查看预测结果
+        """
 
         通过调用PredictionListView视图类获取并展示最新的预测结果。
 
@@ -126,6 +126,11 @@ class ForecastAdminSite(admin.ModelAdmin):
             HttpResponse: 渲染后的预测结果页面模板响应
         """
         try:
+            # 获取用户选择的模型和展示方式
+            selected_model = request.GET.get('model', '')
+            display_type = request.GET.get('display_type', 'table')
+            selected_feature = request.GET.get('feature', '')
+            
             # 调用已有的视图类获取预测结果
             from myapi.apps.forecast.views import PredictionListView
 
@@ -133,15 +138,30 @@ class ForecastAdminSite(admin.ModelAdmin):
             api_request.method = 'GET'
             api_request.user = request.user
             api_request.META = request.META
-            api_request.query_params = {}
+            api_request.query_params = {'model': selected_model, 'feature': selected_feature}
 
             view = PredictionListView()
             response = view.get(api_request)
+            
+            # 提取所有可用的模型名称
+            available_models = set()
+            available_features = set()
+            results = response.data.get('results', []) if response.status_code == 200 else []
+            for result in results:
+                if 'model_name' in result:
+                    available_models.add(result['model_name'])
+                if 'feature' in result:
+                    available_features.add(result['feature'])
 
             context = dict(
                 self.admin_site.each_context(request),  # Admin 模板提供上下文变量
                 title="预测结果",
                 results=response.data if response.status_code == 200 else None,
+                available_models=list(available_models),
+                available_features=list(available_features),
+                selected_model=selected_model,
+                selected_feature=selected_feature,
+                display_type=display_type,
             )
             return render(request, 'admin/forecast_results.html', context)
         except Exception as e:

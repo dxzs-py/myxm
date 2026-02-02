@@ -115,6 +115,7 @@ export default {
   },
   created() {
     this.getuserInfo();
+    this.$store.dispatch('getAreaOptions');
   },
   methods: {
     getuserInfo() {

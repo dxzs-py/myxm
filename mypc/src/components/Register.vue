@@ -115,7 +115,7 @@
               </span>
           </label>
           <button @click="registerHander"
-            class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors !rounded-button whitespace-nowrap">
+                  class="w-full py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors !rounded-button whitespace-nowrap">
             注 册
           </button>
         </div>
@@ -174,14 +174,13 @@ export default {
         this.$message.error("两次密码不一致");
         return false;
       }
+
       // 用户注册
       this.$axios.post(`${this.$settings.HOST}/user/reg/`, {
         mobile: this.registerForm.mobile,
         password: this.registerForm.password,
         sms_code: this.registerForm.sms_code,
       }).then(res => {
-
-        console.log(res.data);
         localStorage.removeItem('user_token');  // 为了避免登录状态被覆盖
         localStorage.removeItem('user_id');
         localStorage.removeItem('user_name');
@@ -189,7 +188,44 @@ export default {
         sessionStorage.user_id = res.data.id;
         sessionStorage.user_name = res.data.username;
 
-        let self = this;
+        // 注册成功后获取用户IP定位并设置默认地址
+        this.setDefaultLocation();
+
+      }).catch(error => {
+        let data = error.response.data;
+        let message = "";
+        for (let key in data) {
+          message = data[key][0];
+        }
+        this.$message.error(`对不起，注册失败！错误提示：${message}`)
+      });
+    },
+
+    async setDefaultLocation() {
+      try {
+        // 调用Vuex的action获取IP定位
+        await this.$store.dispatch('fetchSelectedArea');
+
+        // 获取地区选项数据
+        const areaOptions = await this.$store.dispatch('getAreaOptions');
+
+        // 根据定位结果查找对应的地区ID
+        const locationNames = this.$store.state.selecteAreas;
+        const numericArea = this.findAreaIds(locationNames, areaOptions);
+
+        if (numericArea) {
+          // 保存用户默认地址
+          await this.$axios.post(`${this.$settings.HOST}/user/self/`, {
+            selectedArea: numericArea,
+          }, {
+            headers: {
+              'Authorization': `Bearer ${sessionStorage.user_token}`,
+            }
+          });
+        }
+
+        // 显示注册成功提示
+        const self = this;
         this.$alert("注册成功", "欢迎成为我们的用户", {}, {
           confirmButtonText: '确定',
           cancelButtonText: '取消',
@@ -198,27 +234,51 @@ export default {
           self.$router.push('/');  // 这里如果用this是alert对象，我们要重新回调到Vue
         });
 
-      }).catch(error => {
-        let data = error.response.data;
-        let message = "";
-        for (let key in data) {
-          message = data[key][0];
-        }  // 循环遍历所有错误信息，等价于下面代码
-        // let message = " "
-        // if(error.response.data.mobile){
-        //   message = error.response.data.mobile[0];
-        // }
-        // if(error.response.data.password){
-        //   message = error.response.data.password[0];
-        // }
-        // if(error.response.data.sms_code){
-        //   message = error.response.data.sms_code[0];
-        // }
-        // if(error.response.data.non_field_errors){
-        //   message = error.response.data.non_field_errors;
-        // }
-        this.$message.error(`对不起，注册失败！错误提示：${message}`)
-      });
+      } catch (error) {
+        console.error('设置默认地址失败:', error);
+        // 即使地址设置失败，注册仍然成功
+        const self = this;
+        this.$alert("注册成功", "欢迎成为我们的用户", {}, {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'success'
+        }).then(() => {
+          self.$router.push('/');
+        });
+      }
+    },
+
+    findAreaIds(areaNames, areaOptions) {
+      // 根据地区名称查找对应的id
+      if (!areaNames || areaNames.length !== 3 || !areaOptions) return null;
+
+      const [provinceName, cityName, districtName] = areaNames;
+      let provinceId = null, cityId = null, districtId = null;
+
+      // 查找省份
+      const province = areaOptions.find(p => p.name === provinceName);
+      if (province) {
+        provinceId = province.id;
+
+        // 查找城市
+        const city = province.children.find(c => c.name === cityName);
+        if (city) {
+          cityId = city.id;
+
+          // 查找区县
+          const district = city.children.find(d => d.name === districtName);
+          if (district) {
+            districtId = district.id;
+          }
+        }
+      }
+
+      // 返回选中的地址ID
+      if (provinceId && cityId && districtId) {
+        return [provinceId, cityId, districtId];
+      }
+
+      return null;
     },
 
     smsHandle() {
@@ -263,4 +323,3 @@ export default {
 }
 
 </style>
-

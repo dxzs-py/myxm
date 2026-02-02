@@ -347,7 +347,7 @@ export default {
   },
   methods: {
     getAlertDetail() {
-      const selectedArea = this.$store.state.selectedArea
+      const selectedArea = this.$store.getters.selectedArea
       this.$axios.get(`${this.$settings.HOST}/meteorology/`, {
         params: {
           address: "银川,石嘴山,固原,吴忠,中卫",

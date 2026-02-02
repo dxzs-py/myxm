@@ -88,6 +88,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myapi.middleware.security_headers.SecurityHeadersMiddleware',  # 自定义安全头中间件
 ]
 
 ROOT_URLCONF = 'myapi.urls'

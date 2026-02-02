@@ -263,14 +263,55 @@ export default {
         }).then(response => {
           this.userInfo = response.data[0];
           this.selectedArea0 = [this.userInfo.province_id, this.userInfo.city_id, this.userInfo.county_id]
-          this.selectedArea = this.selectedArea0.length === 3 ? this.selectedArea0 : [];
-          // console.log(this.selectedArea0.length)
+
+          // 如果用户没有保存的地址信息，使用IP定位获取默认地址
+          if (this.selectedArea0.length !== 3 || this.selectedArea0.some(id => !id)) {
+            this.$store.dispatch('fetchSelectedArea').then(() => {
+              // IP定位成功后，更新本地选择的地址
+              const storeAreas = this.$store.state.selecteAreas;
+              // 查找对应的id
+              this.findAreaIds(storeAreas);
+            });
+          } else {
+            this.selectedArea = this.selectedArea0;
+          }
+
           this.selectedCrops0 = this.userInfo.crops_interest
           this.selectedCrops = this.selectedCrops0
           this.getCrops()
         }).catch(error => {
           this.$auth.handleLoginExpired(this);
         })
+      }
+    },
+    findAreaIds(areaNames) {
+      // 根据地区名称查找对应的id
+      if (!areaNames || areaNames.length !== 3) return;
+
+      const [provinceName, cityName, districtName] = areaNames;
+      let provinceId = null, cityId = null, districtId = null;
+
+      // 查找省份
+      const province = this.areaOptions.find(p => p.name === provinceName);
+      if (province) {
+        provinceId = province.id;
+
+        // 查找城市
+        const city = province.children.find(c => c.name === cityName);
+        if (city) {
+          cityId = city.id;
+
+          // 查找区县
+          const district = city.children.find(d => d.name === districtName);
+          if (district) {
+            districtId = district.id;
+          }
+        }
+      }
+
+      // 更新选中的地址
+      if (provinceId && cityId && districtId) {
+        this.selectedArea = [provinceId, cityId, districtId];
       }
     },
     check_user_login() {
@@ -291,6 +332,12 @@ export default {
       // 获取地区选项
       this.$axios.get(`${this.$settings.HOST}user/areas/hierarchy/`).then(response => {
         this.areaOptions = response.data;
+
+        // 获取地区选项后，如果已经有IP定位的结果但还没有找到对应的id，尝试查找
+        if (this.$store.state.selecteAreas.length === 3 &&
+            (!this.selectedArea || this.selectedArea.length !== 3)) {
+          this.findAreaIds(this.$store.state.selecteAreas);
+        }
       }).catch(error => {
         this.$message.error("获取地区选项失败");
       })

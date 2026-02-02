@@ -14,36 +14,192 @@
 {% block content %}
 <div class="module">
     <h2>预测结果</h2>
-    
+
     {% if results %}
         <p>总共 {{ results.count }} 条结果</p>
         
-        {% for result in results.results %}
-        <div class="result-item" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
-            <h3>特征: {{ result.feature }}</h3>
-            <p>生成时间: {{ result.generated_at }}</p>
-            <p>过期时间: {{ result.expires }}</p>
-            
-            <h4>预测值:</h4>
-            <div style="max-height: 200px; overflow-y: auto;">
-                <pre>{{ result.values|pprint }}</pre>
-            </div>
+        <!-- 选择控件 -->
+        <div style="margin-bottom: 20px; padding: 15px; background: #f8f8f8; border: 1px solid #eee; border-radius: 4px;">
+            <form method="get" action="{% url 'admin:forecast-results' %}" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; align-items: end;">
+                <div>
+                    <label for="model-select" style="display: block; margin-bottom: 5px; font-weight: bold;">选择模型：</label>
+                    <select name="model" id="model-select" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="">所有模型</option>
+                        {% for model in available_models %}
+                            <option value="{{ model }}" {% if selected_model == model %}selected{% endif %}>{{ model }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="feature-select" style="display: block; margin-bottom: 5px; font-weight: bold;">选择特征：</label>
+                    <select name="feature" id="feature-select" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="">所有特征</option>
+                        {% for feature in available_features %}
+                            <option value="{{ feature }}" {% if selected_feature == feature %}selected{% endif %}>{{ feature }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                
+                <div>
+                    <label for="display-type" style="display: block; margin-bottom: 5px; font-weight: bold;">展示方式：</label>
+                    <select name="display_type" id="display-type" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px;">
+                        <option value="table" {% if display_type == 'table' %}selected{% endif %}>数值展示</option>
+                        <option value="chart" {% if display_type == 'chart' %}selected{% endif %}>图像展示</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <input type="submit" value="应用" style="width: 100%; padding: 8px; background: #79aec8; color: white; border: none; border-radius: 4px; cursor: pointer;">
+                </div>
+            </form>
         </div>
-        {% endfor %}
+        
+        <!-- 数值展示 -->
+        {% if display_type == 'table' %}
+            {% for result in results.results %}
+            <div class="result-item" style="margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                <h3>特征: {{ result.feature }}</h3>
+                <p>模型: {{ result.model_name|default:'未知模型' }}</p>
+                <p>生成时间: {{ result.generated_at }}</p>
+                <p>过期时间: {{ result.expires }}</p>
+
+                <h4>预测值:</h4>
+                <div style="max-height: 300px; overflow-y: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background: #f2f2f2;">序号</th>
+                                <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background: #f2f2f2;">预测值</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for value in result.values %}
+                            <tr>
+                                <td style="border: 1px solid #ddd; padding: 8px;">{{ forloop.counter }}</td>
+                                <td style="border: 1px solid #ddd; padding: 8px;">{{ value|floatformat:4 }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            {% endfor %}
+        {% endif %}
+        
+        <!-- 图像展示 -->
+        {% if display_type == 'chart' %}
+            {% for result in results.results %}
+            <div class="result-item" style="margin-bottom: 30px; padding: 15px; border: 1px solid #ddd; border-radius: 4px;">
+                <h3>特征: {{ result.feature }}</h3>
+                <p>模型: {{ result.model_name|default:'未知模型' }}</p>
+                <p>生成时间: {{ result.generated_at }}</p>
+                <p>过期时间: {{ result.expires }}</p>
+
+                <h4>预测值趋势图:</h4>
+                <div id="chart-{{ forloop.counter }}" style="width: 100%; height: 400px;"></div>
+            </div>
+            {% endfor %}
+        {% endif %}
     {% else %}
         <p>暂无预测结果</p>
     {% endif %}
-    
+
     <div class="submit-row">
         <a href="{% url 'admin:forecast_forecast_changelist' %}" class="button">返回预测管理</a>
     </div>
 </div>
 
+{% if display_type == 'chart' %}
+<!-- 引入ECharts -->
+<script src="{% static 'echarts/echarts.min.js' %}"></script>
+<script>
+    // 初始化所有图表
+    {% for result in results.results %}
+    var chart{{ forloop.counter }} = echarts.init(document.getElementById('chart-{{ forloop.counter }}'));
+    
+    // 准备数据
+    var values = {{ result.values|safe }};
+    var indices = [];
+    for (var i = 1; i <= values.length; i++) {
+        indices.push(i);
+    }
+    
+    // 配置图表
+    var option{{ forloop.counter }} = {
+        title: {
+            text: '{{ result.feature }} 预测趋势',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'axis',
+            formatter: function(params) {
+                return '序号: ' + params[0].name + '<br/>预测值: ' + params[0].value.toFixed(4);
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'category',
+            data: indices,
+            name: '预测天数',
+            nameLocation: 'middle',
+            nameGap: 30
+        },
+        yAxis: {
+            type: 'value',
+            name: '预测值',
+            nameLocation: 'middle',
+            nameGap: 50
+        },
+        series: [{
+            name: '{{ result.feature }}',
+            type: 'line',
+            data: values,
+            smooth: true,
+            itemStyle: {
+                color: '#79aec8'
+            },
+            lineStyle: {
+                width: 2
+            },
+            areaStyle: {
+                color: {
+                    type: 'linear',
+                    x: 0,
+                    y: 0,
+                    x2: 0,
+                    y2: 1,
+                    colorStops: [{
+                        offset: 0, color: 'rgba(121, 174, 200, 0.3)'
+                    }, {
+                        offset: 1, color: 'rgba(121, 174, 200, 0.05)'
+                    }]
+                }
+            }
+        }]
+    };
+    
+    // 应用配置
+    chart{{ forloop.counter }}.setOption(option{{ forloop.counter }});
+    
+    // 响应窗口大小变化
+    window.addEventListener('resize', function() {
+        chart{{ forloop.counter }}.resize();
+    });
+    {% endfor %}
+</script>
+{% endif %}
+
 <style>
     .result-item {
         background: #f9f9f9;
     }
-    
+
     pre {
         white-space: pre-wrap;
         word-wrap: break-word;
@@ -52,12 +208,12 @@
         border: 1px solid #eee;
         border-radius: 4px;
     }
-    
+
     .submit-row {
         margin-top: 20px;
         text-align: center;
     }
-    
+
     .button {
         padding: 10px 15px;
         background: #79aec8;
@@ -65,9 +221,17 @@
         text-decoration: none;
         border-radius: 4px;
     }
-    
+
     .button:hover {
         background: #679bb4;
+    }
+    
+    table {
+        background: white;
+    }
+    
+    th, td {
+        text-align: right;
     }
 </style>
 {% endblock %}

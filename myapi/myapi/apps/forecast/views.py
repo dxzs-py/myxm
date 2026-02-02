@@ -14,6 +14,7 @@ class PredictionListView(APIView):
         """获取最新的预测结果"""
         # 解析查询参数
         feature_name = request.query_params.get('feature')
+        model_name = request.query_params.get('model')
         days = int(request.query_params.get('days', 3))
         limit = int(request.query_params.get('limit', 10))
 
@@ -21,8 +22,12 @@ class PredictionListView(APIView):
         redis_conn = get_redis_connection("forecast")
 
         # 构建搜索模式
-        if feature_name:
-            pattern = f"prediction:{feature_name}:*"
+        if model_name and feature_name:
+            pattern = f"prediction:{model_name}:{feature_name}:*"
+        elif model_name:
+            pattern = f"prediction:{model_name}:*"
+        elif feature_name:
+            pattern = f"prediction:*:{feature_name}:*"
         else:
             pattern = "prediction:*"
 
@@ -84,11 +89,12 @@ class TriggerPredictionView(APIView):
             forecast_end_date = forecast_start_date + timedelta(days=14)
 
             feature_name = prediction['feature_name']
-            # 创建唯一的键名
-            key = f"prediction:{feature_name}:{forecast_start_date.strftime('%Y%m%d')}-{forecast_end_date.strftime('%Y%m%d')}"
+            # 创建唯一的键名，包含模型名称
+            key = f"prediction:{model_name}:{feature_name}:{forecast_start_date.strftime('%Y%m%d')}-{forecast_end_date.strftime('%Y%m%d')}"
             # 存储的数据结构
             data = {
                 'feature': feature_name,
+                'model_name': model_name,  # 添加模型名称信息
                 'values': json.dumps(prediction['values']),  # 序列化列表为JSON字符串
                 'generated_at': timezone.now().isoformat(),
                 'expires': (timezone.now() + timedelta(days=7)).isoformat()

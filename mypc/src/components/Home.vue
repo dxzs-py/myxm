@@ -161,7 +161,7 @@ export default {
   },
   computed: {
     selectedArea() {
-      return this.$store.state.selectedArea;
+      return this.$store.getters.selectedArea;
     },
   },
   created() {
